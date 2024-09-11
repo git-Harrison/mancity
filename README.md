@@ -1,6 +1,7 @@
 # Manchester City Football Club Player Management
 
-[**포트폴리오 보러가기**](https://git-harrison.github.io/mancity/)
+<a href="https://git-harrison.github.io/mancity/" target="_blank"><strong>포트폴리오 보러가기</strong></a>
+
 
 
 ## 📌 프로젝트 개요
