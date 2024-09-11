@@ -1,8 +1,12 @@
-import { Player } from '../../models/interfaces/player.interface';
+import {Player} from '../../models/interfaces/player.interface';
 
 export const fetchPlayers = async (): Promise<Player[]> => {
     try {
-        const response = await fetch(`https://git-harrison.github.io/mancity/players-info.json`);
+        const url =
+            process.env.NODE_ENV === 'development'
+                ? process.env.PUBLIC_URL + '/players-info.json'
+                : process.env.REACT_APP_GITHUB_URL + '/players-info.json';
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
