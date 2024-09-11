@@ -8,7 +8,7 @@ export interface Player {
     weight?: number;
     date_of_birth?: string;
     honors?: {
-        [key: string]: string[];
+        [key: string]: string[] | undefined; // undefined를 허용
     };
     club_history: {
         year: string;
