@@ -9,6 +9,7 @@
     "@types/gsap": "^3.0.0",
     "axios": "^1.7.7",
     "framer-motion": "^11.5.4",
+    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -26,8 +27,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
   },
+  "homepage": "https://git-harrison.github.io/mancity/",
   "eslintConfig": {
     "extends": [
       "react-app",
