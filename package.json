@@ -29,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "homepage": "https://git-harrison.github.io/mancity/",
   "eslintConfig": {
@@ -58,6 +58,5 @@
     "@types/react-dom": "^18.3.0",
     "@types/react-slick": "^0.23.13",
     "@types/swiper": "^6.0.0"
-  },
-  "proxy": "https://api.nexon.co.kr"
+  }
 }
