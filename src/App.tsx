@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/mancity">
             <Header/>
             <AppRoutes/>
         </BrowserRouter>
