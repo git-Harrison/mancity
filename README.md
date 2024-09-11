@@ -2,6 +2,12 @@
 
 [**포트폴리오 보러가기**](https://git-harrison.github.io/mancity/)
 
+📦 기술 스택
+- Node.js: v18.15.0
+- npm: v9.8.1
+- React: v18.3.1
+- TypeScript: v4.9.5
+
 ## 📌 프로젝트 개요
 
 이 프로젝트는 **Manchester City Football Club**의 선수 데이터를 관리하는 웹 애플리케이션으로, **MVVM (Model-View-ViewModel)** 패턴을 기반으로 설계되었습니다.
