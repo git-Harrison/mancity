@@ -1,0 +1,63 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .header-right {
+        display: flex;
+        gap: 30px;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+
+            li {
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    padding: 5px 10px;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: #6CABDD; // 하늘색으로 변경
+                    }
+                }
+            }
+        }
+    }
+
+    .icons {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        .icon {
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #6CABDD; // 아이콘 호버 색상
+            }
+        }
+    }
+}

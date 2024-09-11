@@ -1,0 +1,20 @@
+$city-blue: #6CABDD;
+$dark-blue: #1C2C5B;
+$white: #FFFFFF;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($duration) {
+    transition: all $duration ease-in-out;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}

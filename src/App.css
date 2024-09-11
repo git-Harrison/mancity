@@ -1,0 +1,625 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "INGAME";
+  font-weight: 100;
+  src: url("assets/fonts/YoonGothic530.woff2") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+.header .header-right {
+  display: flex;
+  gap: 30px;
+}
+.header nav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+.header nav ul li a:hover {
+  color: #6CABDD;
+}
+.header .icons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.header .icons .icon {
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.header .icons .icon:hover {
+  color: #6CABDD;
+}
+
+.main-video-player {
+  min-height: 100vh;
+  background: url("https://via.placeholder.com/1920x1080") no-repeat center center;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+}
+.main-video-player .thumbnail {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.main-video-player .thumbnail.fade-out {
+  opacity: 0;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: #fff;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+.loading-screen.fade-out {
+  display: flex;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.loading-bg {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  opacity: 0.1;
+}
+
+.loading-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading-screen h1 {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 20px;
+}
+
+.players-info-container {
+  display: flex;
+  left: 10%;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.players-info {
+  padding: 20px;
+  border-radius: 8px;
+  width: 524px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.players-info .info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.players-info .info-top .detail {
+  display: flex;
+  align-items: center;
+}
+.players-info .info-top .detail img {
+  width: 27px;
+  height: 22px;
+  margin-right: 8px;
+}
+.players-info .info-top .detail .number {
+  font-size: 12px;
+}
+.players-info .info-top .name {
+  font-size: 24px;
+  color: #151432;
+  font-family: "Roboto", sans-serif;
+}
+.players-info .info-top .number {
+  font-size: 12px;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+.players-info .position {
+  font-size: 30px;
+  margin-bottom: 26px;
+}
+.players-info .position.ST, .players-info .position.RW, .players-info .position.LW, .players-info .position.CF {
+  color: #f6425f;
+}
+.players-info .position.CM, .players-info .position.CDM {
+  color: #03cd7a;
+}
+.players-info .position.CB, .players-info .position.RB, .players-info .position.LB {
+  color: #1476ff;
+}
+.players-info .position.GK {
+  color: #e9a216;
+}
+.players-info .info-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.players-info .info-detail div {
+  width: 30%;
+}
+.players-info .dominant_foot,
+.players-info .nationality,
+.players-info .height,
+.players-info .weight,
+.players-info .date_of_birth,
+.players-info .current_team,
+.players-info .transfer_date,
+.players-info .previous_team {
+  width: 100%;
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+.players-info .player-rating {
+  font-size: 18px;
+  color: #f39c12;
+  margin: 10px 0;
+}
+.players-info .nationality img {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+.players-info .player-features img {
+  width: 40px;
+  height: auto;
+  margin: 5px;
+}
+.players-info .club-history {
+  margin-top: 20px;
+}
+.players-info .club-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.players-info .club-history table th {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 15px 0;
+  color: #6b6a7b;
+  border-top: 10px solid #3e3d55;
+  border-bottom: 2px solid #3e3d55;
+  text-align: left;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+.players-info .club-history table tr:last-child td {
+  border-bottom: 0;
+}
+.players-info .club-history table td {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #6b6a7b;
+  border-bottom: 1px solid #e1e1e5;
+}
+.players-info .club-history table td:first-child {
+  width: 20%;
+}
+.players-info .club-history table td:nth-child(2) {
+  width: 60%;
+}
+.players-info .club-history table td:last-child {
+  width: 20%;
+}
+
+.slider-container {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  padding: 0 30px;
+}
+.slider-container .slick-slider {
+  display: flex;
+  height: 324px;
+  gap: 20px;
+}
+.slider-container .slick-slider img {
+  width: 100%;
+  object-fit: cover;
+}
+.slider-container .slick-slider .slick-track {
+  display: flex;
+  gap: 30px;
+}
+.slider-container .slick-slider .slider-slide {
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 300px;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-container .slick-slider .slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.slider-container .slick-list {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slider-container .slick-dots {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+}
+.slider-container .slick-dots li {
+  list-style: none;
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.slider-container .slick-dots li button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  opacity: 0;
+  cursor: pointer;
+}
+.slider-container .slick-dots .slick-active {
+  animation: neonGlow 1.5s infinite alternate;
+}
+.slider-container .slick-dots .custom-dots {
+  position: absolute;
+  left: 0;
+  top: -16px;
+  color: #eeeeee;
+}
+.slider-container .slick-dots .custom-dots .current-slide {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.slider-container .slick-dots .custom-dots .total-slides {
+  font-size: 18px;
+  font-weight: bold;
+  color: #eeeeee;
+}
+
+.play-button-container {
+  position: absolute;
+  bottom: 160px;
+  left: 400px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.play-button-container div h4 {
+  font-size: 22px;
+  text-align: left;
+}
+.play-button-container div p {
+  font-size: 18px;
+  text-align: left;
+}
+.play-button-container .play-button {
+  width: 50px;
+  height: 50px;
+  margin-right: 1.2em;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.play-button-container .play-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.play-button-container .play-button svg {
+  width: 14px;
+  height: 14px;
+  color: #6CABDD;
+}
+
+.card-slider-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  width: 50%;
+}
+
+.card-slide {
+  cursor: pointer;
+}
+.card-slide .players-row {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 9px);
+  left: 4px;
+  height: 100%;
+}
+.card-slide .players-row .number {
+  color: #fff;
+  position: absolute;
+  top: 69px;
+  left: 0;
+  text-align: center;
+  width: 61px;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  font-family: "INGAME", sans-serif;
+}
+.card-slide .players-row .position {
+  font-size: 26px;
+  color: #fff;
+  position: absolute;
+  top: 99px;
+  left: 0;
+  text-align: center;
+  width: 61px;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-family: "INGAME", sans-serif;
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+.card-slide .players-row .country-logo {
+  position: absolute;
+  top: 133px;
+  left: 15px;
+  width: 32px;
+  text-align: center;
+  z-index: 2;
+}
+.card-slide .players-row .img {
+  position: absolute;
+  top: 81px;
+  right: 5px;
+  z-index: 1;
+  width: 155px;
+  height: 169px;
+  overflow: hidden;
+}
+.card-slide .players-row .img img {
+  width: 169px;
+}
+.card-slide .players-row .team-logo {
+  position: absolute;
+  top: 192px;
+  left: 9px;
+  text-align: center;
+  width: 46px;
+  height: 46px;
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.card-slide .players-row .team-logo img {
+  width: 33px;
+  height: 33px;
+}
+.card-slide .players-row .players {
+  width: 100%;
+  position: absolute;
+  top: 262px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-slide .players-row .players img {
+  width: 20px;
+  height: 16px;
+  margin-right: 3px;
+  display: inline-block;
+  margin-top: 2px;
+  vertical-align: top;
+}
+.card-slide .players-row .players .name {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 19px;
+  font-weight: 200;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 17px !important;
+  left: auto !important;
+  right: 0 !important;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.swiper-horizontal {
+  padding-bottom: 90px;
+}
+
+.swiper-pagination {
+  width: 83% !important;
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 3.8%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 0;
+  margin: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: auto;
+  bottom: 0; /* Adjust as needed to place below the slider */
+  width: 50px; /* Button size */
+  height: 50px; /* Button size */
+  background-color: transparent; /* Circle background color */
+  border: 2px solid #ccc; /* Circle border */
+  border-radius: 50%; /* Makes it circular */
+  color: #ccc; /* Arrow color */
+  font-size: 20px; /* Arrow size, adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer; /* Makes it obvious it's clickable */
+  outline: none; /* Removes the outline to clean up the appearance */
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  left: 60px;
+}
+
+/* 화살표 스타일 */
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 1.2em; /* Adjust arrow size */
+}
+
+/* 마우스 호버 시 효과 */
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light white background on hover */
+}
+
+@keyframes neonGlow {
+  0% {
+    background-color: #6CABDD;
+    box-shadow: 0 0 5px #6CABDD, 0 0 10px #6CABDD, 0 0 15px #6CABDD, 0 0 20px #6CABDD;
+  }
+  100% {
+    background-color: #A3E4FF;
+    box-shadow: 0 0 10px #A3E4FF, 0 0 20px #A3E4FF, 0 0 30px #A3E4FF, 0 0 40px #A3E4FF;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,10 @@
+@keyframes neonGlow {
+    0% {
+        background-color: #6CABDD;
+        box-shadow: 0 0 5px #6CABDD, 0 0 10px #6CABDD, 0 0 15px #6CABDD, 0 0 20px #6CABDD;
+    }
+    100% {
+        background-color: #A3E4FF;
+        box-shadow: 0 0 10px #A3E4FF, 0 0 20px #A3E4FF, 0 0 30px #A3E4FF, 0 0 40px #A3E4FF;
+    }
+}

@@ -1,0 +1,167 @@
+.players-info-container {
+    display: flex;
+    left: 10%;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.players-info {
+    padding: 20px;
+    border-radius: 8px;
+    width: 524px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    .info-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        .detail {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 27px;
+                height: 22px;
+                margin-right: 8px;
+            }
+
+            .number {
+                font-size: 12px;
+            }
+        }
+
+        .name {
+            font-size: 24px;
+            color: #151432;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .number {
+            font-size: 12px;
+            font-family: "Pretendard-Regular", sans-serif;
+        }
+    }
+
+    .position {
+        font-size: 30px;
+        margin-bottom: 26px;
+
+        &.ST,
+        &.RW,
+        &.LW,
+        &.CF {
+            color: #f6425f;
+        }
+
+        &.CM,
+        &.CDM {
+            color: #03cd7a;
+        }
+
+        &.CB,
+        &.RB,
+        &.LB {
+            color: #1476ff;
+        }
+
+        &.GK {
+            color: #e9a216;
+        }
+    }
+
+    .info-detail {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        div {
+            width: 30%;
+        }
+    }
+
+    .dominant_foot,
+    .nationality,
+    .height,
+    .weight,
+    .date_of_birth,
+    .current_team,
+    .transfer_date,
+    .previous_team {
+        width: 100%;
+        font-size: 16px;
+        color: #7f8c8d;
+        margin-bottom: 5px;
+    }
+
+    .player-rating {
+        font-size: 18px;
+        color: #f39c12;
+        margin: 10px 0;
+    }
+
+    .nationality img {
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+    }
+
+    .player-features img {
+        width: 40px;
+        height: auto;
+        margin: 5px;
+    }
+
+    // 테이블 스타일
+    .club-history {
+        margin-top: 20px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+
+            th {
+                font-size: 15px;
+                font-weight: normal;
+                padding: 15px 0;
+                color: #6b6a7b;
+                border-top: 10px solid #3e3d55;
+                border-bottom: 2px solid #3e3d55;
+                text-align: left;
+                font-family: "Pretendard-Regular", sans-serif;
+            }
+
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            td {
+                padding: 10px 0;
+                font-size: 14px;
+                color: #6b6a7b;
+                border-bottom: 1px solid #e1e1e5;
+            }
+
+            td:first-child {
+                width: 20%;
+            }
+
+            td:nth-child(2) {
+                width: 60%;
+            }
+
+            td:last-child {
+                width: 20%;
+            }
+        }
+    }
+}
