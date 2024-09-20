@@ -5,8 +5,10 @@ import Header from "./components/organisms/Header";
 import './App.css';
 
 function App() {
+    const basename = process.env.REACT_APP_BASENAME || '/';
+
     return (
-        <BrowserRouter basename="/mancity">
+        <BrowserRouter basename={basename}>
             <Header/>
             <AppRoutes/>
         </BrowserRouter>

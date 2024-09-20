@@ -7,14 +7,36 @@
 }
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("assets/fonts/Pretendard-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("assets/fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("assets/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("assets/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  letter-spacing: -1px;
 }
 
 ul, li {
@@ -198,7 +220,7 @@ img {
 .players-info .info-top .name {
   font-size: 24px;
   color: #151432;
-  font-family: "Roboto", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
 }
 .players-info .info-top .number {
   font-size: 12px;
@@ -235,7 +257,8 @@ img {
 .players-info .date_of_birth,
 .players-info .current_team,
 .players-info .transfer_date,
-.players-info .previous_team {
+.players-info .previous_team,
+.players-info .honor-item {
   width: 100%;
   font-size: 16px;
   color: #7f8c8d;
@@ -278,10 +301,12 @@ img {
   border-bottom: 0;
 }
 .players-info .club-history table td {
-  padding: 10px 0;
-  font-size: 14px;
+  overflow: hidden;
+  font-size: 13px;
   color: #6b6a7b;
   border-bottom: 1px solid #e1e1e5;
+  line-height: 38px;
+  font-family: "Pretendard-Regular", sans-serif;
 }
 .players-info .club-history table td:first-child {
   width: 20%;
@@ -530,7 +555,6 @@ img {
   height: 16px;
   margin-right: 3px;
   display: inline-block;
-  margin-top: 2px;
   vertical-align: top;
 }
 .card-slide .players-row .players .name {
@@ -540,7 +564,9 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 19px;
-  font-weight: 200;
+  font-weight: 500;
+  color: #141432;
+  font-family: "Pretendard-Regular", sans-serif;
 }
 
 .swiper-pagination {

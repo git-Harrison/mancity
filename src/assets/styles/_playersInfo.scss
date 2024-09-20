@@ -38,7 +38,7 @@
         .name {
             font-size: 24px;
             color: #151432;
-            font-family: "Roboto", sans-serif;
+            font-family: "Pretendard-Regular", sans-serif;
         }
 
         .number {
@@ -91,7 +91,8 @@
     .date_of_birth,
     .current_team,
     .transfer_date,
-    .previous_team {
+    .previous_team,
+    .honor-item {
         width: 100%;
         font-size: 16px;
         color: #7f8c8d;
@@ -145,10 +146,12 @@
             }
 
             td {
-                padding: 10px 0;
-                font-size: 14px;
+                overflow: hidden;
+                font-size: 13px;
                 color: #6b6a7b;
                 border-bottom: 1px solid #e1e1e5;
+                line-height: 38px;
+                font-family: "Pretendard-Regular", sans-serif;
             }
 
             td:first-child {

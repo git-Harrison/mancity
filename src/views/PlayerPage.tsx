@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
+import {usePlayerViewModel} from '../viewmodels/usePlayerViewModel';
 import PlayersInfo from "../components/organisms/PlayersInfo";
 import PlayersCardSlider from '../components/organisms/PlayersCardSlider';
-import {usePlayerViewModel} from '../viewmodels/usePlayerViewModel';
 
 const PlayerPage: React.FC = () => {
     const {players, loading, error} = usePlayerViewModel();
@@ -19,7 +19,7 @@ const PlayerPage: React.FC = () => {
 
     return (
         <div className="container">
-            {selectedPlayer && <PlayersInfo player={selectedPlayer}/>}
+            {selectedPlayer && (<PlayersInfo player={selectedPlayer}/>)}
             <PlayersCardSlider players={players} onPlayerClick={setSelectedPlayerNumber}/>
         </div>
     );

@@ -13,6 +13,17 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
         transition: {duration, delay, ease: 'easeOut'}
     });
 
+    const renderHonors = (honor: string[] | Record<string, string[]>) => {
+        if (Array.isArray(honor)) {
+            return honor.join(', ');
+        } else if (typeof honor === 'object') {
+            return Object.entries(honor)
+                .map(([key, values]) => `${key}: ${values.join(', ')}`)
+                .join(' | ');
+        }
+        return 'No honors';
+    };
+
     return (
         <div className="players-info-container">
             <motion.div
@@ -20,7 +31,7 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                 className="players-info"
                 initial={{opacity: 0, x: -100}}
                 animate={{opacity: 1, x: 0}}
-                transition={{duration: 0.6}}  // 전체 애니메이션 시간
+                transition={{duration: 0.6}} // 전체 애니메이션 시간
             >
                 <div className="info-top">
                     <motion.div className="detail" {...textAnimation(0.05, 0.4)}>
@@ -57,13 +68,22 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                     </motion.div>
                 </div>
 
+                {player.honors && (
+                    <motion.div className="honors-section" {...textAnimation(0.5, 0.4)}>
+                        {Object.keys(player.honors).map((league, index) => (
+                            <div key={index}
+                                 className="honor-item">{league}: {renderHonors(player.honors![league]!)}</div>
+                        ))}
+                    </motion.div>
+                )}
+
                 <motion.div className="club-history" {...textAnimation(0.45, 0.35)}>
                     <table>
                         <thead>
                         <tr>
-                            <th>Year</th>
-                            <th>Club</th>
-                            <th>Loan Status</th>
+                            <th>연도</th>
+                            <th>클럽</th>
+                            <th>임대 여부</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -71,7 +91,7 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                             <tr key={index}>
                                 <td>{history.year}</td>
                                 <td>{history.club}</td>
-                                <td>{history.loan ? 'Loan' : ''}</td>
+                                <td>{history.loan ? '임대' : ''}</td>
                             </tr>
                         ))}
                         </tbody>

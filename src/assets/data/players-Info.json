@@ -1,45 +1,66 @@
 {
   "manager": {
     "number": 0,
-    "name": "Pep Guardiola",
+    "name": "펩 과르디올라",
     "position": "Manager",
     "nationality": "Spain",
     "date_of_birth": "1971.01.18",
     "honors": {
-      "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-      "Champions League": ["2022/23"],
-      "FA Cup": ["2018/19", "2022/23"],
-      "EFL Cup": ["2017/18", "2018/19", "2019/20", "2020/21"],
-      "FIFA Club World Cup": ["2023"],
-      "UEFA Super Cup": ["2023"]
+      "프리미어리그": [
+        "2017/18",
+        "2018/19",
+        "2020/21",
+        "2021/22",
+        "2022/23",
+        "2023/24"
+      ],
+      "챔피언스리그": [
+        "2022/23"
+      ],
+      "FA컵": [
+        "2018/19",
+        "2022/23"
+      ],
+      "EFL컵": [
+        "2017/18",
+        "2018/19",
+        "2019/20",
+        "2020/21"
+      ],
+      "FIFA 클럽 월드컵": [
+        "2023"
+      ],
+      "UEFA 슈퍼컵": [
+        "2023"
+      ]
     },
-    "current_team": "Manchester City",
+    "current_team": "맨체스터 시티",
     "hire_date": "2016.07.01",
-    "previous_team": "Bayern Munich",
+    "previous_team": "바이에른 뮌헨",
     "club_history": [
       {
         "year": "2022 ~",
-        "club": "Manchester City",
+        "club": "맨체스터 시티",
         "loan": false
       },
       {
         "year": "2020 ~ 2022",
-        "club": "Borussia Dortmund",
+        "club": "보루시아 도르트문트",
         "loan": false
       },
       {
         "year": "2019 ~ 2020",
-        "club": "Red Bull Salzburg",
+        "club": "레드불 잘츠부르크",
         "loan": false
       },
       {
         "year": "2017 ~ 2019",
-        "club": "Molde FK",
+        "club": "몰데 FK",
         "loan": false
       },
       {
         "year": "2016 ~ 2017",
-        "club": "Bryne FK",
+        "club": "브리네 FK",
         "loan": false
       }
     ]
@@ -47,7 +68,7 @@
   "forwards": [
     {
       "number": 9,
-      "name": "Erling Haaland",
+      "name": "엘링 홀란",
       "position": "ST",
       "dominant_foot": "Left",
       "nationality": "Norway",
@@ -55,43 +76,61 @@
       "weight": 88,
       "date_of_birth": "2000.07.21",
       "honors": {
-        "Premier League": ["2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"],
-        "Premier League Golden Boot": ["2022/23", "2023/24"]
+        "프리미어리그": [
+          "2022-23",
+          "2023-24"
+        ],
+        "FA컵": [
+          "2022-23"
+        ],
+        "UEFA 챔피언스리그": [
+          "2022-23"
+        ],
+        "UEFA 슈퍼컵": [
+          "2023"
+        ],
+        "FA 커뮤니티 실드": {
+          "우승": [
+            "2024"
+          ],
+          "준우승": [
+            "2022",
+            "2023"
+          ]
+        }
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2022.06.13",
-      "previous_team": "Borussia Dortmund",
+      "previous_team": "보루시아 도르트문트",
       "club_history": [
         {
           "year": "2022 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2020 ~ 2022",
-          "club": "Borussia Dortmund",
+          "club": "보루시아 도르트문트",
           "loan": false
         },
         {
           "year": "2019 ~ 2020",
-          "club": "Red Bull Salzburg",
+          "club": "레드불 잘츠부르크",
           "loan": false
         },
         {
           "year": "2017 ~ 2019",
-          "club": "Molde FK",
+          "club": "몰데 FK",
           "loan": false
         },
         {
           "year": "2016 ~ 2017",
-          "club": "Bryne FK",
+          "club": "브뤼네 FK",
           "loan": false
         },
         {
           "year": "2015 ~ 2016",
-          "club": "Bryne 2",
+          "club": "브뤼네 2",
           "loan": false
         }
       ]
@@ -100,7 +139,7 @@
   "midfielders": [
     {
       "number": 17,
-      "name": "Kevin De Bruyne",
+      "name": "케빈 데 브라위너",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "Belgium",
@@ -108,50 +147,65 @@
       "weight": 68,
       "date_of_birth": "1991.06.28",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"],
-        "PFA Player of the Year": ["2019/20", "2020/21"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ],
+        "PFA 올해의 선수": [
+          "2019/20",
+          "2020/21"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2015.08.30",
-      "previous_team": "Wolfsburg",
+      "previous_team": "볼프스부르크",
       "club_history": [
         {
           "year": "2015 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2014 ~ 2015",
-          "club": "VfL Wolfsburg",
+          "club": "VfL 볼프스부르크",
           "loan": false
         },
         {
           "year": "2012 ~ 2014",
-          "club": "Chelsea",
+          "club": "첼시",
           "loan": false
         },
         {
           "year": "2012 ~ 2013",
-          "club": "Werder Bremen (loan)",
+          "club": "베르더 브레멘 (임대)",
           "loan": true
         },
         {
           "year": "2011 ~ 2012",
-          "club": "Genk",
+          "club": "헹크",
           "loan": false
         },
         {
           "year": "2008 ~ 2012",
-          "club": "Genk",
+          "club": "헹크",
           "loan": false
         }
       ]
     },
     {
       "number": 16,
-      "name": "Rodrigo",
+      "name": "로드리고",
       "position": "CDM",
       "dominant_foot": "Right",
       "nationality": "Spain",
@@ -159,39 +213,48 @@
       "weight": 82,
       "date_of_birth": "1996.06.22",
       "honors": {
-        "Premier League": ["2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2019.07.04",
-      "previous_team": "Atletico Madrid",
+      "previous_team": "아틀레티코 마드리드",
       "club_history": [
         {
           "year": "2019 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2018 ~ 2019",
-          "club": "Atlético Madrid",
+          "club": "아틀레티코 마드리드",
           "loan": false
         },
         {
           "year": "2015 ~ 2018",
-          "club": "Villarreal",
+          "club": "비야레알",
           "loan": false
         },
         {
           "year": "2014 ~ 2016",
-          "club": "Villarreal B",
+          "club": "비야레알 B",
           "loan": false
         }
       ]
     },
     {
       "number": 20,
-      "name": "Bernardo Silva",
+      "name": "베르나르두 실바",
       "position": "RW",
       "dominant_foot": "Left",
       "nationality": "Portugal",
@@ -199,39 +262,51 @@
       "weight": 64,
       "date_of_birth": "1994.08.10",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2017.01.01",
-      "previous_team": "Monaco",
+      "previous_team": "모나코",
       "club_history": [
         {
           "year": "2017 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2014 ~ 2017",
-          "club": "Monaco",
+          "club": "모나코",
           "loan": false
         },
         {
           "year": "2013 ~ 2014",
-          "club": "Benfica",
+          "club": "벤피카",
           "loan": false
         },
         {
           "year": "2013 ~ 2014",
-          "club": "Benfica B",
+          "club": "벤피카 B",
           "loan": false
         }
       ]
     },
     {
       "number": 47,
-      "name": "Phil Foden",
+      "name": "필 포든",
       "position": "RW",
       "dominant_foot": "Left",
       "nationality": "England",
@@ -239,25 +314,36 @@
       "weight": 63,
       "date_of_birth": "2000.05.28",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"],
-        "PFA Young Player of the Year": ["2020/21", "2021/22"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
-      "transfer_date": "Academy product",
+      "current_team": "맨체스터 시티",
+      "transfer_date": "유스 출신",
       "previous_team": "N/A",
       "club_history": [
         {
-          "year": "Academy product",
-          "club": "Manchester City",
+          "year": "유스 출신",
+          "club": "맨체스터 시티",
           "loan": false
         }
       ]
     },
     {
       "number": 10,
-      "name": "Jack Grealish",
+      "name": "잭 그릴리쉬",
       "position": "LW",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -265,34 +351,42 @@
       "weight": 77,
       "date_of_birth": "1995.09.10",
       "honors": {
-        "Premier League": ["2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2021.08.05",
-      "previous_team": "Aston Villa",
+      "previous_team": "애스턴 빌라",
       "club_history": [
         {
           "year": "2021 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2013 ~ 2021",
-          "club": "Aston Villa",
+          "club": "애스턴 빌라",
           "loan": false
         },
         {
           "year": "2013 ~ 2014",
-          "club": "Notts County",
+          "club": "놋츠 카운티",
           "loan": true
         }
       ]
     },
     {
       "number": 11,
-      "name": "Jérémy Doku",
+      "name": "제레미 도쿠",
       "position": "RW",
       "dominant_foot": "Right",
       "nationality": "Belgium",
@@ -300,34 +394,34 @@
       "weight": 66,
       "date_of_birth": "2002.05.27",
       "honors": {
-        "Premier League": [],
-        "Champions League": [],
-        "FA Cup": []
+        "프리미어리그": [],
+        "챔피언스리그": [],
+        "FA컵": []
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2023.08.24",
-      "previous_team": "Rennes",
+      "previous_team": "렌",
       "club_history": [
         {
           "year": "2023 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2020 ~ 2023",
-          "club": "Rennes",
+          "club": "렌",
           "loan": false
         },
         {
           "year": "2018 ~ 2020",
-          "club": "Anderlecht",
+          "club": "안더레흐트",
           "loan": false
         }
       ]
     },
     {
       "number": 19,
-      "name": "Ilkay Gundogan",
+      "name": "일카이 귄도안",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "Germany",
@@ -335,49 +429,60 @@
       "weight": 79,
       "date_of_birth": "1990.10.24",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2024.07.01",
-      "previous_team": "Barcelona",
+      "previous_team": "바르셀로나",
       "club_history": [
         {
           "year": "2024 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2023 ~ 2024",
-          "club": "Barcelona",
+          "club": "바르셀로나",
           "loan": false
         },
         {
           "year": "2016 ~ 2023",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2011 ~ 2016",
-          "club": "Borussia Dortmund",
+          "club": "보루시아 도르트문트",
           "loan": false
         },
         {
           "year": "2009 ~ 2011",
-          "club": "1. FC Nürnberg",
+          "club": "1. FC 뉘른베르크",
           "loan": false
         },
         {
           "year": "2008 ~ 2009",
-          "club": "VfL Bochum II",
+          "club": "VfL 보훔 II",
           "loan": false
         }
       ]
     },
     {
       "number": 8,
-      "name": "Mateo Kovacic",
+      "name": "마테오 코바치치",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "Croatia",
@@ -385,43 +490,47 @@
       "weight": 78,
       "date_of_birth": "1994.05.06",
       "honors": {
-        "Premier League": ["2023/24"],
-        "Champions League": ["2022/23"]
+        "프리미어리그": [
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2023.07.01",
-      "previous_team": "Chelsea",
+      "previous_team": "첼시",
       "club_history": [
         {
           "year": "2023 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2019 ~ 2023",
-          "club": "Chelsea",
+          "club": "첼시",
           "loan": false
         },
         {
           "year": "2015 ~ 2019",
-          "club": "Real Madrid",
+          "club": "레알 마드리드",
           "loan": false
         },
         {
           "year": "2013 ~ 2015",
-          "club": "Inter Milan",
+          "club": "인테르 밀란",
           "loan": false
         },
         {
           "year": "2010 ~ 2013",
-          "club": "Dinamo Zagreb",
+          "club": "디나모 자그레브",
           "loan": false
         }
       ]
     },
     {
       "number": 27,
-      "name": "Matheus Nunes",
+      "name": "마테우스 누네스",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "Portugal",
@@ -429,44 +538,44 @@
       "weight": 76,
       "date_of_birth": "1998.08.27",
       "honors": {
-        "Premier League": [],
-        "Champions League": [],
-        "FA Cup": []
+        "프리미어리그": [],
+        "챔피언스리그": [],
+        "FA컵": []
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2023.09.01",
-      "previous_team": "Wolves",
+      "previous_team": "울버햄튼 원더러스",
       "club_history": [
         {
           "year": "2024 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2022 ~ 2023",
-          "club": "Wolverhampton Wanderers",
+          "club": "울버햄튼 원더러스",
           "loan": false
         },
         {
           "year": "2019 ~ 2022",
-          "club": "Sporting CP",
+          "club": "스포르팅 CP",
           "loan": false
         },
         {
           "year": "2018 ~ 2019",
-          "club": "Estoril",
+          "club": "에스토릴",
           "loan": false
         },
         {
           "year": "2015 ~ 2017",
-          "club": "Ericeirense",
+          "club": "에리세이렌세",
           "loan": false
         }
       ]
     },
     {
       "number": 52,
-      "name": "Oscar Bobb",
+      "name": "오스카 밥",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "Norway",
@@ -474,24 +583,30 @@
       "weight": 70,
       "date_of_birth": "2003.05.12",
       "honors": {
-        "Premier League": ["2022/23"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
-      "transfer_date": "Academy product",
+      "current_team": "맨체스터 시티",
+      "transfer_date": "유스 출신",
       "previous_team": "N/A",
       "club_history": [
         {
-          "year": "Academy product",
-          "club": "Manchester City",
+          "year": "유스 출신",
+          "club": "맨체스터 시티",
           "loan": false
         }
       ]
     },
     {
       "number": 4,
-      "name": "Kalvin Phillips",
+      "name": "칼빈 필립스",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -499,39 +614,45 @@
       "weight": 73,
       "date_of_birth": "1995.12.02",
       "honors": {
-        "Premier League": ["2022/23"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2022.07.04",
-      "previous_team": "Leeds United",
+      "previous_team": "리즈 유나이티드",
       "club_history": [
         {
           "year": "2024 ~",
-          "club": "Ipswich Town (loan)",
+          "club": "입스위치 타운",
           "loan": true
         },
         {
           "year": "2023",
-          "club": "West Ham United (loan)",
+          "club": "웨스트햄 유나이티드",
           "loan": true
         },
         {
           "year": "2022 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2014 ~ 2022",
-          "club": "Leeds United",
+          "club": "리즈 유나이티드",
           "loan": false
         }
       ]
     },
     {
       "number": 32,
-      "name": "Maximo Perrone",
+      "name": "막시모 페로네",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "Argentina",
@@ -539,39 +660,45 @@
       "weight": 72,
       "date_of_birth": "2003.01.07",
       "honors": {
-        "Premier League": ["2022/23"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2023.01.23",
-      "previous_team": "Vélez Sarsfield",
+      "previous_team": "벨레스 사르스필드",
       "club_history": [
         {
           "year": "2024 ~",
-          "club": "Como (loan)",
+          "club": "코모",
           "loan": true
         },
         {
           "year": "2023 ~ 2024",
-          "club": "Las Palmas (loan)",
+          "club": "라스 팔마스",
           "loan": true
         },
         {
           "year": "2022 ~ 2023",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2022",
-          "club": "Vélez Sarsfield",
+          "club": "벨레스 사르스필드",
           "loan": false
         }
       ]
     },
     {
       "number": 26,
-      "name": "Savinho",
+      "name": "사비뉴",
       "position": "RW",
       "dominant_foot": "Right",
       "nationality": "Brazil",
@@ -579,44 +706,44 @@
       "weight": 70,
       "date_of_birth": "2004.04.10",
       "honors": {
-        "Premier League": [],
-        "Champions League": [],
-        "FA Cup": []
+        "프리미어리그": [],
+        "챔피언스리그": [],
+        "FA컵": []
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2022.06.23",
-      "previous_team": "Atletico Mineiro",
+      "previous_team": "아틀레티코 미네이루",
       "club_history": [
         {
           "year": "2024 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2023 ~ 2024",
-          "club": "Girona (loan)",
+          "club": "지로나",
           "loan": true
         },
         {
           "year": "2022 ~ 2023",
-          "club": "PSV (loan)",
+          "club": "PSV",
           "loan": true
         },
         {
           "year": "2022",
-          "club": "Jong PSV (loan)",
+          "club": "융 PSV",
           "loan": true
         },
         {
           "year": "2020 ~ 2022",
-          "club": "Atlético Mineiro",
+          "club": "아틀레티코 미네이루",
           "loan": false
         }
       ]
     },
     {
       "number": 87,
-      "name": "James McAtee",
+      "name": "제임스 맥아티",
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -624,27 +751,33 @@
       "weight": 68,
       "date_of_birth": "2002.10.18",
       "honors": {
-        "Premier League": ["2022/23"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
-      "transfer_date": "Academy product",
+      "current_team": "맨체스터 시티",
+      "transfer_date": "유스 출신",
       "previous_team": "N/A",
       "club_history": [
         {
           "year": "2023 ~",
-          "club": "Sheffield United (loan)",
+          "club": "셰필드 유나이티드",
           "loan": true
         },
         {
           "year": "2022 ~ 2023",
-          "club": "Sheffield United (loan)",
+          "club": "셰필드 유나이티드",
           "loan": true
         },
         {
           "year": "2021 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         }
       ]
@@ -653,7 +786,7 @@
   "defenders": [
     {
       "number": 3,
-      "name": "Rúben Dias",
+      "name": "후벵 디아스",
       "position": "CB",
       "dominant_foot": "Right",
       "nationality": "Portugal",
@@ -661,34 +794,43 @@
       "weight": 76,
       "date_of_birth": "1997.05.14",
       "honors": {
-        "Premier League": ["2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2020.09.29",
-      "previous_team": "SL Benfica",
+      "previous_team": "SL 벤피카",
       "club_history": [
         {
           "year": "2020 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2017 ~ 2020",
-          "club": "Benfica",
+          "club": "벤피카",
           "loan": false
         },
         {
           "year": "2015 ~ 2017",
-          "club": "Benfica B",
+          "club": "벤피카 B",
           "loan": false
         }
       ]
     },
     {
       "number": 2,
-      "name": "Kyle Walker",
+      "name": "카일 워커",
       "position": "RB",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -696,54 +838,66 @@
       "weight": 80,
       "date_of_birth": "1990.05.28",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2017.07.14",
-      "previous_team": "Tottenham Hotspur",
+      "previous_team": "토트넘 홋스퍼",
       "club_history": [
         {
           "year": "2017 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2009 ~ 2017",
-          "club": "Tottenham Hotspur",
+          "club": "토트넘 홋스퍼",
           "loan": false
         },
         {
           "year": "2010 ~ 2011",
-          "club": "Aston Villa (loan)",
+          "club": "아스톤 빌라",
           "loan": true
         },
         {
           "year": "2010",
-          "club": "Queens Park Rangers (loan)",
+          "club": "퀸즈 파크 레인저스",
           "loan": true
         },
         {
           "year": "2009",
-          "club": "Sheffield United (loan)",
+          "club": "셰필드 유나이티드",
           "loan": true
         },
         {
           "year": "2008 ~ 2009",
-          "club": "Sheffield United",
+          "club": "셰필드 유나이티드",
           "loan": false
         },
         {
           "year": "2008 ~ 2009",
-          "club": "Northampton Town (loan)",
+          "club": "노샘프턴 타운",
           "loan": true
         }
       ]
     },
     {
       "number": 5,
-      "name": "John Stones",
+      "name": "존 스톤스",
       "position": "CB",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -751,34 +905,46 @@
       "weight": 80,
       "date_of_birth": "1994.05.28",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2016.08.09",
-      "previous_team": "Everton",
+      "previous_team": "에버튼",
       "club_history": [
         {
           "year": "2016 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2013 ~ 2016",
-          "club": "Everton",
+          "club": "에버튼",
           "loan": false
         },
         {
           "year": "2011 ~ 2013",
-          "club": "Barnsley",
+          "club": "반슬리",
           "loan": false
         }
       ]
     },
     {
       "number": 25,
-      "name": "Manuel Akanji",
+      "name": "마누엘 아칸지",
       "position": "CB",
       "dominant_foot": "Right",
       "nationality": "Switzerland",
@@ -786,34 +952,41 @@
       "weight": 91,
       "date_of_birth": "1995.07.19",
       "honors": {
-        "Premier League": ["2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2022.09.01",
-      "previous_team": "Borussia Dortmund",
+      "previous_team": "보루시아 도르트문트",
       "club_history": [
         {
           "year": "2022 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2018 ~ 2022",
-          "club": "Borussia Dortmund",
+          "club": "보루시아 도르트문트",
           "loan": false
         },
         {
           "year": "2015 ~ 2018",
-          "club": "FC Basel",
+          "club": "FC 바젤",
           "loan": false
         }
       ]
     },
     {
       "number": 6,
-      "name": "Nathan Aké",
+      "name": "네이선 아케",
       "position": "CB",
       "dominant_foot": "Left",
       "nationality": "Netherlands",
@@ -821,80 +994,93 @@
       "weight": 75,
       "date_of_birth": "1995.02.18",
       "honors": {
-        "Premier League": ["2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2020.08.05",
-      "previous_team": "AFC Bournemouth",
+      "previous_team": "AFC 본머스",
       "club_history": [
         {
           "year": "2020 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2017 ~ 2020",
-          "club": "AFC Bournemouth",
+          "club": "AFC 본머스",
           "loan": false
         },
         {
           "year": "2016 ~ 2017",
-          "club": "AFC Bournemouth",
+          "club": "AFC 본머스",
           "loan": true
         },
         {
           "year": "2012 ~ 2017",
-          "club": "Chelsea",
+          "club": "첼시",
           "loan": false
         },
         {
           "year": "2015 ~ 2016",
-          "club": "Watford",
+          "club": "왓퍼드",
           "loan": true
         },
         {
           "year": "2014 ~ 2015",
-          "club": "Reading",
+          "club": "레딩",
           "loan": true
         }
       ]
     },
     {
       "number": 24,
-      "name": "Josko Gvardiol",
+      "name": "요슈코 그바르디올",
       "position": "LB",
       "dominant_foot": "Left",
       "nationality": "Croatia",
       "height": 185,
       "weight": 80,
       "date_of_birth": "2002.01.23",
-      "honors": {},
-      "current_team": "Manchester City",
+      "honors": {
+        "프리미어리그": [],
+        "챔피언스리그": [],
+        "FA컵": []
+      },
+      "current_team": "맨체스터 시티",
       "transfer_date": "2023.08.05",
-      "previous_team": "RB Leipzig",
+      "previous_team": "RB 라이프치히",
       "club_history": [
         {
           "year": "2023 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2021 ~ 2023",
-          "club": "RB Leipzig",
+          "club": "RB 라이프치히",
           "loan": false
         },
         {
           "year": "2019 ~ 2021",
-          "club": "Dinamo Zagreb",
+          "club": "디나모 자그레브",
           "loan": false
         }
       ]
     },
     {
       "number": 82,
-      "name": "Rico Lewis",
+      "name": "리코 루이스",
       "position": "RB",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -902,24 +1088,31 @@
       "weight": 64,
       "date_of_birth": "2004.11.21",
       "honors": {
-        "Premier League": ["2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "Academy product",
       "previous_team": "N/A",
       "club_history": [
         {
           "year": "Academy product",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         }
       ]
     },
     {
       "number": 97,
-      "name": "Joshua Wilson-Esbrand",
+      "name": "조슈아 윌슨-에스브랜드",
       "position": "LB",
       "dominant_foot": "Left",
       "nationality": "England",
@@ -927,32 +1120,38 @@
       "weight": 67,
       "date_of_birth": "2002.12.26",
       "honors": {
-        "Premier League": ["2022/23"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "Academy product",
       "previous_team": "N/A",
       "club_history": [
         {
           "year": "2023 ~",
-          "club": "Reims (loan)",
+          "club": "랭스",
           "loan": true
         },
         {
           "year": "2022 ~ 2023",
-          "club": "Coventry City (loan)",
+          "club": "코번트리 시티",
           "loan": true
         },
         {
           "year": "2022 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2020 ~ 2023",
-          "club": "Manchester City U21",
+          "club": "맨체스터 시티 U21",
           "loan": false
         }
       ]
@@ -961,7 +1160,7 @@
   "goalkeepers": [
     {
       "number": 31,
-      "name": "Ederson",
+      "name": "에데르송",
       "position": "GK",
       "dominant_foot": "Left",
       "nationality": "Brazil",
@@ -969,44 +1168,56 @@
       "weight": 86,
       "date_of_birth": "1993.08.17",
       "honors": {
-        "Premier League": ["2017/18", "2018/19", "2020/21", "2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2018/19", "2022/23"]
+        "프리미어리그": [
+          "2017/18",
+          "2018/19",
+          "2020/21",
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2018/19",
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2017.07.01",
-      "previous_team": "SL Benfica",
+      "previous_team": "벤피카",
       "club_history": [
         {
           "year": "2017 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2015 ~ 2017",
-          "club": "Benfica",
+          "club": "벤피카",
           "loan": false
         },
         {
           "year": "2015 ~ 2016",
-          "club": "Benfica B",
+          "club": "벤피카 B",
           "loan": false
         },
         {
           "year": "2013 ~ 2015",
-          "club": "Rio Ave",
+          "club": "리우 아브",
           "loan": false
         },
         {
           "year": "2011 ~ 2013",
-          "club": "Ribeirão",
+          "club": "히베이라오",
           "loan": false
         }
       ]
     },
     {
       "number": 18,
-      "name": "Stefan Ortega",
+      "name": "스테판 오르테가",
       "position": "GK",
       "dominant_foot": "Right",
       "nationality": "Germany",
@@ -1014,64 +1225,71 @@
       "weight": 88,
       "date_of_birth": "1992.11.06",
       "honors": {
-        "Premier League": ["2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2022.07.01",
-      "previous_team": "Arminia Bielefeld",
+      "previous_team": "아르미니아 빌레펠트",
       "club_history": [
         {
           "year": "2022 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2019 ~ 2022",
-          "club": "Arminia Bielefeld",
+          "club": "아르미니아 빌레펠트",
           "loan": false
         },
         {
           "year": "2018 ~ 2019",
-          "club": "Arminia Bielefeld",
+          "club": "아르미니아 빌레펠트",
           "loan": false
         },
         {
           "year": "2017 ~ 2018",
-          "club": "1860 Munich",
+          "club": "1860 뮌헨",
           "loan": false
         },
         {
           "year": "2016 ~ 2017",
-          "club": "1860 Munich II",
+          "club": "1860 뮌헨 II",
           "loan": false
         },
         {
           "year": "2015 ~ 2017",
-          "club": "1860 Munich",
+          "club": "1860 뮌헨",
           "loan": false
         },
         {
           "year": "2013 ~ 2015",
-          "club": "Arminia Bielefeld",
+          "club": "아르미니아 빌레펠트",
           "loan": false
         },
         {
           "year": "2011 ~ 2013",
-          "club": "Arminia Bielefeld",
+          "club": "아르미니아 빌레펠트",
           "loan": false
         },
         {
           "year": "2010 ~ 2011",
-          "club": "Arminia Bielefeld II",
+          "club": "아르미니아 빌레펠트 II",
           "loan": false
         }
       ]
     },
     {
       "number": 33,
-      "name": "Scott Carson",
+      "name": "스콧 카슨",
       "position": "GK",
       "dominant_foot": "Right",
       "nationality": "England",
@@ -1079,42 +1297,50 @@
       "weight": 85,
       "date_of_birth": "1985.09.03",
       "honors": {
-        "Premier League": ["2021/22", "2022/23", "2023/24"],
-        "Champions League": ["2022/23"],
-        "FA Cup": ["2022/23"]
+        "프리미어리그": [
+          "2021/22",
+          "2022/23",
+          "2023/24"
+        ],
+        "챔피언스리그": [
+          "2022/23"
+        ],
+        "FA컵": [
+          "2022/23"
+        ]
       },
-      "current_team": "Manchester City",
+      "current_team": "맨체스터 시티",
       "transfer_date": "2021.07.20",
-      "previous_team": "Derby County",
+      "previous_team": "더비 카운티",
       "club_history": [
         {
           "year": "2021 ~",
-          "club": "Manchester City",
+          "club": "맨체스터 시티",
           "loan": false
         },
         {
           "year": "2015 ~ 2021",
-          "club": "Derby County",
+          "club": "더비 카운티",
           "loan": false
         },
         {
           "year": "2013 ~ 2015",
-          "club": "Wigan Athletic",
+          "club": "위건 애슬레틱",
           "loan": false
         },
         {
           "year": "2011 ~ 2013",
-          "club": "Bursaspor",
+          "club": "부르사스포르",
           "loan": false
         },
         {
           "year": "2008 ~ 2011",
-          "club": "West Bromwich Albion",
+          "club": "웨스트 브로미치 앨비언",
           "loan": false
         },
         {
           "year": "2005 ~ 2008",
-          "club": "Liverpool",
+          "club": "리버풀",
           "loan": false
         }
       ]
