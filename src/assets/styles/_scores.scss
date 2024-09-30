@@ -1,0 +1,191 @@
+.error-message {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+}
+
+.scores-pag {
+    margin-top: 66px;
+}
+
+.contents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: 70%;
+    height: calc(100vh - 66px);
+    overflow: auto;
+}
+
+.match-card.not-started {
+    background: linear-gradient(to right, #3d95fc 0%, #97c4f1 100%);
+    background-size: 200% 200%; // 배경 크기 설정
+    animation: GradientAnimation 2s ease infinite;
+    border: 1px solid var(--city-color);
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+
+}
+.match-card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--contents-background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .match-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: var(--text-color);
+
+        .competition-name {
+            font-weight: bold;
+            color: var(--sub-text-color);
+            font-family: "Pretendard-Bold", sans-serif;
+        }
+
+        .match-date {
+            font-style: italic;
+            font-family: "Pretendard-Regular", sans-serif;
+        }
+    }
+
+    .team-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: "Pretendard-Bold", sans-serif;
+        color: var(--text-color);
+
+        .team-name {
+            &.city {
+                color: var(--city-color);
+            }
+
+            text-align: center;
+        }
+
+        .team {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: flex-start;
+            width: 30%;
+
+            img {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            &:first-child {
+                justify-content: flex-end;
+
+                img {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .vs {
+            width: 10%;
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+
+    .score {
+        text-align: center;
+        font-size: 16px;
+        font-family: "Pretendard-Bold", sans-serif;
+        color: var(--text-color);
+
+        .not-started-button {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.standings-list {
+    display: flex;
+    justify-content: center;
+    width: calc(30%);
+    height: calc(100vh - 66px);
+    padding-top: 20px;
+    overflow: auto;
+
+    .standings-table {
+        width: 90%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .standing-header th {
+        background-color: var(--contents-background-color);
+        color: var(--text-color);
+        font-weight: bold;
+        font-family: "INGAME", sans-serif;
+    }
+
+    .team-standing {
+        color: var(--sub-text-color);
+        font-family: "Pretendard-Regular", sans-serif;
+
+        &:hover {
+            background-color: var(--city-color);
+            color: #000;
+        }
+
+        .team-details {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .team-crest {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+            }
+
+            .team-name {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .team-position {
+        width: 50px; /* 순위 칸 너비 */
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .points {
+        color: var(--nav-hover-after-color);
+        font-weight: bold;
+    }
+}
+

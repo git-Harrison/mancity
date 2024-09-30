@@ -1,5 +1,5 @@
 import React from 'react';
-import {Player} from '../../models/interfaces/player.interface';
+import {Player} from '../../models/interfaces/Player.interface';
 import {motion} from 'framer-motion';
 
 interface PlayersInfoProps {

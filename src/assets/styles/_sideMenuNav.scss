@@ -1,0 +1,95 @@
+.side-menu-wrap {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 82px;
+    height: 100vh;
+    border-right: 1px solid var(--main-border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-family: "Pretendard-Regular", sans-serif;
+
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            display: flex;
+            margin: 16px 0;
+            justify-content: center;
+            flex-wrap: wrap;
+            cursor: pointer;
+
+            .ea_sports_icon {
+                width: 50px;
+            }
+
+            svg {
+                font-size: 20px;
+                color: var(--sub-text-color);
+
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 8px 14px;
+                font-size: 13px;
+                color: var(--sub-text-color);
+                text-decoration: none;
+                text-align: center;
+            }
+
+            span {
+                display: block;
+            }
+
+            &:hover {
+                svg {
+                    color: var(--nav-hover-before-color);
+
+                }
+
+                a {
+                    color: var(--nav-hover-before-color);
+                }
+            }
+
+            &.active {
+                svg {
+                    color: var(--nav-hover-before-color);
+
+                }
+
+                a {
+                    color: var(--nav-hover-before-color);
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    width: 34%;
+                    height: 4px;
+                    border-radius: 8px;
+                    background-color: var(--nav-hover-before-color);
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 4px;
+                    height: 100%;
+                    background-color: var(--nav-hover-after-color);
+                }
+            }
+        }
+    }
+}

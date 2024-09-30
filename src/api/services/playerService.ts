@@ -1,5 +1,5 @@
 import playersData from '../../assets/data/players-Info.json';
-import {Player} from '../../models/interfaces/player.interface';
+import {Player} from '../../models/interfaces/Player.interface';
 
 export const fetchPlayers = async (): Promise<Player[]> => {
     try {

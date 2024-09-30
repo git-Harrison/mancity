@@ -34,15 +34,15 @@
 │       ├── Header.tsx         # 헤더 컴포넌트
 │       ├── LoadingScreen.tsx  # 로딩 스크린 컴포넌트
 │       ├── MainSlider.tsx     # 메인 페이지에서 사용되는 슬라이더
-│       ├── MainVideoPlayer.tsx # 메인 비디오 플레이어 컴포넌트
+│       ├── MainBg.tsx # 메인 비디오 플레이어 컴포[README.md](..%2F..%2F..%2FUsers%2FUSER%2FDesktop%2FREADME.md)넌트
 │       ├── PlayersCardSlider.tsx # 선수 카드 슬라이더
 │       └── PlayersInfo.tsx    # 선수 정보 표시 컴포넌트
 ├── 📂 hooks                   # 커스텀 훅
 ├── 📂 models                  # 데이터 모델 정의 및 타입 인터페이스
 │   ├── 📂 interfaces          # TypeScript 인터페이스 정의
 │       ├── LoadingScreen.interface.ts
-│       ├── player.interface.ts
-│       ├── Slider.interface.ts
+│       ├── Player.interface.ts
+│       ├── MainSlider.interface.ts
 │       └── VideoPlayer.interface.ts
 ├── 📂 routes                  # 라우트 설정 폴더
 │   └── AppRoutes.tsx          # 라우트 설정 컴포넌트

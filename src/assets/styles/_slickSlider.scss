@@ -5,16 +5,16 @@
     bottom: 30px;
     width: 100%;
     padding: 0 30px;
+    opacity: 0;
+    transform: translateY(100px);
+
+    /* 애니메이션 설정 */
+    animation: slideUp 1s ease-out forwards;
 
     .slick-slider {
         display: flex;
         height: 324px;
         gap: 20px;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
 
         .slick-track {
             display: flex;
@@ -22,6 +22,7 @@
         }
 
         .slider-slide {
+            position: relative;
             outline: none;
             border: 2px solid #fff;
             border-radius: 16px;
@@ -29,21 +30,103 @@
             cursor: pointer;
             min-width: 300px;
             max-width: 600px;
-            height: 100%;
+            height: 240px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            top: 0;
+            transition: top 0.3s ease;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .slider-caption {
+                position: absolute;
+                color: $white;
+                padding: 10px;
+                font-size: .9em;
+                text-transform: uppercase;
+                font-family: "Pretendard", sans-serif;
+                letter-spacing: 1.6px;
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                top: -10px;
+                transition: top 0.2s ease;
+            }
+
+            &.premier {
+
+                .slider-caption {
+                    left: 20px;
+                    bottom: -100%;
+                }
+
+                &:hover {
+                    .slider-caption {
+                        bottom: 20px;
+                        transition: bottom 0.3s ease;
+                    }
+                }
+            }
+
+            &.super {
+                .slider-caption {
+                    left: -100%;
+                    top: 10px;
+                }
+
+                &:hover {
+                    .slider-caption {
+                        left: 20px;
+                    }
+                }
+            }
+
+            &.world {
+                .slider-caption {
+                    right: 20px;
+                    top: -100%;
+                }
+
+                &:hover {
+                    .slider-caption {
+                        top: 10px;
+                    }
+                }
+            }
+
+            &.fa {
+                .slider-caption {
+                    right: 20px;
+                    top: -100%;
+                }
+
+                &:hover {
+                    .slider-caption {
+                        top: 10px;
+                    }
+                }
+            }
+
+            &.champions {
+                .slider-caption {
+                    left: -100%;
+                    top: 10px;
+                }
+
+                &:hover {
+                    .slider-caption {
+                        left: 20px;
+                    }
+                }
+            }
         }
 
-        .slider-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            font-size: 1.5rem;
-            text-transform: uppercase;
+        .slick-track {
+            padding-top: 10px;
         }
     }
 

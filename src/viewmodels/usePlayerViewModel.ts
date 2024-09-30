@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {fetchPlayers} from '../api/services/playerService';
-import {Player} from '../models/interfaces/player.interface';
+import {Player} from '../models/interfaces/Player.interface';
 
 export const usePlayerViewModel = () => {
     const [players, setPlayers] = useState<Player[]>([]);

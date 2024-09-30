@@ -3,7 +3,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import {Pagination, Navigation} from 'swiper/modules';
 import SwiperCore from 'swiper';
-import {PlayerCardData} from '../../models/interfaces/player.interface';
+import {PlayerCardData} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
 
 interface PlayersCardSliderProps {

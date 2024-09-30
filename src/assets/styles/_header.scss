@@ -1,63 +1,29 @@
-.header {
+header {
+    z-index: 1000;
+    position: fixed;
     display: flex;
+    left: 82px;
+    top: 0;
+    width: calc(100% - 82px);
+    padding: 18px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-    background-color: transparent;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-
-    .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: white;
-    }
+    border-bottom: 1px solid var(--main-border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
 
     .header-right {
         display: flex;
         gap: 30px;
     }
 
-    nav {
-        ul {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-
-            li {
-                a {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 0.9rem;
-                    text-transform: uppercase;
-                    padding: 5px 10px;
-                    transition: color 0.3s ease;
-
-                    &:hover {
-                        color: #6CABDD; // 하늘색으로 변경
-                    }
-                }
-            }
-        }
+    .toggle_theme_button {
+        cursor: pointer;
     }
 
-    .icons {
-        display: flex;
-        gap: 30px;
-        align-items: center;
-
-        .icon {
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: #6CABDD; // 아이콘 호버 색상
-            }
-        }
+    .page-name {
+        font-size: 24px;
+        font-family: "INGAME", sans-serif;
     }
 }

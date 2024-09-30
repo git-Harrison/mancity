@@ -1,45 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import MainSlider from "../components/organisms/MainSlider";
-import MainVideoPlayer from "../components/organisms/MainVideoPlayer";
+import MainBg from "../components/organisms/MainBg";
 import {useMainPageViewModel} from "../viewmodels/useMainPageViewModel";
-import LoadingScreen from "../components/organisms/LoadingScreen";
 
 const MainPage: React.FC = () => {
-    const {
-        loading,
-        selectedVideo,
-        videoText,
-        videoSubText,
-        videoRef,
-        isPlaying,
-        setIsPlaying,
-        slides,
-        handleVideoSelect,
-        handleVideoDetails,
-        handlePlayVideo,
-    } = useMainPageViewModel();
+    const {slides} = useMainPageViewModel();
 
-    const currentThumbnail = slides.find((slide) => slide.videoUrl === selectedVideo)?.thumbnail || "";
+    const [selectedSlideId, setSelectedSlideId] = useState<number | null>(null);
+    const selectedSlide = slides.find(slide => slide.id === selectedSlideId);
+    const bgImg = selectedSlide ? selectedSlide.bgImg : slides[0]?.bgImg;
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+    const handleSlideChange = (newSlideId: number) => {
+        setSelectedSlideId(newSlideId);
+        if (isFirstLoad) setIsFirstLoad(false);
+    };
 
     return (
         <div className="container">
-            <LoadingScreen className={loading ? "fade-out" : ""}/>
-            <MainVideoPlayer
-                videoUrl={selectedVideo}
-                videoRef={videoRef}
-                onPlay={handlePlayVideo}
-                isPlaying={isPlaying}
-                videoText={videoText}
-                videoSubText={videoSubText}
-                thumbnail={currentThumbnail}
-            />
-            <MainSlider
-                slides={slides}
-                onVideoSelect={handleVideoSelect}
-                setVideoDetails={handleVideoDetails}
-                isPlaying={isPlaying}
-                setIsPlaying={setIsPlaying}
-            />
+            {/*<MainBg bgImgUrl={bgImg} isFirstLoad={isFirstLoad}/>*/}
+            {/*<MainSlider*/}
+            {/*    slides={slides}*/}
+            {/*    setSelectedSlideId={handleSlideChange}*/}
+            {/*/>*/}
         </div>
     );
 };

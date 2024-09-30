@@ -1,0 +1,37 @@
+.not-found-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.not-found-title {
+    font-size: 6rem;
+    color: var(--sub-text-color);
+}
+
+.not-found-message {
+    font-size: 1.5rem;
+    color: var(--sub-text-color);
+    text-align: center;
+}
+
+.back-home-link {
+    margin-top: 60px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000000;
+    background-color: var(--city-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+}
