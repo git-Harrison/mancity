@@ -5,116 +5,113 @@
     width: 50%;
 }
 
-.card-slide {
-    cursor: pointer;
-    .players-row {
-        position: relative;
+.players-row {
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - 9px);
+    left: 4px;
+    height: 100%;
+
+    .number {
+        color: #fff;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        text-align: center;
+        width: 61px;
+        font-weight: bold;
+        z-index: 2;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
+        font-size: 37px;
+        font-family: 'INGAME', sans-serif;
+    }
+
+    .position {
+        font-size: 26px;
+        color: #fff;
+        position: absolute;
+        top: 99px;
+        left: 0;
+        text-align: center;
+        width: 61px;
+        z-index: 2;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
+        font-family: 'INGAME', sans-serif;
+        font-weight: 100;
+        letter-spacing: -1px;
+    }
+
+    .country-logo {
+        position: absolute;
+        top: 133px;
+        left: 15px;
+        width: 32px;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .img {
+        position: absolute;
+        top: 81px;
+        right: 5px;
+        z-index: 1;
+        width: 155px;
+        height: 169px;
         overflow: hidden;
-        width: calc(100% - 9px);
-        left: 4px;
-        height: 100%;
 
-        .number {
-            color: #fff;
-            position: absolute;
-            top: 69px;
-            left: 0;
-            text-align: center;
-            width: 61px;
-            font-weight: bold;
-            z-index: 2;
-            text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
-            font-size: 30px;
-            font-family: 'INGAME', sans-serif;
+        img {
+            width: 169px;
+        }
+    }
+
+    .team-logo {
+        position: absolute;
+        top: 192px;
+        left: 9px;
+        text-align: center;
+        width: 46px;
+        height: 46px;
+        z-index: 2;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #fff;
+
+        img {
+            width: 33px;
+            height: 33px;
+        }
+    }
+
+    .players {
+        width: 100%;
+        position: absolute;
+        top: 262px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 20px;
+            height: 16px;
+            margin-right: 3px;
+            display: inline-block;
+            vertical-align: top;
         }
 
-        .position {
-            font-size: 26px;
-            color: #fff;
-            position: absolute;
-            top: 99px;
-            left: 0;
-            text-align: center;
-            width: 61px;
-            z-index: 2;
-            text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
-            font-family: 'INGAME', sans-serif;
-            font-weight: 100;
-            letter-spacing: -1px;
-        }
-
-        .country-logo {
-            position: absolute;
-            top: 133px;
-            left: 15px;
-            width: 32px;
-            text-align: center;
-            z-index: 2;
-        }
-
-        .img {
-            position: absolute;
-            top: 81px;
-            right: 5px;
-            z-index: 1;
-            width: 155px;
-            height: 169px;
+        .name {
+            display: inline-block;
+            max-width: 140px;
+            white-space: nowrap;
             overflow: hidden;
-
-            img {
-                width: 169px;
-            }
-        }
-
-        .team-logo {
-            position: absolute;
-            top: 192px;
-            left: 9px;
-            text-align: center;
-            width: 46px;
-            height: 46px;
-            z-index: 2;
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #fff;
-
-            img {
-                width: 33px;
-                height: 33px;
-            }
-        }
-
-        .players {
-            width: 100%;
-            position: absolute;
-            top: 262px;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                width: 20px;
-                height: 16px;
-                margin-right: 3px;
-                display: inline-block;
-                vertical-align: top;
-            }
-
-            .name {
-                display: inline-block;
-                max-width: 140px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                font-size: 19px;
-                font-weight: 500;
-                color: #141432;
-                font-family: "Pretendard-Regular", sans-serif;
-            }
+            text-overflow: ellipsis;
+            font-size: 19px;
+            font-weight: 500;
+            color: #141432;
+            font-family: "Pretendard-Regular", sans-serif;
         }
     }
 }

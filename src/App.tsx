@@ -19,6 +19,16 @@ function App() {
     });
 
     useEffect(() => {
+        const city: number | null = localStorage.getItem('city')
+            ? JSON.parse(localStorage.getItem('city') as string)
+            : null;
+
+        if (city === null) {
+            localStorage.setItem('city', JSON.stringify(1000000000000));
+        }
+    }, []);
+
+    useEffect(() => {
         document.documentElement.setAttribute("data-theme", mode);
     }, [mode]);
 

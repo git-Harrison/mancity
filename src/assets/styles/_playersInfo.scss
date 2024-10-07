@@ -50,28 +50,6 @@
     .position {
         font-size: 30px;
         margin-bottom: 26px;
-
-        &.ST,
-        &.RW,
-        &.LW,
-        &.CF {
-            color: #f6425f;
-        }
-
-        &.CM,
-        &.CDM {
-            color: #03cd7a;
-        }
-
-        &.CB,
-        &.RB,
-        &.LB {
-            color: #1476ff;
-        }
-
-        &.GK {
-            color: #e9a216;
-        }
     }
 
     .info-detail {

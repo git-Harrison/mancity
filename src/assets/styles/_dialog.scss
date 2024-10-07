@@ -1,0 +1,75 @@
+.common-dialog {
+    #common-dialog-title {
+        font-size: 30px;
+        padding: 30px 30px 60px 30px;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        font-family: "INGAME", sans-serif;
+    }
+
+    &.success,
+    &.failure {
+        #common-dialog-title {
+            padding-bottom: 0;
+        }
+    }
+
+    .MuiPaper-root {
+        color: var(--text-color);
+        background-color: var(--background-color);
+        font-family: "INGAME", sans-serif;
+    }
+
+    .MuiDialogContent-root,
+    .MuiDialogActions-root {
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .MuiDialog-paper {
+        border-radius: 10px;
+        min-width: 400px;
+        max-width: 800px;
+    }
+
+    .dialog-title {
+        padding: 16px 24px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .dialog-content {
+        padding: 6px;
+        font-size: 26px;
+        font-family: "INGAME", sans-serif;
+    }
+
+    .dialog-actions {
+        padding: 8px 24px;
+        justify-content: center;
+    }
+
+    .confirm-button, .cancel-button {
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin: 0 5px;
+        color: #ffffff;
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    &.success-dialog .dialog-title {
+        background-color: #4caf50;
+
+    }
+
+    &.failure-dialog .dialog-title {
+        background-color: #f44336;
+    }
+
+    &.confirmation-dialog .dialog-title {
+        background-color: #3e3d55;
+    }
+}

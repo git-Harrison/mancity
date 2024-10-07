@@ -34,6 +34,8 @@
     font-style: normal;
 }
 
+
+
 //font-family: "INGAME", sans-serif;
 //font-family: "Roboto", sans-serif;
 //font-family: "Pretendard", sans-serif;
@@ -46,6 +48,10 @@
 
 body {
     letter-spacing: -1px;
+}
+
+body:lang(en) {
+    font-family: 'Pretendard-Regular', sans-serif;
 }
 
 ul, li {

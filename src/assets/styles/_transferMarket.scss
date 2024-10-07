@@ -1,0 +1,175 @@
+.transfer-market-table-wrap {
+    overflow: auto;
+    width: 70%;
+    height: calc(100vh - 66px);
+}
+
+.transfer-market-table {
+    width: 100%;
+    color: var(--text-color);
+    border-collapse: collapse;
+
+    thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        height: 48px;
+        background-color: var(--table-header-color);
+        font-family: "INGAME", sans-serif;
+    }
+
+    tr {
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--table-hover-color);
+        }
+    }
+
+    td {
+        padding: 40px 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+
+        &.name {
+            font-family: "INGAME", sans-serif;
+        }
+
+        &.profile-icon {
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+
+        &.nationality {
+            img {
+                width: 32px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+.transfer-market-detail {
+    width: 30%;
+    margin: 20px;
+    color: var(--text-color);
+    font-size: 18px;
+
+    .players-card {
+        margin: 0 auto;
+    }
+
+    .buy-button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 14px;
+
+        button {
+            width: 180px;
+            height: 40px;
+            background-color: #3e3d55;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: "INGAME", sans-serif;
+        }
+    }
+}
+
+.transfer-player-info {
+    margin: 30px 0;
+    border-top: 1px solid var(--border-color);
+
+    .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        font-family: "INGAME", sans-serif;
+        font-size: 34px;
+
+        .held-status {
+            font-size: 18px;
+            color: var(--city-color);
+            font-family: "INGAME", sans-serif;
+        }
+    }
+
+    .statistics {
+        display: flex;
+        gap: 10px;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .detail {
+        display: flex;
+        gap: 20px;
+        margin-top: 10px;
+        color: var(--sub-text-color);
+
+        span {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: -10px;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background-color: var(--sub-text-color);
+            }
+
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .nationality-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+
+        .nationality-img {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 32px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+.transfer-fee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 28px;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+    font-family: "INGAME", sans-serif;
+
+    span {
+        font-size: 22px;
+        color: var(--text-color);
+        font-family: "INGAME", sans-serif;
+        font-weight: bold;
+
+        &.label {
+            font-weight: normal;
+        }
+    }
+}

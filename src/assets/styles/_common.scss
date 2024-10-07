@@ -21,9 +21,11 @@ $white: #FFFFFF;
     --contents-background-color: #ffffff;
     --nav-hover-before-color: #29fdc8;
     --nav-hover-after-color: #eb7c1a;
-    --main-border-color: #275265;
-    --border-color: #275265;
+    --main-border-color: #e3e2e6;
+    --border-color: #e3e2e6;
     --city-color: #98C5E9;
+    --table-header-color: #ffffff;
+    --table-hover-color: #edeff8;
 }
 
 // Dark Theme Variables
@@ -37,6 +39,8 @@ $white: #FFFFFF;
     --main-border-color: #1f1f20;
     --border-color: #275265;
     --city-color: #98C5E9;
+    --table-header-color: #3e3d55;
+    --table-hover-color: #000000;
 }
 
 .container {
@@ -49,16 +53,15 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.contents-container {
-    width: 90%;
-    margin: 0 auto;
+.contents-container,
+.transfer-market-container {
     margin-top: 65px;
     padding-left: 82px;
     display: flex;
-
 }
 
 .api-loading-bar {
+    z-index: 1001;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -70,4 +73,27 @@ body {
         text-align: center;
         color: var(--city-color);
     }
+}
+
+.ST,
+.RW,
+.LW,
+.CF {
+    color: #f6425f;
+}
+
+.CM,
+.CAM,
+.CDM {
+    color: #03cd7a;
+}
+
+.CB,
+.RB,
+.LB {
+    color: #1476ff;
+}
+
+.GK {
+    color: #e9a216;
 }

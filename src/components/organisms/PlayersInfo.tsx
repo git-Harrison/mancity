@@ -71,32 +71,36 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                 {player.honors && (
                     <motion.div className="honors-section" {...textAnimation(0.5, 0.4)}>
                         {Object.keys(player.honors).map((league, index) => (
-                            <div key={index}
-                                 className="honor-item">{league}: {renderHonors(player.honors![league]!)}</div>
+                            <div key={index} className="honor-item">
+                                {league}: {renderHonors(player.honors![league]!)}
+                            </div>
                         ))}
                     </motion.div>
                 )}
 
-                <motion.div className="club-history" {...textAnimation(0.45, 0.35)}>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>연도</th>
-                            <th>클럽</th>
-                            <th>임대 여부</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {player.club_history.map((history, index) => (
-                            <tr key={index}>
-                                <td>{history.year}</td>
-                                <td>{history.club}</td>
-                                <td>{history.loan ? '임대' : ''}</td>
+                {/* club_history가 존재하는 경우에만 table 렌더링 */}
+                {player.club_history && (
+                    <motion.div className="club-history" {...textAnimation(0.45, 0.35)}>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>연도</th>
+                                <th>클럽</th>
+                                <th>임대 여부</th>
                             </tr>
-                        ))}
-                        </tbody>
-                    </table>
-                </motion.div>
+                            </thead>
+                            <tbody>
+                            {player.club_history.map((history, index) => (
+                                <tr key={index}>
+                                    <td>{history.year}</td>
+                                    <td>{history.club}</td>
+                                    <td>{history.loan ? '임대' : ''}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </motion.div>
+                )}
             </motion.div>
         </div>
     );

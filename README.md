@@ -55,7 +55,7 @@
 │   └── usePlayerViewModel.ts     # 선수 페이지 ViewModel
 └── 📂 views                   # 화면을 구성하는 페이지 컴포넌트들
     ├── MainPage.tsx           # 메인 페이지
-    └── PlayerPage.tsx         # 선수 페이지
+    └── PlayerInfoPage.tsx         # 선수 페이지
 
 ```
 

@@ -5,7 +5,7 @@ header {
     left: 82px;
     top: 0;
     width: calc(100% - 82px);
-    padding: 18px;
+    padding: 11px 18px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--main-border-color);
@@ -15,7 +15,24 @@ header {
 
     .header-right {
         display: flex;
+        align-items: center;
         gap: 30px;
+
+        .my-bag {
+            text-align: right;
+        }
+
+        .city {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+
+            .logo {
+                width: 40px;
+            }
+        }
+
     }
 
     .toggle_theme_button {
