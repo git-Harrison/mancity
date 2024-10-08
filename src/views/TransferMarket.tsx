@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useTransferMarketViewModel} from '../viewmodels/useTransferMarketViewModel';
+import {useTransferMarketViewModel} from '../viewmodels/transferMarket/useTransferMarketViewModel';
 import TransferMarketTable from '../components/organisms/TransferMarketTable';
 import TransferMarketDetail from '../components/molecules/TransferMarketDetail';
 import {Player} from '../models/interfaces/Player.interface';

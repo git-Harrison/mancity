@@ -2,6 +2,10 @@
     overflow: auto;
     width: 70%;
     height: calc(100vh - 66px);
+
+    .table-nav {
+        margin-top: 16px;
+    }
 }
 
 .transfer-market-table {
@@ -22,7 +26,9 @@
         cursor: pointer;
 
         &:hover {
-            background-color: var(--table-hover-color);
+            td {
+                background-color: var(--table-hover-color);
+            }
         }
     }
 

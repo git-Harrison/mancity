@@ -1,15 +1,31 @@
 import React from 'react';
-import {TransferMarketTableProps} from '../../models/interfaces/Player.interface';
-import {getFlagImage} from '../../utils/flagUtils';
-import {formatCurrency} from '../../utils/formatCurrency';
+import TransferMarketTableHeader from '../atoms/TransferMarketTableHeader';
+import TransferMarketTableBody from '../atoms/TransferMarketTableBody';
+import {TransferMarketTableProps} from '../../models/interfaces/transferMarket/TransferMarketTable.interface';
+import {useTransferMarketTableViewModel} from '../../viewmodels/transferMarket/useTransferMarketTableViewModel';
+import {useTransferMarketTableBodyViewModel} from '../../viewmodels/transferMarket/useTransferMarketTableBodyViewModel';
+import {
+    useTransferMarketTableHeaderViewModel
+} from '../../viewmodels/transferMarket/useTransferMarketTableHeaderViewModel';
 
 const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPlayerClick}) => {
-    const sortedPlayers = [...players].sort((a, b) =>
-        (b.transfer_details?.transfer_fee ?? 0) - (a.transfer_details?.transfer_fee ?? 0)
-    );
+    const {filters, handleFilterChange, handlePositionChange, handleNationalityChange, handleResetFilters} =
+        useTransferMarketTableHeaderViewModel();
+    const {sortedPlayers, sortKey, sortOrder, handleSort} = useTransferMarketTableViewModel(players);
+    const {filteredPlayers} = useTransferMarketTableBodyViewModel(sortedPlayers, filters);
 
     return (
         <div className="transfer-market-table-wrap">
+            <TransferMarketTableHeader
+                filters={filters}
+                handleFilterChange={handleFilterChange}
+                handlePositionChange={handlePositionChange}
+                handleNationalityChange={handleNationalityChange}
+                handleSort={handleSort}
+                handleResetFilters={handleResetFilters}
+                sortKey={sortKey}
+                sortOrder={sortOrder}
+            />
             <table className="transfer-market-table">
                 <thead>
                 <tr>
@@ -21,27 +37,7 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
                     <th>이적료</th>
                 </tr>
                 </thead>
-                <tbody>
-                {sortedPlayers.map((player) => (
-                    <tr key={player.number} onClick={() => onPlayerClick(player)}>
-                        <td className="profile-icon">
-                            <img
-                                src={`${process.env.PUBLIC_URL}/images/profile_icon_${player.number}.webp`}
-                                alt={player.name}
-                                className="player-image"
-                                onError={(e) => (e.currentTarget.src = `${process.env.PUBLIC_URL}/images/profile_icon_default.webp`)}
-                            />
-                        </td>
-                        <td className="name">{player.name}</td>
-                        <td>{player.overall_ability}</td>
-                        <td className={`${player.position}`}>{player.position}</td>
-                        <td className="nationality">
-                            <img src={getFlagImage(player.nationality)} alt={player.nationality}/>
-                        </td>
-                        <td>{formatCurrency(player.transfer_details?.transfer_fee)}</td>
-                    </tr>
-                ))}
-                </tbody>
+                <TransferMarketTableBody players={filteredPlayers} onPlayerClick={onPlayerClick}/>
             </table>
         </div>
     );

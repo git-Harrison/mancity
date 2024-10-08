@@ -6,7 +6,7 @@ import {Button, Box} from '@mui/material';
 import {numberWithCommas} from '../../utils/formatCurrency';
 import CommonDialog from '../atoms/CommonDialog';
 import LoadingSpinner from '../atoms/LoadingSpinner';
-import {useTransferMarketDetailViewModel} from '../../viewmodels/useTransferMarketDetailViewModel';
+import {useTransferMarketDetailViewModel} from '../../viewmodels/transferMarket/useTransferMarketDetailViewModel';
 
 const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => {
     const {
@@ -83,12 +83,13 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
                         height: '44px',
                         fontSize: '16px',
                         textTransform: 'none',
-                        color: '#000000',
+                        color: '#ffffff',
+                        backgroundColor: '#3e3d55',
                         transition: 'transform 0.3s ease-in-out',
                         fontFamily: '"Pretendard-Bold", sans-serif',
                         '&:hover': {
                             color: '#ffffff',
-                            backgroundColor: '#3e3d55',
+                            backgroundColor: 'var(--city-color)',
                         },
                     }}
                     onClick={handleClickOpen}

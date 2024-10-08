@@ -986,6 +986,9 @@ header .page-name {
   width: 70%;
   height: calc(100vh - 66px);
 }
+.transfer-market-table-wrap .table-nav {
+  margin-top: 16px;
+}
 
 .transfer-market-table {
   width: 100%;
@@ -1003,7 +1006,7 @@ header .page-name {
 .transfer-market-table tr {
   cursor: pointer;
 }
-.transfer-market-table tr:hover {
+.transfer-market-table tr:hover td {
   background-color: var(--table-hover-color);
 }
 .transfer-market-table td {

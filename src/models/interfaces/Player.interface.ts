@@ -30,11 +30,6 @@ export interface PlayerCardProps {
     player: Player;
 }
 
-export interface TransferMarketTableProps {
-    players: Player[];
-    onPlayerClick: (player: Player) => void;
-}
-
 export interface TransferMarketDetailProps {
     player: Player | null;
 }

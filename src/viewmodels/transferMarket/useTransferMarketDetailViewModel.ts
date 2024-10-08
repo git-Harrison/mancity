@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {TransferMarketDetailProps} from '../models/interfaces/Player.interface';
-import {RootState} from '../store';
-import {setCity} from '../store/slices/citySlice';
-import {setHeldPlayers} from '../store/slices/playerSlice';
+import {TransferMarketDetailProps} from '../../models/interfaces/Player.interface';
+import {RootState} from '../../store';
+import {setCity} from '../../store/slices/citySlice';
+import {setHeldPlayers} from '../../store/slices/playerSlice';
 
 export const useTransferMarketDetailViewModel = (player: TransferMarketDetailProps['player']) => {
     const [open, setOpen] = useState(false);

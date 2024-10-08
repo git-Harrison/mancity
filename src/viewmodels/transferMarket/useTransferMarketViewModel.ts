@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
-import {fetchPlayers, fetchPreviousSeasonPlayers} from '../api/services/playerService';
-import {Player} from '../models/interfaces/Player.interface';
+import {fetchPlayers, fetchPreviousSeasonPlayers} from '../../api/services/playerService';
+import {Player} from '../../models/interfaces/Player.interface';
 
 export const useTransferMarketViewModel = () => {
     const [players, setPlayers] = useState<Player[]>([]);
