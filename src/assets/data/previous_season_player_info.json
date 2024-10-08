@@ -11,7 +11,7 @@
       "weight": 70,
       "date_of_birth": "1988.06.02",
       "transfer_details": {
-        "transfer_fee": 40000000,
+        "transfer_fee": 320000000000,
         "currency": "EUR"
       }
     },
@@ -26,7 +26,7 @@
       "weight": 69,
       "date_of_birth": "1994.12.08",
       "transfer_details": {
-        "transfer_fee": 63000000,
+        "transfer_fee": 6300000000,
         "currency": "EUR"
       }
     },
@@ -41,7 +41,7 @@
       "weight": 88,
       "date_of_birth": "1990.08.12",
       "transfer_details": {
-        "transfer_fee": 28000000,
+        "transfer_fee": 2800000000,
         "currency": "EUR"
       }
     },
@@ -56,7 +56,7 @@
       "weight": 80,
       "date_of_birth": "1986.03.17",
       "transfer_details": {
-        "transfer_fee": 7700000000,
+        "transfer_fee": 280000000000,
         "currency": "EUR"
       }
     },
@@ -86,7 +86,7 @@
       "weight": 67,
       "date_of_birth": "1991.02.21",
       "transfer_details": {
-        "transfer_fee": 60000000,
+        "transfer_fee": 60000000000,
         "currency": "EUR"
       }
     },
@@ -101,7 +101,7 @@
       "weight": 73,
       "date_of_birth": "1997.04.03",
       "transfer_details": {
-        "transfer_fee": 32000000,
+        "transfer_fee": 3200000000,
         "currency": "EUR"
       }
     },
@@ -555,7 +555,7 @@
       "weight": 63,
       "date_of_birth": "2000.12.10",
       "transfer_details": {
-        "transfer_fee": 15000000,
+        "transfer_fee": 150000000,
         "currency": "EUR"
       }
     },
@@ -570,7 +570,7 @@
       "weight": 74,
       "date_of_birth": "1994.05.27",
       "transfer_details": {
-        "transfer_fee": 21600000000,
+        "transfer_fee": 17600000000,
         "currency": "EUR"
       }
     },
@@ -750,7 +750,7 @@
       "weight": 81,
       "date_of_birth": "1988.02.12",
       "transfer_details": {
-        "transfer_fee": 28000000,
+        "transfer_fee": 280000000,
         "currency": "EUR"
       }
     }
@@ -767,7 +767,7 @@
       "weight": 89,
       "date_of_birth": "1987.04.19",
       "transfer_details": {
-        "transfer_fee": 2260000000,
+        "transfer_fee": 22600000000,
         "currency": "EUR"
       }
     },
@@ -792,7 +792,7 @@
       "position": "GK",
       "dominant_foot": "Right",
       "nationality": "Denmark",
-      "overall_ability": 108,
+      "overall_ability": 98,
       "height": 189,
       "weight": 82,
       "date_of_birth": "1986.11.05",
