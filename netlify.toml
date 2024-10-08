@@ -1,8 +1,8 @@
 [build]
-  command = "npm run build"
+  functions = "netlify/functions"
   publish = "build"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/api/*"
+  to = "/.netlify/functions/footballProxy"
   status = 200
