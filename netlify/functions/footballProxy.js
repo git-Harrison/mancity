@@ -5,13 +5,14 @@ exports.handler = async function (event) {
 
     try {
         // 요청할 API URL 생성
-        const apiUrl = `https://api.football-data.org/v4${path}?${new URLSearchParams(queryStringParameters).toString()}`;
+        const apiUrl = `https://api.football-data.org/v4${path}`;
 
         // API 요청 설정
         const response = await axios.get(apiUrl, {
             headers: {
                 'X-Auth-Token': process.env.FOOTBALL_DATA_API_TOKEN, // Netlify 환경 변수로 설정한 API 토큰 사용
             },
+            params: queryStringParameters,
         });
 
         // API 응답 전송

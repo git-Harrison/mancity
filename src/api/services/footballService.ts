@@ -7,13 +7,23 @@ const apiClient = axios.create({
 
 // 경기를 가져오는 API 호출 함수
 export const getMatches = async (teamId: number, season: number) => {
-    const response = await apiClient.get(`/teams/${teamId}/matches`, { params: { season } });
-    return response.data.matches;
+    try {
+        const response = await apiClient.get(`/teams/${teamId}/matches`, { params: { season } });
+        return response.data.matches;
+    } catch (error) {
+        console.error('Error fetching matches:', error);
+        throw error;
+    }
 };
 
 // EPL 순위를 가져오는 API 호출 함수
 export const getEPLStandings = async () => {
-    const response = await apiClient.get('/competitions/PL/standings');
-    const totalStandings = response.data.standings.find((standing: any) => standing.type === 'TOTAL');
-    return totalStandings ? totalStandings.table : [];
+    try {
+        const response = await apiClient.get('/competitions/PL/standings');
+        const totalStandings = response.data.standings.find((standing: any) => standing.type === 'TOTAL');
+        return totalStandings ? totalStandings.table : [];
+    } catch (error) {
+        console.error('Error fetching EPL standings:', error);
+        throw error;
+    }
 };
