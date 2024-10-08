@@ -1032,6 +1032,12 @@ header .page-name {
   color: var(--text-color);
   font-size: 18px;
 }
+.transfer-market-detail.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
 .transfer-market-detail .players-card {
   margin: 0 auto;
 }

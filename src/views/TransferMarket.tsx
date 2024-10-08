@@ -3,20 +3,19 @@ import {useTransferMarketViewModel} from '../viewmodels/transferMarket/useTransf
 import TransferMarketTable from '../components/organisms/TransferMarketTable';
 import TransferMarketDetail from '../components/molecules/TransferMarketDetail';
 import {Player} from '../models/interfaces/Player.interface';
-import LoadingSpinner from "../components/atoms/LoadingSpinner";
+import LoadingSpinner from '../components/atoms/LoadingSpinner';
+import NotFound from "../components/atoms/NotFound";
 
 const TransferMarket: React.FC = () => {
     const {players, loading, error} = useTransferMarketViewModel();
-    const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null); // 선택된 선수 상태 관리
+    const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
 
     if (loading) {
-        return (
-            <LoadingSpinner message="데이터 가져오는 중..."/>
-        );
+        return <LoadingSpinner message="데이터 가져오는 중..."/>;
     }
 
     if (error) {
-        return <div>{error}</div>;
+        return <NotFound/>;
     }
 
     return (

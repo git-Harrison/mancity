@@ -37,7 +37,10 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
                     <th>이적료</th>
                 </tr>
                 </thead>
-                <TransferMarketTableBody players={filteredPlayers} onPlayerClick={onPlayerClick}/>
+                <TransferMarketTableBody
+                    players={filteredPlayers}
+                    onPlayerClick={onPlayerClick}
+                />
             </table>
         </div>
     );
