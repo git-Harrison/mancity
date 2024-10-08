@@ -5,8 +5,10 @@ exports.handler = async function (event) {
     const { path, queryStringParameters } = event;
 
     try {
-        // 요청할 API URL 생성
-        const apiUrl = `https://api.football-data.org/v4${path}`;
+        // Netlify Functions로 전달된 경로가 올바른지 확인합니다.
+        // 예를 들어, event.path가 "/.netlify/functions/footballProxy/api/competitions/PL/standings"로 오는 경우 이를 처리하도록 변경합니다.
+        const apiPath = path.replace('/.netlify/functions/footballProxy', ''); // 불필요한 부분 제거
+        const apiUrl = `https://api.football-data.org/v4${apiPath}`;
         console.log('API URL:', apiUrl); // API URL 확인
 
         // API 요청 설정

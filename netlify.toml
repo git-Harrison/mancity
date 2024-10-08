@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/footballProxy"
+  to = "/.netlify/functions/footballProxy/:splat"
   status = 200
