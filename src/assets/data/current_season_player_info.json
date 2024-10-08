@@ -634,7 +634,7 @@
       "weight": 70,
       "date_of_birth": "2003.05.12",
       "transfer_details": {
-        "transfer_fee": 0,
+        "transfer_fee": 330000000,
         "currency": "EUR"
       },
       "honors": {
@@ -817,12 +817,12 @@
       "position": "CM",
       "dominant_foot": "Right",
       "nationality": "England",
-      "overall_ability": 68,
+      "overall_ability": 59,
       "height": 180,
       "weight": 68,
       "date_of_birth": "2002.10.18",
       "transfer_details": {
-        "transfer_fee": 0,
+        "transfer_fee": 1000000,
         "currency": "EUR"
       },
       "honors": {
@@ -1194,7 +1194,7 @@
       "weight": 64,
       "date_of_birth": "2004.11.21",
       "transfer_details": {
-        "transfer_fee": 0,
+        "transfer_fee": 6400000000,
         "currency": "EUR"
       },
       "honors": {
@@ -1346,7 +1346,7 @@
       "weight": 88,
       "date_of_birth": "1992.11.06",
       "transfer_details": {
-        "transfer_fee": 0,
+        "transfer_fee": 100000000,
         "currency": "EUR"
       },
       "honors": {
@@ -1423,7 +1423,7 @@
       "weight": 85,
       "date_of_birth": "1985.09.03",
       "transfer_details": {
-        "transfer_fee": 0,
+        "transfer_fee": 1000000,
         "currency": "EUR"
       },
       "honors": {

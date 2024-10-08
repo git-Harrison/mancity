@@ -1,12 +1,18 @@
 import React from 'react';
 import {PlayerCardProps} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
+import {getCardImages} from '../../utils/getCardImages';
+
 const PlayerCard: React.FC<PlayerCardProps> = ({player}) => {
+    const isIconNumbers = [1042, 101008, 101049, 101037, 1051].includes(player.number);
+    // getCardImages 함수를 사용하여 이미지 경로 가져오기
+    const {background: backgroundImage, tag: tagImage, badge: badgeImage} = getCardImages(player);
+
     return (
         <div
             className="players-card"
             style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/card_bg.png)`,
+                backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -16,13 +22,10 @@ const PlayerCard: React.FC<PlayerCardProps> = ({player}) => {
             }}
         >
             <div className="players-row">
-                <div className="number">{player.overall_ability}</div>
-                <div className={`position ${player.position}`}>{player.position}</div>
+                <div className={`number ${isIconNumbers ? 'icon' : ''}`}>{player.overall_ability}</div>
+                <div className={`position ${player.position} ${isIconNumbers ? 'icon' : ''}`}>{player.position}</div>
                 <div className="country-logo">
-                    <img
-                        src={getFlagImage(player.nationality)}
-                        alt={player.nationality}
-                    />
+                    <img src={getFlagImage(player.nationality)} alt={player.nationality}/>
                 </div>
                 <div className="img">
                     <img
@@ -36,16 +39,10 @@ const PlayerCard: React.FC<PlayerCardProps> = ({player}) => {
                     />
                 </div>
                 <div className="team-logo">
-                    <img
-                        src={`${process.env.PUBLIC_URL}/images/toty_icon.png`}
-                        alt="toty_icon"
-                    />
+                    <img src={badgeImage} alt="team-logo"/>
                 </div>
                 <div className="players">
-                    <img
-                        src={`${process.env.PUBLIC_URL}/images/card_icon.png`}
-                        alt="card_icon"
-                    />
+                    <img src={tagImage} alt="card_icon"/>
                     <div className="name">{player.name}</div>
                 </div>
             </div>

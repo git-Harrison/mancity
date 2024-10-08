@@ -133,6 +133,115 @@ body {
   color: #e9a216;
 }
 
+.players-row {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 9px);
+  left: 4px;
+  height: 100%;
+}
+.players-row .number {
+  color: #fff;
+  position: absolute;
+  top: 62px;
+  left: 0;
+  text-align: center;
+  width: 61px;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-size: 37px;
+  font-family: "INGAME", sans-serif;
+}
+.players-row .number.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
+.players-row .position {
+  font-size: 26px;
+  color: #fff;
+  position: absolute;
+  top: 99px;
+  left: 0;
+  text-align: center;
+  width: 61px;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-family: "INGAME", sans-serif;
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+.players-row .position.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
+.players-row .country-logo {
+  position: absolute;
+  top: 133px;
+  left: 15px;
+  width: 32px;
+  text-align: center;
+  z-index: 2;
+}
+.players-row .img {
+  position: absolute;
+  top: 81px;
+  right: 5px;
+  z-index: 1;
+  width: 155px;
+  height: 169px;
+  overflow: hidden;
+}
+.players-row .img img {
+  width: 169px;
+}
+.players-row .team-logo {
+  position: absolute;
+  top: 192px;
+  left: 9px;
+  text-align: center;
+  width: 46px;
+  height: 46px;
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.players-row .team-logo img {
+  width: 33px;
+  height: 33px;
+}
+.players-row .players {
+  width: 100%;
+  position: absolute;
+  top: 262px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.players-row .players img {
+  width: 20px;
+  height: 16px;
+  margin-right: 3px;
+  display: inline-block;
+  vertical-align: top;
+}
+.players-row .players .name {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 19px;
+  font-weight: 500;
+  color: #141432;
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
 header {
   z-index: 1000;
   position: fixed;
@@ -643,107 +752,6 @@ header .page-name {
   right: 0;
   bottom: 30px;
   width: 50%;
-}
-
-.players-row {
-  position: relative;
-  overflow: hidden;
-  width: calc(100% - 9px);
-  left: 4px;
-  height: 100%;
-}
-.players-row .number {
-  color: #fff;
-  position: absolute;
-  top: 62px;
-  left: 0;
-  text-align: center;
-  width: 61px;
-  font-weight: bold;
-  z-index: 2;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  font-size: 37px;
-  font-family: "INGAME", sans-serif;
-}
-.players-row .position {
-  font-size: 26px;
-  color: #fff;
-  position: absolute;
-  top: 99px;
-  left: 0;
-  text-align: center;
-  width: 61px;
-  z-index: 2;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  font-family: "INGAME", sans-serif;
-  font-weight: 100;
-  letter-spacing: -1px;
-}
-.players-row .country-logo {
-  position: absolute;
-  top: 133px;
-  left: 15px;
-  width: 32px;
-  text-align: center;
-  z-index: 2;
-}
-.players-row .img {
-  position: absolute;
-  top: 81px;
-  right: 5px;
-  z-index: 1;
-  width: 155px;
-  height: 169px;
-  overflow: hidden;
-}
-.players-row .img img {
-  width: 169px;
-}
-.players-row .team-logo {
-  position: absolute;
-  top: 192px;
-  left: 9px;
-  text-align: center;
-  width: 46px;
-  height: 46px;
-  z-index: 2;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #fff;
-}
-.players-row .team-logo img {
-  width: 33px;
-  height: 33px;
-}
-.players-row .players {
-  width: 100%;
-  position: absolute;
-  top: 262px;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.players-row .players img {
-  width: 20px;
-  height: 16px;
-  margin-right: 3px;
-  display: inline-block;
-  vertical-align: top;
-}
-.players-row .players .name {
-  display: inline-block;
-  max-width: 140px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 19px;
-  font-weight: 500;
-  color: #141432;
-  font-family: "Pretendard-Regular", sans-serif;
 }
 
 .swiper-pagination {
