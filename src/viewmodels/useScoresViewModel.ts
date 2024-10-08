@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react';
-import {getMatches, getEPLStandings} from '../api/services/footballService';
-import {ScoresType, TeamStanding} from '../models/interfaces/ScoresType.interface';
+import { useEffect, useState } from 'react';
+import { getMatches, getEPLStandings } from '../api/services/footballService';
+import { ScoresType, TeamStanding } from '../models/interfaces/FootballTypes.interface'; // 수정된 인터페이스 경로 확인
 
 export const useScoresViewModel = () => {
     const [matches, setMatches] = useState<ScoresType[]>([]);
@@ -18,8 +18,8 @@ export const useScoresViewModel = () => {
                     getEPLStandings(),
                 ]);
 
-                setMatches(matchesData);
-                setEplStandings(standingsData);
+                setMatches(matchesData); // ScoresType[] 타입으로 매핑
+                setEplStandings(standingsData); // TeamStanding[] 타입으로 매핑
             } catch (error) {
                 setError('데이터를 불러오는 데 오류가 발생했습니다.');
             } finally {
@@ -30,5 +30,5 @@ export const useScoresViewModel = () => {
         fetchData();
     }, []);
 
-    return {matches, eplStandings, error, isLoading};
+    return { matches, eplStandings, error, isLoading };
 };
