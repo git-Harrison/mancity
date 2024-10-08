@@ -1,10 +1,12 @@
 import React from 'react';
 import {PlayerCardProps} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../store';
 
 const TransferPlayerInfo: React.FC<PlayerCardProps> = ({player}) => {
     // 로컬스토리지에서 heldPlayers 값 가져오기
-    const heldPlayers: number[] = JSON.parse(localStorage.getItem('heldPlayers') ?? '[]');
+    const heldPlayers = useSelector((state: RootState) => state.player.heldPlayers);
 
     // player.number와 같은 선수를 몇 개 보유 중인지 확인
     const countHeldPlayers = heldPlayers.filter((number) => number === player.number).length;
