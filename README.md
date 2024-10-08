@@ -1,6 +1,6 @@
 # Manchester City Football Club Player Management
 
-<a href="https://git-harrison.github.io/mancity/" target="_blank"><strong>포트폴리오 보러가기</strong></a>
+<a href="https://mancity-harrison.netlify.app/" target="_blank"><strong>포트폴리오 보러가기</strong></a>
 
 
 
