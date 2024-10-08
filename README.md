@@ -2,8 +2,6 @@
 
 <a href="https://mancity-harrison.netlify.app/" target="_blank"><strong>포트폴리오 보러가기</strong></a>
 
-
-
 ## 📌 프로젝트 개요
 
 이 프로젝트는 **Manchester City Football Club**의 선수 데이터를 관리하는 웹 애플리케이션으로, **MVVM (Model-View-ViewModel)** 패턴을 기반으로 설계되었습니다.
@@ -14,6 +12,7 @@
 - **애니메이션**: **GSAP** 및 **Framer Motion**을 사용하여 인터랙티브한 UI 애니메이션을 구현했습니다.
 - **슬라이더 구현**: **react-slick** 및 **Swiper**를 사용해 선수 카드와 영상을 보여주는 슬라이더를 제작했습니다.
 - **HTTP 통신**: **Axios**를 통해 서버로부터 데이터를 받아와 처리합니다.
+- **상태 관리**: **Redux** 및 **Redux Persist**를 활용하여 상태를 중앙에서 관리하며, 새로고침 시에도 데이터를 유지합니다.
 - **SCSS**: **Sass**를 사용하여 스타일링을 보다 유연하게 적용합니다.
 - **타입 안정성**: **TypeScript**를 적용하여 코드의 안정성과 유지보수성을 극대화했습니다.
 
@@ -21,41 +20,73 @@
 
 ```plaintext
 📂 src
-├── 📂 api                    # API 호출을 위한 서비스 폴더
-│   ├── 📂 interceptors        # Axios 인터셉터 설정
-│   └── 📂 services            # API 서비스 정의
-│       └── playerService.ts   # 플레이어 관련 API 호출 서비스
-├── 📂 assets                  # 정적 파일들 (이미지, 폰트 등)
-├── 📂 components              # 재사용 가능한 UI 컴포넌트들
-│   ├── 📂 atoms               # 가장 작은 단위의 UI 요소 (버튼, 인풋 등)
-│   ├── 📂 molecules           # 기본 컴포넌트들의 집합 (카드, 리스트 등)
-│   └── 📂 organisms           # 복합적인 컴포넌트 (헤더, 푸터 등)
-│       ├── Footer.tsx         # 푸터 컴포넌트
-│       ├── Header.tsx         # 헤더 컴포넌트
-│       ├── LoadingScreen.tsx  # 로딩 스크린 컴포넌트
-│       ├── MainSlider.tsx     # 메인 페이지에서 사용되는 슬라이더
-│       ├── MainBg.tsx # 메인 비디오 플레이어 컴포[README.md](..%2F..%2F..%2FUsers%2FUSER%2FDesktop%2FREADME.md)넌트
-│       ├── PlayersCardSlider.tsx # 선수 카드 슬라이더
-│       └── PlayersInfo.tsx    # 선수 정보 표시 컴포넌트
-├── 📂 hooks                   # 커스텀 훅
-├── 📂 models                  # 데이터 모델 정의 및 타입 인터페이스
-│   ├── 📂 interfaces          # TypeScript 인터페이스 정의
-│       ├── LoadingScreen.interface.ts
-│       ├── Player.interface.ts
-│       ├── MainSlider.interface.ts
-│       └── VideoPlayer.interface.ts
+├── 📂 api                      # API 호출을 위한 서비스 폴더
+│   └── 📂 services             # API 서비스 정의
+│       ├── footballService.ts  # 축구 관련 API 호출 서비스
+│       ├── mainService.ts      # 메인 페이지 관련 API 호출 서비스
+│       └── playerService.ts    # 플레이어 관련 API 호출 서비스
+├── 📂 assets                   # 정적 파일들 (이미지, 폰트, JSON 데이터 등)
+│   ├── 📂 data                 # JSON 형식의 선수 정보 파일
+│   │   ├── current_season_player_info.json  # 현재 시즌 선수 데이터
+│   │   ├── main-slider.json                 # 메인 슬라이더 데이터
+│   │   └── previous_season_player_info.json # 이전 시즌 선수 데이터
+│   └── 📂 fonts                # 프로젝트에서 사용하는 폰트 파일
+├── 📂 components               # 재사용 가능한 UI 컴포넌트들
+│   ├── 📂 atoms                # 가장 작은 단위의 UI 요소
+│   │   ├── CommonDialog.tsx    # 공통 다이얼로그 컴포넌트
+│   │   ├── LoadingSpinner.tsx  # 로딩 스피너 컴포넌트
+│   │   ├── NotFound.tsx        # 404 Not Found 페이지 컴포넌트
+│   │   ├── PlayerCard.tsx      # 선수 카드 컴포넌트
+│   │   └── TransferPlayerInfo.tsx  # 이적 선수 정보 컴포넌트
+│   ├── 📂 molecules            # 기본 컴포넌트들의 집합 (카드, 리스트 등)
+│   │   └── TransferMarketDetail.tsx # 이적 시장 상세 정보 컴포넌트
+│   └── 📂 organisms            # 복합적인 컴포넌트 (헤더, 푸터 등)
+│       ├── scores              # 경기 정보 관련 컴포넌트 모음
+│       │   ├── Footer.tsx         # 푸터 컴포넌트
+│       │   ├── Header.tsx         # 헤더 컴포넌트
+│       │   ├── LoadingScreen.tsx  # 로딩 스크린 컴포넌트
+│       │   ├── MainBg.tsx         # 메인 페이지 배경 컴포넌트
+│       │   ├── MainSlider.tsx     # 메인 페이지 슬라이더 컴포넌트
+│       │   ├── MainSliderItem.tsx # 슬라이더 아이템 컴포넌트
+│       │   ├── PlayersInfo.tsx    # 선수 정보 표시 컴포넌트
+│       │   └── TransferMarketTable.tsx  # 이적 시장 테이블 컴포넌트
+│       └── SideMenuNav.tsx       # 사이드 메뉴 네비게이션 컴포넌트
+├── 📂 models                   # 데이터 모델 정의 및 타입 인터페이스
+│   └── 📂 interfaces           # TypeScript 인터페이스 정의
+│       ├── Dialog.interface.ts         # 다이얼로그 인터페이스 정의
+│       ├── FootballTypes.interface.ts  # 축구 관련 데이터 타입 정의
+│       ├── Header.interface.ts         # 헤더 인터페이스 정의
+│       ├── Loading.interface.ts        # 로딩 상태 인터페이스 정의
+│       ├── MainBg.interface.ts         # 메인 배경 인터페이스 정의
+│       ├── MainSlider.interface.ts     # 메인 슬라이더 인터페이스 정의
+│       ├── Player.interface.ts         # 선수 데이터 인터페이스 정의
+│       ├── ScoresType.interface.ts     # 경기 스코어 타입 정의
+│       └── VideoPlayer.interface.ts    # 비디오 플레이어 인터페이스 정의
 ├── 📂 routes                  # 라우트 설정 폴더
 │   └── AppRoutes.tsx          # 라우트 설정 컴포넌트
-├── 📂 store                   # 상태 관리 (예: Redux 등)
+├── 📂 store                   # Redux 상태 관리 및 슬라이스 폴더
+│   └── 📂 slices              # Redux 슬라이스 파일
+│       ├── citySlice.ts       # City 상태 관리 슬라이스
+│       └── playerSlice.ts     # Player 상태 관리 슬라이스
 ├── 📂 utils                   # 유틸리티 함수
+│   ├── flagUtils.ts           # 국기 이미지 관련 유틸리티 함수
+│   └── formatCurrency.ts      # 화폐 형식 관련 유틸리티 함수
 ├── 📂 viewmodels              # MVVM 패턴에서의 ViewModel 계층
-│   ├── useCenterLogoViewModel.ts # 로고 관련 ViewModel
-│   ├── useMainPageViewModel.ts   # 메인 페이지 ViewModel
-│   ├── useMainSliderViewModel.ts # 메인 슬라이더 ViewModel
-│   └── usePlayerViewModel.ts     # 선수 페이지 ViewModel
+│   ├── useCenterLogoViewModel.ts       # 로고 관련 ViewModel
+│   ├── useCityViewModel.ts             # City 관련 ViewModel
+│   ├── useHeaderViewModel.ts           # 헤더 관련 ViewModel
+│   ├── useMainPageViewModel.ts         # 메인 페이지 ViewModel
+│   ├── useMainSliderViewModel.ts       # 메인 슬라이더 ViewModel
+│   ├── usePlayerViewModel.ts           # 선수 페이지 ViewModel
+│   ├── useScoresViewModel.ts           # 경기 정보 ViewModel
+│   ├── useThemeViewModel.ts            # 테마 관련 ViewModel
+│   ├── useTransferMarketDetailViewModel.ts  # 이적 시장 상세 ViewModel
+│   └── useTransferMarketViewModel.ts   # 이적 시장 ViewModel
 └── 📂 views                   # 화면을 구성하는 페이지 컴포넌트들
     ├── MainPage.tsx           # 메인 페이지
-    └── PlayerInfoPage.tsx         # 선수 페이지
+    ├── PlayerInfoPage.tsx     # 선수 정보 페이지
+    ├── ScoresPage.tsx         # 경기 정보 페이지
+    └── TransferMarket.tsx     # 선수 이적 시장 페이지
 
 ```
 
