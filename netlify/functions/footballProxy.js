@@ -1,11 +1,13 @@
 const axios = require('axios');
 
 exports.handler = async function (event) {
+    console.log('Request event:', event); // 요청 이벤트를 기록
     const { path, queryStringParameters } = event;
 
     try {
         // 요청할 API URL 생성
         const apiUrl = `https://api.football-data.org/v4${path}`;
+        console.log('API URL:', apiUrl); // API URL 확인
 
         // API 요청 설정
         const response = await axios.get(apiUrl, {
@@ -14,6 +16,8 @@ exports.handler = async function (event) {
             },
             params: queryStringParameters,
         });
+
+        console.log('API Response:', response.data); // 응답 데이터 기록
 
         // API 응답 전송
         return {
@@ -25,6 +29,7 @@ exports.handler = async function (event) {
             },
         };
     } catch (error) {
+        console.error('API Request Error:', error); // 에러 기록
         return {
             statusCode: error.response ? error.response.status : 500,
             body: JSON.stringify({ error: error.message }),
