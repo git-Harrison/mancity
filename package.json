@@ -38,6 +38,7 @@
     "deploy": "gh-pages -d build",
     "postbuild": "cp build/index.html build/404.html"
   },
+  "homepage": ".",
   "eslintConfig": {
     "extends": [
       "react-app",
