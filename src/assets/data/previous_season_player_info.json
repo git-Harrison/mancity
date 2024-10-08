@@ -11,7 +11,7 @@
       "weight": 70,
       "date_of_birth": "1988.06.02",
       "transfer_details": {
-        "transfer_fee": 320000000000,
+        "transfer_fee": 512000000000,
         "currency": "EUR"
       }
     },
@@ -56,7 +56,7 @@
       "weight": 80,
       "date_of_birth": "1986.03.17",
       "transfer_details": {
-        "transfer_fee": 280000000000,
+        "transfer_fee": 210000000000,
         "currency": "EUR"
       }
     },
@@ -71,7 +71,7 @@
       "weight": 77,
       "date_of_birth": "1984.02.05",
       "transfer_details": {
-        "transfer_fee": 20200000000,
+        "transfer_fee": 97600000000,
         "currency": "EUR"
       }
     },
@@ -86,7 +86,7 @@
       "weight": 67,
       "date_of_birth": "1991.02.21",
       "transfer_details": {
-        "transfer_fee": 60000000000,
+        "transfer_fee": 123000000000,
         "currency": "EUR"
       }
     },
@@ -116,7 +116,7 @@
       "weight": 70,
       "date_of_birth": "2000.01.31",
       "transfer_details": {
-        "transfer_fee": 27900000000,
+        "transfer_fee": 19800000000,
         "currency": "EUR"
       }
     },
@@ -253,7 +253,7 @@
       "weight": 67,
       "date_of_birth": "1986.01.08",
       "transfer_details": {
-        "transfer_fee": 28000000,
+        "transfer_fee": 497600000000,
         "currency": "EUR"
       }
     },
@@ -435,7 +435,7 @@
       "weight": 85,
       "date_of_birth": "1986.04.10",
       "transfer_details": {
-        "transfer_fee": 8000000,
+        "transfer_fee": 197600000000,
         "currency": "EUR"
       }
     },
@@ -630,7 +630,7 @@
       "weight": 87,
       "date_of_birth": "1986.11.27",
       "transfer_details": {
-        "transfer_fee": 20000000,
+        "transfer_fee": 900000,
         "currency": "EUR"
       }
     },
@@ -750,7 +750,7 @@
       "weight": 81,
       "date_of_birth": "1988.02.12",
       "transfer_details": {
-        "transfer_fee": 280000000,
+        "transfer_fee": 87000000000,
         "currency": "EUR"
       }
     }
@@ -767,7 +767,7 @@
       "weight": 89,
       "date_of_birth": "1987.04.19",
       "transfer_details": {
-        "transfer_fee": 22600000000,
+        "transfer_fee": 99900000000,
         "currency": "EUR"
       }
     },
