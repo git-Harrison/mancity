@@ -359,26 +359,6 @@ header .page-name {
   background-color: var(--nav-hover-after-color);
 }
 
-.main-bg-wrap {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-.main-bg-wrap .background-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.main-bg-wrap:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-}
-
 .loading-screen {
   position: fixed;
   top: 0;
