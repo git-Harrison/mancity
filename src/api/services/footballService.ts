@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // API 클라이언트 설정
 const apiClient = axios.create({
-    baseURL: '/api', // Netlify Functions 경로 사용
+    baseURL: '/.netlify/functions/footballProxy', // Netlify Functions 경로 사용
 });
 
 // 경기를 가져오는 API 호출 함수
