@@ -36,7 +36,7 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                 <div className="info-top">
                     <motion.div className="detail" {...textAnimation(0.05, 0.4)}>
                         <img
-                            src={`${process.env.PUBLIC_URL}/images/card_icon.png`}
+                            src={`${process.env.PUBLIC_URL}/images/card_toty_tag.png`}
                             alt="card_icon"
                         />
                         <div className="name">{player.name}</div>
