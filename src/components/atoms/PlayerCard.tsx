@@ -3,9 +3,8 @@ import {PlayerCardProps} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
 import {getCardImages} from '../../utils/getCardImages';
 
-const PlayerCard: React.FC<PlayerCardProps> = ({player}) => {
+const PlayerCard: React.FC<PlayerCardProps & { showEnhancement?: boolean }> = ({player, showEnhancement = false}) => {
     const isIconNumbers = [1042, 101008, 101049, 101037, 1051].includes(player.number);
-    // getCardImages 함수를 사용하여 이미지 경로 가져오기
     const {background: backgroundImage, tag: tagImage, badge: badgeImage} = getCardImages(player);
 
     return (
@@ -24,6 +23,11 @@ const PlayerCard: React.FC<PlayerCardProps> = ({player}) => {
             <div className="players-row">
                 <div className={`number ${isIconNumbers ? 'icon' : ''}`}>{player.overall_ability}</div>
                 <div className={`position ${player.position} ${isIconNumbers ? 'icon' : ''}`}>{player.position}</div>
+                {showEnhancement && (
+                    <div className={`enhancement-level enhancement-level${player.enhancementLevel}`}>
+                        {player.enhancementLevel}
+                    </div>
+                )}
                 <div className="country-logo">
                     <img src={getFlagImage(player.nationality)} alt={player.nationality}/>
                 </div>

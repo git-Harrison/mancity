@@ -18,6 +18,8 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
                 return '24/25 현재 시즌 경기 정보';
             case '/transfer':
                 return '맨시티 선수 이적 시장';
+            case '/enhancement':
+                return '보유 선수 강화 시뮬레이션';
             default:
                 return '페이지 없음';
         }

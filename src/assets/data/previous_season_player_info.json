@@ -13,7 +13,8 @@
       "transfer_details": {
         "transfer_fee": 512000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101007,
@@ -28,7 +29,8 @@
       "transfer_details": {
         "transfer_fee": 6300000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1045,
@@ -43,7 +45,8 @@
       "transfer_details": {
         "transfer_fee": 2800000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101019,
@@ -58,7 +61,8 @@
       "transfer_details": {
         "transfer_fee": 210000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101032,
@@ -73,7 +77,8 @@
       "transfer_details": {
         "transfer_fee": 97600000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1026,
@@ -88,7 +93,8 @@
       "transfer_details": {
         "transfer_fee": 123000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1033,
@@ -103,7 +109,8 @@
       "transfer_details": {
         "transfer_fee": 3200000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1055,
@@ -118,7 +125,8 @@
       "transfer_details": {
         "transfer_fee": 19800000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101014,
@@ -133,7 +141,8 @@
       "transfer_details": {
         "transfer_fee": 28000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1060,
@@ -148,7 +157,8 @@
       "transfer_details": {
         "transfer_fee": 22500000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101035,
@@ -163,7 +173,8 @@
       "transfer_details": {
         "transfer_fee": 37000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1025,
@@ -178,7 +189,8 @@
       "transfer_details": {
         "transfer_fee": 29000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101027,
@@ -193,7 +205,8 @@
       "transfer_details": {
         "transfer_fee": 25000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101047,
@@ -208,7 +221,8 @@
       "transfer_details": {
         "transfer_fee": 20000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1038,
@@ -223,7 +237,8 @@
       "transfer_details": {
         "transfer_fee": 9000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1040,
@@ -238,7 +253,8 @@
       "transfer_details": {
         "transfer_fee": 26000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     }
   ],
   "midfielders": [
@@ -255,7 +271,8 @@
       "transfer_details": {
         "transfer_fee": 497600000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1042,
@@ -270,7 +287,8 @@
       "transfer_details": {
         "transfer_fee": 17200000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101008,
@@ -285,7 +303,8 @@
       "transfer_details": {
         "transfer_fee": 4880000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101018,
@@ -300,7 +319,8 @@
       "transfer_details": {
         "transfer_fee": 12500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101006,
@@ -315,7 +335,8 @@
       "transfer_details": {
         "transfer_fee": 40000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101023,
@@ -330,7 +351,8 @@
       "transfer_details": {
         "transfer_fee": 25000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101037,
@@ -345,7 +367,8 @@
       "transfer_details": {
         "transfer_fee": 4740000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1039,
@@ -360,7 +383,9 @@
       "transfer_details": {
         "transfer_fee": 19000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
+
     },
     {
       "number": 101040,
@@ -375,7 +400,8 @@
       "transfer_details": {
         "transfer_fee": 10000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1043,
@@ -390,7 +416,8 @@
       "transfer_details": {
         "transfer_fee": 15000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101051,
@@ -405,7 +432,8 @@
       "transfer_details": {
         "transfer_fee": 20000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1054,
@@ -420,7 +448,8 @@
       "transfer_details": {
         "transfer_fee": 30000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     }
   ],
   "defenders": [
@@ -437,7 +466,8 @@
       "transfer_details": {
         "transfer_fee": 197600000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101022,
@@ -452,7 +482,8 @@
       "transfer_details": {
         "transfer_fee": 8500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101002,
@@ -467,7 +498,8 @@
       "transfer_details": {
         "transfer_fee": 1000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1061,
@@ -482,7 +514,8 @@
       "transfer_details": {
         "transfer_fee": 20000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101005,
@@ -497,7 +530,8 @@
       "transfer_details": {
         "transfer_fee": 8000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1059,
@@ -512,7 +546,8 @@
       "transfer_details": {
         "transfer_fee": 2070000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101013,
@@ -527,7 +562,8 @@
       "transfer_details": {
         "transfer_fee": 18000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1056,
@@ -542,7 +578,8 @@
       "transfer_details": {
         "transfer_fee": 23000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1052,
@@ -557,7 +594,8 @@
       "transfer_details": {
         "transfer_fee": 150000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101055,
@@ -572,7 +610,8 @@
       "transfer_details": {
         "transfer_fee": 17600000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101026,
@@ -587,7 +626,8 @@
       "transfer_details": {
         "transfer_fee": 42000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101024,
@@ -602,7 +642,8 @@
       "transfer_details": {
         "transfer_fee": 16000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101017,
@@ -617,7 +658,8 @@
       "transfer_details": {
         "transfer_fee": 13500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101043,
@@ -632,7 +674,8 @@
       "transfer_details": {
         "transfer_fee": 900000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1041,
@@ -647,7 +690,8 @@
       "transfer_details": {
         "transfer_fee": 6000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1044,
@@ -662,7 +706,8 @@
       "transfer_details": {
         "transfer_fee": 8500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101045,
@@ -677,7 +722,8 @@
       "transfer_details": {
         "transfer_fee": 27000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1014,
@@ -692,7 +738,8 @@
       "transfer_details": {
         "transfer_fee": 65000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1057,
@@ -707,7 +754,8 @@
       "transfer_details": {
         "transfer_fee": 25000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1063,
@@ -722,7 +770,8 @@
       "transfer_details": {
         "transfer_fee": 37000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1047,
@@ -737,7 +786,8 @@
       "transfer_details": {
         "transfer_fee": 3500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1058,
@@ -752,7 +802,8 @@
       "transfer_details": {
         "transfer_fee": 87000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     }
   ],
   "goalkeepers": [
@@ -769,7 +820,8 @@
       "transfer_details": {
         "transfer_fee": 99900000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101025,
@@ -784,7 +836,8 @@
       "transfer_details": {
         "transfer_fee": 8500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101030,
@@ -799,7 +852,8 @@
       "transfer_details": {
         "transfer_fee": 1500000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101031,
@@ -814,7 +868,8 @@
       "transfer_details": {
         "transfer_fee": 18000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 1051,
@@ -829,7 +884,8 @@
       "transfer_details": {
         "transfer_fee": 1160000000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     },
     {
       "number": 101049,
@@ -844,7 +900,8 @@
       "transfer_details": {
         "transfer_fee": 64600000000,
         "currency": "EUR"
-      }
+      },
+      "enhancementLevel": 1
     }
   ]
 }

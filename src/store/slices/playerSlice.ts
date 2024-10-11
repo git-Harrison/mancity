@@ -1,29 +1,47 @@
-// src/store/slices/playerSlice.ts
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction, nanoid} from '@reduxjs/toolkit';
+import {HeldPlayer} from '../../models/interfaces/Player.interface';
 
 interface PlayerState {
-    heldPlayers: number[]; // 보유한 선수의 번호 배열
+    heldPlayers: HeldPlayer[];
 }
 
 const initialState: PlayerState = {
-    heldPlayers: [], // 초기값 설정
+    heldPlayers: [],
 };
 
 const playerSlice = createSlice({
     name: 'player',
     initialState,
     reducers: {
-        setHeldPlayers: (state, action: PayloadAction<number[]>) => {
+        setHeldPlayers: (state, action: PayloadAction<HeldPlayer[]>) => {
             state.heldPlayers = action.payload;
         },
-        addPlayer: (state, action: PayloadAction<number>) => {
-            state.heldPlayers.push(action.payload);
+        addPlayer: {
+            reducer(state, action: PayloadAction<HeldPlayer>) {
+                state.heldPlayers.push(action.payload);
+            },
+            prepare(player: { number: number; enhancementLevel: number; overall_ability: number }) {
+                const id = nanoid(); // 고유 ID 생성
+                const payload: HeldPlayer = {id, ...player};
+                return {payload};
+            },
         },
-        removePlayer: (state, action: PayloadAction<number>) => {
-            state.heldPlayers = state.heldPlayers.filter((number) => number !== action.payload);
+        removePlayer: (state, action: PayloadAction<{ id: string }>) => {
+            state.heldPlayers = state.heldPlayers.filter(
+                (player) => player.id !== action.payload.id
+            );
+        },
+        upgradePlayer: (state, action: PayloadAction<{ id: string; ovrIncrease: number }>) => {
+            const player = state.heldPlayers.find(
+                (player) => player.id === action.payload.id
+            );
+            if (player) {
+                player.enhancementLevel += 1; // 강화 레벨 증가
+                player.overall_ability += action.payload.ovrIncrease; // OVR 상승
+            }
         },
     },
 });
 
-export const {setHeldPlayers, addPlayer, removePlayer} = playerSlice.actions;
+export const {setHeldPlayers, addPlayer, removePlayer, upgradePlayer} = playerSlice.actions;
 export default playerSlice.reducer;

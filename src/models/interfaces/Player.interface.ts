@@ -23,6 +23,7 @@ export interface Player {
     transfer_date?: string;
     current_team?: string;
     previous_team?: string;
+    enhancementLevel: number;
 }
 
 
@@ -45,6 +46,7 @@ export interface PlayerCardData {
         transfer_fee: number;
         currency: string;
     };
+    enhancementLevel: number;
 }
 
 export interface PlayersCardSliderProps {
@@ -52,3 +54,14 @@ export interface PlayersCardSliderProps {
     onPlayerClick: (number: number) => void;
 }
 
+export interface HeldPlayer {
+    id: string;
+    number: number;
+    enhancementLevel: number;
+    overall_ability: number;
+}
+
+export interface PlayerEnhancementListProps {
+    players: (HeldPlayer & Player)[];
+    onPlayerClick: (player: HeldPlayer & Player) => void;
+}

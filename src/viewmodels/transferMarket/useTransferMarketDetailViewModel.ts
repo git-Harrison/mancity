@@ -3,12 +3,16 @@ import {useDispatch, useSelector} from 'react-redux';
 import {TransferMarketDetailProps} from '../../models/interfaces/Player.interface';
 import {RootState} from '../../store';
 import {setCity} from '../../store/slices/citySlice';
-import {setHeldPlayers} from '../../store/slices/playerSlice';
+import {addPlayer} from '../../store/slices/playerSlice';
 
-export const useTransferMarketDetailViewModel = (player: TransferMarketDetailProps['player']) => {
+export const useTransferMarketDetailViewModel = (
+    player: TransferMarketDetailProps['player']
+) => {
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [dialogType, setDialogType] = useState<'confirm' | 'success' | 'failure'>('confirm');
+    const [dialogType, setDialogType] = useState<'confirm' | 'success' | 'failure'>(
+        'confirm'
+    );
 
     // Redux store의 city 값 및 heldPlayers 상태 가져오기
     const remainingCity = useSelector((state: RootState) => state.city.city);
@@ -44,9 +48,14 @@ export const useTransferMarketDetailViewModel = (player: TransferMarketDetailPro
             setLoading(false);
             dispatch(setCity(updatedCity)); // Redux store의 city 값 업데이트
 
-            // 보유중인 선수 목록에 새로운 선수의 number 추가
-            const updatedHeldPlayers = [...heldPlayers, player.number];
-            dispatch(setHeldPlayers(updatedHeldPlayers)); // Redux store의 heldPlayers 값 업데이트
+            // 보유중인 선수 목록에 새로운 선수를 추가할 때 addPlayer 액션 사용
+            dispatch(
+                addPlayer({
+                    number: player.number,
+                    enhancementLevel: player.enhancementLevel ?? 1,
+                    overall_ability: player.overall_ability ?? 0,
+                })
+            );
 
             setDialogType('success');
             setOpen(true);

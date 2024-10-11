@@ -1,7 +1,86 @@
-// common.scss
 $city-blue: #6CABDD;
 $dark-blue: #1C2C5B;
 $white: #FFFFFF;
+$level-styles: (
+    "1-4": (
+        background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42),
+        border-color: #e4b7a2 #864229 #864229 #e4b7a2,
+        border-style: solid,
+        border-width: 1.5px,
+        color: #7e3f27
+    ),
+    "5-7": (
+        background: linear-gradient(140deg, #020024, #d8d9dc 0, #b8bdca),
+        border-color: #d8dadc #a9aaae #a5a8ae #d8dadc,
+        border-style: solid,
+        border-width: 1.5px,
+        color: #4e545e
+    ),
+    "8-10": (
+        background: linear-gradient(140deg, #f9dd62, #f9dd62 0, #dca908),
+        border-color: #e9d36c #cda000 #cda000 #e9d36c,
+        border-style: solid,
+        border-width: 1.5px,
+        color: #695100
+    )
+);
+
+@function get-level-range($range) {
+    $start: str-slice($range, 1, str-index($range, "-") - 1);
+    $end: str-slice($range, str-index($range, "-") + 1);
+    @return (1: $start, 2: $end);
+}
+
+// Convert string to number by parsing
+@function to-number($str) {
+    $parsed-number: 0;
+
+    // Convert string to list of individual characters and iterate through them
+    @for $i from 1 through str-length($str) {
+        $char: str-slice($str, $i, $i);
+
+        // Convert characters to numbers based on ASCII values
+        @if $char == '0' {
+            $parsed-number: $parsed-number * 10 + 0;
+        } @else if $char == '1' {
+            $parsed-number: $parsed-number * 10 + 1;
+        } @else if $char == '2' {
+            $parsed-number: $parsed-number * 10 + 2;
+        } @else if $char == '3' {
+            $parsed-number: $parsed-number * 10 + 3;
+        } @else if $char == '4' {
+            $parsed-number: $parsed-number * 10 + 4;
+        } @else if $char == '5' {
+            $parsed-number: $parsed-number * 10 + 5;
+        } @else if $char == '6' {
+            $parsed-number: $parsed-number * 10 + 6;
+        } @else if $char == '7' {
+            $parsed-number: $parsed-number * 10 + 7;
+        } @else if $char == '8' {
+            $parsed-number: $parsed-number * 10 + 8;
+        } @else if $char == '9' {
+            $parsed-number: $parsed-number * 10 + 9;
+        }
+    }
+
+    @return $parsed-number;
+}
+
+// Loop through the level styles and apply them to each enhancement level class
+@each $range, $styles in $level-styles {
+    $range-values: get-level-range($range);
+    $start-level: to-number(map-get($range-values, 1)); // Convert start level to number
+    $end-level: to-number(map-get($range-values, 2)); // Convert end level to number
+
+    // Iterate through each level in the range and apply the styles
+    @for $level from $start-level through $end-level {
+        .enhancement-level#{$level} {
+            @each $property, $value in $styles {
+                #{$property}: $value;
+            }
+        }
+    }
+}
 
 @mixin flex-center {
     display: flex;
@@ -217,4 +296,26 @@ body {
             font-family: "Pretendard-Regular", sans-serif;
         }
     }
+
+    .enhancement-level {
+        z-index: 99;
+        position: absolute;
+        right: 2px;
+        bottom: 86px;
+    }
+}
+
+.enhancement-level {
+    display: block;
+    width: 48px !important;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+    height: 23px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding-left: 0;
+    position: relative;
+    text-align: center;
+    font-family: "EASANS", sans-serif;
 }

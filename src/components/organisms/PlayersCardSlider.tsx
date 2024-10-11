@@ -1,17 +1,18 @@
-import React, {useRef} from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
+// PlayersCardSlider.tsx
+
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import {Pagination, Navigation} from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
-import {PlayersCardSliderProps} from '../../models/interfaces/Player.interface';
-import {getFlagImage} from '../../utils/flagUtils';
+import { PlayersCardSliderProps, Player } from '../../models/interfaces/Player.interface';
 import PlayerCard from "../atoms/PlayerCard";
 
-const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({players, onPlayerClick}) => {
+const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({ players, onPlayerClick }) => {
     const swiperRef = useRef<SwiperCore | null>(null);
 
     const handleSlideChange = (swiper: SwiperCore) => {
-        const activeIndex = swiper.realIndex; // 현재 슬라이드 인덱스
+        const activeIndex = swiper.realIndex;
         const playerNumber = players[activeIndex]?.number;
         if (playerNumber) {
             onPlayerClick(playerNumber);
@@ -36,7 +37,7 @@ const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({players, onPlayerC
                 slidesPerView={4.5}
                 slidesPerGroup={1}
                 navigation
-                pagination={{clickable: true}}
+                pagination={{ clickable: true }}
                 loop
                 speed={900}
                 onSwiper={(swiper: SwiperCore) => {
@@ -44,14 +45,20 @@ const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({players, onPlayerC
                 }}
                 onSlideChange={handleSlideChange}
             >
-                {players.map((player, index) => (
-                    <SwiperSlide
-                        key={player.number}
-                        onClick={() => handleClick(index, player.number)}
-                    >
-                        <PlayerCard player={player}/>
-                    </SwiperSlide>
-                ))}
+                {players.map((player, index) => {
+                    const playerWithEnhancement: Player = {
+                        ...player,
+                        enhancementLevel: player.enhancementLevel ?? 0,
+                    };
+                    return (
+                        <SwiperSlide
+                            key={player.number}
+                            onClick={() => handleClick(index, player.number)}
+                        >
+                            <PlayerCard player={playerWithEnhancement} />
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </div>
     );

@@ -9,7 +9,7 @@ const TransferPlayerInfo: React.FC<PlayerCardProps> = ({player}) => {
     const heldPlayers = useSelector((state: RootState) => state.player.heldPlayers);
 
     // player.number와 같은 선수를 몇 개 보유 중인지 확인
-    const countHeldPlayers = heldPlayers.filter((number) => number === player.number).length;
+    const countHeldPlayers = heldPlayers.filter((heldPlayer) => heldPlayer.number === player.number).length;
 
     return (
         <div className="transfer-player-info">

@@ -1,0 +1,85 @@
+.enhance-wrap {
+    display: flex;
+    width: 100%;
+    margin-top: 66px;
+}
+
+.enhance-box {
+    width: 30%;
+}
+
+.player-list-wrap {
+    width: 70%;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+        color: var(--text-color);
+    }
+
+    .player-list {
+        display: flex;
+        flex-wrap: wrap;
+        transition: transform 0.5s ease-in-out;
+
+        .player-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+
+            div {
+                flex: 1;
+                color: var(--text-color);
+
+                img {
+                    width: 32px;
+                    height: 16px;
+                }
+
+                &.player-count {
+
+                }
+
+                &.enhancement-status {
+                    span {
+                        &.enhance-available {
+                            color: #03cd7a;
+                        }
+
+                        &.enhance-unavailable {
+                            color: #f6425f;
+                        }
+                    }
+                }
+            }
+
+            .ST,
+            .RW,
+            .LW,
+            .CF {
+                color: #f6425f;
+            }
+
+            .CM,
+            .CAM,
+            .CDM {
+                color: #03cd7a;
+            }
+
+            .CB,
+            .RB,
+            .LB {
+                color: #1476ff;
+            }
+
+            .GK {
+                color: #e9a216;
+            }
+        }
+    }
+}

@@ -34,11 +34,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'EASANS';
+    src: url('assets/fonts/EASANS.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
 
 
 //font-family: "INGAME", sans-serif;
 //font-family: "Roboto", sans-serif;
 //font-family: "Pretendard", sans-serif;
+//font-family: "EASANS", sans-serif;
 
 * {
     margin: 0;

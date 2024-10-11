@@ -29,6 +29,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "EASANS";
+  src: url("assets/fonts/EASANS.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -49,6 +55,86 @@ ul, li {
 
 img {
   width: 100%;
+}
+
+.enhancement-level1 {
+  background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42);
+  border-color: #e4b7a2 #864229 #864229 #e4b7a2;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #7e3f27;
+}
+
+.enhancement-level2 {
+  background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42);
+  border-color: #e4b7a2 #864229 #864229 #e4b7a2;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #7e3f27;
+}
+
+.enhancement-level3 {
+  background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42);
+  border-color: #e4b7a2 #864229 #864229 #e4b7a2;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #7e3f27;
+}
+
+.enhancement-level4 {
+  background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42);
+  border-color: #e4b7a2 #864229 #864229 #e4b7a2;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #7e3f27;
+}
+
+.enhancement-level5 {
+  background: linear-gradient(140deg, #020024, #d8d9dc 0, #b8bdca);
+  border-color: #d8dadc #a9aaae #a5a8ae #d8dadc;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #4e545e;
+}
+
+.enhancement-level6 {
+  background: linear-gradient(140deg, #020024, #d8d9dc 0, #b8bdca);
+  border-color: #d8dadc #a9aaae #a5a8ae #d8dadc;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #4e545e;
+}
+
+.enhancement-level7 {
+  background: linear-gradient(140deg, #020024, #d8d9dc 0, #b8bdca);
+  border-color: #d8dadc #a9aaae #a5a8ae #d8dadc;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #4e545e;
+}
+
+.enhancement-level8 {
+  background: linear-gradient(140deg, #f9dd62, #f9dd62 0, #dca908);
+  border-color: #e9d36c #cda000 #cda000 #e9d36c;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #695100;
+}
+
+.enhancement-level9 {
+  background: linear-gradient(140deg, #f9dd62, #f9dd62 0, #dca908);
+  border-color: #e9d36c #cda000 #cda000 #e9d36c;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #695100;
+}
+
+.enhancement-level10 {
+  background: linear-gradient(140deg, #f9dd62, #f9dd62 0, #dca908);
+  border-color: #e9d36c #cda000 #cda000 #e9d36c;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #695100;
 }
 
 :root[data-theme=light] {
@@ -240,6 +326,27 @@ body {
   font-weight: 500;
   color: #141432;
   font-family: "Pretendard-Regular", sans-serif;
+}
+.players-row .enhancement-level {
+  z-index: 99;
+  position: absolute;
+  right: 2px;
+  bottom: 86px;
+}
+
+.enhancement-level {
+  display: block;
+  width: 48px !important;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 500;
+  height: 23px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  padding-left: 0;
+  position: relative;
+  text-align: center;
+  font-family: "EASANS", sans-serif;
 }
 
 header {
@@ -1161,6 +1268,73 @@ header .page-name {
 .back-home-link:hover {
   background-color: #007bff;
   color: #ffffff;
+}
+
+.enhance-wrap {
+  display: flex;
+  width: 100%;
+  margin-top: 66px;
+}
+
+.enhance-box {
+  width: 30%;
+}
+
+.player-list-wrap {
+  width: 70%;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.player-list-wrap h3 {
+  color: var(--text-color);
+}
+.player-list-wrap .player-list {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.5s ease-in-out;
+}
+.player-list-wrap .player-list .player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.player-list-wrap .player-list .player-item div {
+  flex: 1;
+  color: var(--text-color);
+}
+.player-list-wrap .player-list .player-item div img {
+  width: 32px;
+  height: 16px;
+}
+.player-list-wrap .player-list .player-item div.enhancement-status span.enhance-available {
+  color: #03cd7a;
+}
+.player-list-wrap .player-list .player-item div.enhancement-status span.enhance-unavailable {
+  color: #f6425f;
+}
+.player-list-wrap .player-list .player-item .ST,
+.player-list-wrap .player-list .player-item .RW,
+.player-list-wrap .player-list .player-item .LW,
+.player-list-wrap .player-list .player-item .CF {
+  color: #f6425f;
+}
+.player-list-wrap .player-list .player-item .CM,
+.player-list-wrap .player-list .player-item .CAM,
+.player-list-wrap .player-list .player-item .CDM {
+  color: #03cd7a;
+}
+.player-list-wrap .player-list .player-item .CB,
+.player-list-wrap .player-list .player-item .RB,
+.player-list-wrap .player-list .player-item .LB {
+  color: #1476ff;
+}
+.player-list-wrap .player-list .player-item .GK {
+  color: #e9a216;
 }
 
 .loading-overlay {

@@ -3,6 +3,7 @@ import {Link, useLocation} from "react-router-dom";
 import {IoHomeSharp, IoPersonSharp} from "react-icons/io5";
 import {AiOutlineBarChart} from "react-icons/ai";
 import {BiTransferAlt} from "react-icons/bi";
+import {FaMagic} from 'react-icons/fa';
 
 const SideMenuNav: React.FC = () => {
     const location = useLocation();
@@ -23,6 +24,7 @@ const SideMenuNav: React.FC = () => {
         {name: "players", path: "/players", icon: <IoPersonSharp/>, label: "PLAYERS"},
         {name: "scores", path: "/scores", icon: <AiOutlineBarChart/>, label: "SCORES"},
         {name: "transfer", path: "/transfer", icon: <BiTransferAlt/>, label: "TRANSFER"},
+        {name: "enhancement", path: "/enhancement", icon: <FaMagic/>, label: "ENHANCE"},
     ];
 
     return (
