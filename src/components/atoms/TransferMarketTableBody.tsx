@@ -17,6 +17,11 @@ const TransferMarketTableBody: React.FC<TransferMarketTableBodyProps> = ({player
                     />
                 </td>
                 <td className="name">{player.name}</td>
+                <td>
+                    <span className={`enhancement-level enhancement-level${player.enhancementLevel}`}>
+                        {player.enhancementLevel}
+                    </span>
+                </td>
                 <td>{player.overall_ability}</td>
                 <td className={`${player.position}`}>{player.position}</td>
                 <td className="nationality">

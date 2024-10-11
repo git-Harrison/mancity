@@ -4,7 +4,6 @@ import {RootState} from '../store/index';
 import {fetchPlayers, fetchPreviousSeasonPlayers} from '../api/services/playerService';
 import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
 
-
 export const usePlayerEnhancementViewModel = () => {
     const heldPlayers = useSelector((state: RootState) => state.player.heldPlayers);
     const [allPlayers, setAllPlayers] = useState<Player[]>([]);

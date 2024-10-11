@@ -2,7 +2,14 @@ $city-blue: #6CABDD;
 $dark-blue: #1C2C5B;
 $white: #FFFFFF;
 $level-styles: (
-    "1-4": (
+    "0-1": (
+        background: linear-gradient(140deg, #51545a, #51545a 0, #42464d),
+        border-color: #62676d #393a3c #393a3c #62676d,
+        border-style: solid,
+        border-width: 1.5px,
+        color: #c5c8c9
+    ),
+    "2-4": (
         background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42),
         border-color: #e4b7a2 #864229 #864229 #e4b7a2,
         border-style: solid,
@@ -318,4 +325,10 @@ body {
     position: relative;
     text-align: center;
     font-family: "EASANS", sans-serif;
+}
+
+td {
+    .enhancement-level {
+        margin: 0 auto;
+    }
 }

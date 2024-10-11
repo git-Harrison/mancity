@@ -68,7 +68,7 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
 
     return (
         <div className="transfer-market-detail">
-            <PlayerCard player={player}/>
+            <PlayerCard player={player} showEnhancement={true}/>
             <TransferPlayerInfo player={player}/>
             <div className="transfer-fee">
                 <span>이적료</span>

@@ -57,12 +57,20 @@ img {
   width: 100%;
 }
 
-.enhancement-level1 {
-  background: linear-gradient(140deg, #de946b, #de946b 0, #ad5f42);
-  border-color: #e4b7a2 #864229 #864229 #e4b7a2;
+.enhancement-level0 {
+  background: linear-gradient(140deg, #51545a, #51545a 0, #42464d);
+  border-color: #62676d #393a3c #393a3c #62676d;
   border-style: solid;
   border-width: 1.5px;
-  color: #7e3f27;
+  color: #c5c8c9;
+}
+
+.enhancement-level1 {
+  background: linear-gradient(140deg, #51545a, #51545a 0, #42464d);
+  border-color: #62676d #393a3c #393a3c #62676d;
+  border-style: solid;
+  border-width: 1.5px;
+  color: #c5c8c9;
 }
 
 .enhancement-level2 {
@@ -347,6 +355,10 @@ body {
   position: relative;
   text-align: center;
   font-family: "EASANS", sans-serif;
+}
+
+td .enhancement-level {
+  margin: 0 auto;
 }
 
 header {
@@ -1278,6 +1290,17 @@ header .page-name {
 
 .enhance-box {
   width: 30%;
+  margin: 20px;
+  text-align: center;
+}
+.enhance-box .players-card {
+  margin: 0 auto;
+}
+.enhance-box .empty {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: var(--text-color);
 }
 
 .player-list-wrap {
@@ -1335,6 +1358,36 @@ header .page-name {
 }
 .player-list-wrap .player-list .player-item .GK {
   color: #e9a216;
+}
+
+.enhancement-table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.enhancement-table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  color: var(--text-color);
+  overflow: hidden;
+}
+.enhancement-table thead {
+  background-color: var(--table-header-color);
+  font-weight: bold;
+}
+.enhancement-table th, .enhancement-table td {
+  padding: 4px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+.enhancement-table tr:hover {
+  background-color: var(--table-hover-color);
 }
 
 .loading-overlay {

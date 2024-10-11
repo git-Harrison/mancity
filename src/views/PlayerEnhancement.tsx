@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {removePlayer, upgradePlayer} from '../store/slices/playerSlice';
+import {setCity} from '../store/slices/citySlice'; // setCity 액션 임포트
 import PlayerCard from "../components/atoms/PlayerCard";
 import {usePlayerEnhancementViewModel} from "../viewmodels/usePlayerEnhancementViewModel";
 import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
 import PlayerEnhancementList from '../components/molecules/PlayerEnhancementList';
+import EnhancementTable from "../components/molecules/EnhancementTable";
+import {Button, Box} from '@mui/material';
+import {RootState} from '../store';
 
 // 강화 등급별 확률 및 OVR 상승량 설정
 const enhancementConfig: Record<number, { successRate: number; ovrIncrease: number }> = {
@@ -22,6 +26,9 @@ const enhancementConfig: Record<number, { successRate: number; ovrIncrease: numb
 const PlayerEnhancement: React.FC = () => {
     const dispatch = useDispatch();
     const {heldPlayerDetails, handlePlayerSelect} = usePlayerEnhancementViewModel();
+
+    // Redux 스토어에서 현재 city 값 가져오기
+    const cityAmount = useSelector((state: RootState) => state.city.city);
 
     const [sameLevelPlayersCount, setSameLevelPlayersCount] = useState<number>(0);
     const [targetPlayer, setTargetPlayer] = useState<(HeldPlayer & Player) | null>(null);
@@ -71,10 +78,11 @@ const PlayerEnhancement: React.FC = () => {
         const config = enhancementConfig[enhancementLevel]; // enhancementConfig 객체 참조
         const enhancementSuccess = Math.random() < config.successRate; // 확률에 따라 성공 여부 결정
 
-        console.log(`강화 결과: ${enhancementSuccess ? '성공' : '실패'}`);
-
         // 재료 선수 제거
         dispatch(removePlayer({id: materialPlayer.id}));
+
+        // 성공 여부와 상관없이 city 값 추가
+        dispatch(setCity(cityAmount + 100000000000)); // 기존 cityAmount 값에 10,000,000,000을 더해서 setCity 호출
 
         if (enhancementSuccess) {
             // 강화 성공 시: 타겟 선수의 강화 레벨 및 OVR 상승
@@ -90,13 +98,33 @@ const PlayerEnhancement: React.FC = () => {
             <div className="enhance-wrap">
                 <div className="enhance-box">
                     {targetPlayer ? (
-                        <PlayerCard player={targetPlayer} showEnhancement={true}/>
+                        <>
+                            <PlayerCard player={targetPlayer} showEnhancement={true}/>
+                            <EnhancementTable/>
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                sx={{
+                                    width: '180px',
+                                    height: '44px',
+                                    fontSize: '16px',
+                                    textTransform: 'none',
+                                    color: '#ffffff',
+                                    backgroundColor: '#3e3d55',
+                                    transition: 'transform 0.3s ease-in-out',
+                                    fontFamily: '"Pretendard-Bold", sans-serif',
+                                    '&:hover': {
+                                        color: '#ffffff',
+                                        backgroundColor: 'var(--city-color)',
+                                    },
+                                }}
+                                onClick={handleEnhance} disabled={sameLevelPlayersCount < 2}>
+                                강화하기
+                            </Button>
+                        </>
                     ) : (
-                        <p>No player selected</p>
+                        <div className="empty">선수를 선택하세요</div>
                     )}
-                    <button onClick={handleEnhance} disabled={sameLevelPlayersCount < 2}>
-                        강화하기
-                    </button>
                 </div>
                 <div className="player-list-wrap">
                     <h3>Held Players</h3>

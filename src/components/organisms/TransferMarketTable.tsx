@@ -31,6 +31,7 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
                 <tr>
                     <th>프로필</th>
                     <th>선수명</th>
+                    <th>강화단계</th>
                     <th>능력치</th>
                     <th>포지션</th>
                     <th>국가</th>

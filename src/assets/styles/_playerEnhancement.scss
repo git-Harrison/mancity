@@ -6,6 +6,19 @@
 
 .enhance-box {
     width: 30%;
+    margin: 20px;
+    text-align: center;
+
+    .players-card {
+        margin: 0 auto;
+    }
+
+    .empty {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        color: var(--text-color);
+    }
 }
 
 .player-list-wrap {
@@ -81,5 +94,38 @@
                 color: #e9a216;
             }
         }
+    }
+}
+
+.enhancement-table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.enhancement-table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    color: var(--text-color);
+    overflow: hidden;
+
+    thead {
+        background-color: var(--table-header-color);
+        font-weight: bold;
+    }
+
+    th, td {
+        padding: 4px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    tr:hover {
+        background-color: var(--table-hover-color);
     }
 }
