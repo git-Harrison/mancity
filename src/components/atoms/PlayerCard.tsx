@@ -4,7 +4,7 @@ import {getFlagImage} from '../../utils/flagUtils';
 import {getCardImages} from '../../utils/getCardImages';
 
 /**
- * 숫자를 한글 표기법으로 변환하는 함수
+ * 선수 카드 UI 컴포넌트 Props
  * @player - 선수 정보
  * @showEnhancement - 강화 단계 표시 여부
  */
