@@ -3,6 +3,12 @@ import {PlayerCardProps} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
 import {getCardImages} from '../../utils/getCardImages';
 
+/**
+ * 숫자를 한글 표기법으로 변환하는 함수
+ * @player - 선수 정보
+ * @showEnhancement - 강화 단계 표시 여부
+ */
+
 const PlayerCard: React.FC<PlayerCardProps & { showEnhancement?: boolean }> = ({player, showEnhancement = false}) => {
     const isIconNumbers = [1042, 101008, 101049, 101037, 1051].includes(player.number);
     const {background: backgroundImage, tag: tagImage, badge: badgeImage} = getCardImages(player);

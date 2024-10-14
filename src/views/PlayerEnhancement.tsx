@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {removePlayer, upgradePlayer} from '../store/slices/playerSlice';
-import {setCity} from '../store/slices/citySlice'; // setCity 액션 임포트
+import {setCity} from '../store/slices/citySlice';
 import PlayerCard from "../components/atoms/PlayerCard";
 import {usePlayerEnhancementViewModel} from "../viewmodels/usePlayerEnhancementViewModel";
 import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
@@ -96,43 +96,51 @@ const PlayerEnhancement: React.FC = () => {
     return (
         <div className="contents-container">
             <div className="enhance-wrap">
-                <div className="enhance-box">
-                    {targetPlayer ? (
-                        <>
-                            <PlayerCard player={targetPlayer} showEnhancement={true}/>
-                            <EnhancementTable/>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                sx={{
-                                    width: '180px',
-                                    height: '44px',
-                                    fontSize: '16px',
-                                    textTransform: 'none',
-                                    color: '#ffffff',
-                                    backgroundColor: '#3e3d55',
-                                    transition: 'transform 0.3s ease-in-out',
-                                    fontFamily: '"Pretendard-Bold", sans-serif',
-                                    '&:hover': {
-                                        color: '#ffffff',
-                                        backgroundColor: 'var(--city-color)',
-                                    },
-                                }}
-                                onClick={handleEnhance} disabled={sameLevelPlayersCount < 2}>
-                                강화하기
-                            </Button>
-                        </>
-                    ) : (
-                        <div className="empty">선수를 선택하세요</div>
-                    )}
-                </div>
-                <div className="player-list-wrap">
-                    <h3>Held Players</h3>
-                    <PlayerEnhancementList
-                        players={heldPlayerDetails}
-                        onPlayerClick={handleSelectPlayer}
-                    />
-                </div>
+                {heldPlayerDetails.length > 0 ? (
+                    <>
+                        <div className="enhance-box">
+                            {targetPlayer ? (
+                                <>
+                                    <PlayerCard player={targetPlayer} showEnhancement={true}/>
+                                    <EnhancementTable/>
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        sx={{
+                                            width: '180px',
+                                            height: '44px',
+                                            fontSize: '16px',
+                                            textTransform: 'none',
+                                            color: '#ffffff',
+                                            backgroundColor: '#3e3d55',
+                                            transition: 'transform 0.3s ease-in-out',
+                                            fontFamily: '"Pretendard-Bold", sans-serif',
+                                            '&:hover': {
+                                                color: '#ffffff',
+                                                backgroundColor: 'var(--city-color)',
+                                            },
+                                        }}
+                                        onClick={handleEnhance}
+                                        disabled={sameLevelPlayersCount < 2}
+                                    >
+                                        강화하기
+                                    </Button>
+                                </>
+                            ) : (
+                                <div className="empty">강화 할 선수를 선택하세요</div>
+                            )}
+                        </div>
+                        <div className="player-list-wrap">
+                            <h3>Held Players</h3>
+                            <PlayerEnhancementList
+                                players={heldPlayerDetails}
+                                onPlayerClick={handleSelectPlayer}
+                            />
+                        </div>
+                    </>
+                ) : (
+                    <div className="empty full-size">보유중인 선수가 없습니다</div>
+                )}
             </div>
         </div>
     );
