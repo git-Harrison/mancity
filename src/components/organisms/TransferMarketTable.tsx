@@ -14,6 +14,10 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
     const {sortedPlayers, sortKey, sortOrder, handleSort} = useTransferMarketTableViewModel(players);
     const {filteredPlayers} = useTransferMarketTableBodyViewModel(sortedPlayers, filters);
 
+    // 선수 데이터로부터 고유한 포지션과 국가 값을 추출
+    const positions = Array.from(new Set(players.map(player => player.position)));
+    const nationalities = Array.from(new Set(players.map(player => player.nationality)));
+
     return (
         <div className="transfer-market-table-wrap">
             <TransferMarketTableHeader
@@ -25,6 +29,8 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
                 handleResetFilters={handleResetFilters}
                 sortKey={sortKey}
                 sortOrder={sortOrder}
+                positions={positions}
+                nationalities={nationalities}
             />
             <table className="transfer-market-table">
                 <thead>
@@ -38,10 +44,7 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
                     <th>이적료</th>
                 </tr>
                 </thead>
-                <TransferMarketTableBody
-                    players={filteredPlayers}
-                    onPlayerClick={onPlayerClick}
-                />
+                <TransferMarketTableBody players={filteredPlayers} onPlayerClick={onPlayerClick}/>
             </table>
         </div>
     );

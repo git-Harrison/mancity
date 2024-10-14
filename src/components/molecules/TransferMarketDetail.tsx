@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TransferMarketDetailProps} from '../../models/interfaces/Player.interface';
 import PlayerCard from '../atoms/PlayerCard';
 import TransferPlayerInfo from '../atoms/TransferPlayerInfo';
-import {Button, Box} from '@mui/material';
+import {Button, Box, TextField} from '@mui/material';
 import {numberWithCommas} from '../../utils/formatCurrency';
 import CommonDialog from '../atoms/CommonDialog';
 import LoadingSpinner from '../atoms/LoadingSpinner';
@@ -19,18 +19,49 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
         buyPlayer,
     } = useTransferMarketDetailViewModel(player);
 
+    const [quantity, setQuantity] = useState<number>(1); // 영입할 선수 개수 상태 추가
+
     if (!player) {
         return <div className="transfer-market-detail empty">선수를 선택하세요</div>;
     }
 
-    const transferFee = player.transfer_details?.transfer_fee ?? 0;
-    const updatedCity = remainingCity - transferFee;
+    const transferFeePerPlayer = player.transfer_details?.transfer_fee ?? 0;
+    const totalTransferFee = transferFeePerPlayer * quantity; // 선택한 개수만큼 총 이적료 계산
+    const updatedCity = remainingCity - totalTransferFee;
+
+    // 영입할 인원 수 변경 핸들러
+    const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(event.target.value, 10);
+        if (!isNaN(value) && value > 0) {
+            setQuantity(value); // 1 이상의 유효한 값일 때만 상태 업데이트
+        }
+    };
+
+    const handleBuyPlayer = () => {
+        buyPlayer(quantity); // 선택한 수량을 인자로 buyPlayer 호출
+    };
 
     const renderConfirmationContent = (
         <div>
             <div className="transfer-fee">
-                <span className="label">이적료:</span>
-                <div className="value">{numberWithCommas(transferFee)} CITY</div>
+                <span className="label">이적료 (1인당):</span>
+                <div className="value">{numberWithCommas(transferFeePerPlayer)} CITY</div>
+            </div>
+            <div className="transfer-fee">
+                <span className="label">영입할 인원:</span>
+                <div className="value">
+                    <TextField
+                        type="number"
+                        value={quantity}
+                        onChange={handleQuantityChange}
+                        InputProps={{inputProps: {min: 1}}} // 최소 값 1로 설정
+                        sx={{width: '80px'}} // 입력 필드 크기 조정
+                    />
+                </div>
+            </div>
+            <div className="transfer-fee">
+                <span className="label">총 이적료:</span>
+                <div className="value">{numberWithCommas(totalTransferFee)} CITY</div>
             </div>
             <div className="transfer-fee">
                 <span className="label">보유한:</span>
@@ -52,7 +83,7 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
             case 'success':
                 return (
                     <div className="dialog-content success-message">
-                        <span className="highlight">{player.name} 선수를 영입에 성공했습니다.</span>
+                        <span className="highlight">{quantity}명의 {player.name} 선수를 영입에 성공했습니다.</span>
                     </div>
                 );
             case 'failure':
@@ -72,7 +103,7 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
             <TransferPlayerInfo player={player}/>
             <div className="transfer-fee">
                 <span>이적료</span>
-                {numberWithCommas(transferFee)} CITY
+                {numberWithCommas(transferFeePerPlayer)} CITY (1인당)
             </div>
             <Box sx={{display: 'flex', justifyContent: 'flex-end', marginTop: '14px'}}>
                 <Button
@@ -103,10 +134,10 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
                 <CommonDialog
                     open={open}
                     onClose={handleDialogClose}
-                    onConfirm={buyPlayer}
+                    onConfirm={handleBuyPlayer} // handleBuyPlayer 호출
                     title={
                         dialogType === 'confirm'
-                            ? `${player.name} 선수를 영입하시겠습니까?`
+                            ? `${quantity}명의 ${player.name} 선수를 영입하시겠습니까?`
                             : dialogType === 'success'
                                 ? '이적 성공'
                                 : '이적 실패'

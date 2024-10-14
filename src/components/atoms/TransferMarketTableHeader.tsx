@@ -14,6 +14,8 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                                                                                  handleResetFilters,
                                                                                  sortKey,
                                                                                  sortOrder,
+                                                                                 positions,
+                                                                                 nationalities
                                                                              }) => {
     const getSortIcon = (key: string) => {
         if (sortKey !== key) return <FaSort style={{marginLeft: '8px'}}/>;
@@ -59,67 +61,25 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                     }}
                 />
                 <FormControl size="small" sx={{minWidth: 120, backgroundColor: 'transparent'}}>
-                    <InputLabel
-                        sx={{
-                            backgroundColor: 'transparent',
-                            fontFamily: '"Pretendard-Regular", sans-serif',
-                            color: 'var(--text-color)',
-                            fontSize: '16px',
-                            '&.Mui-focused': {
-                                color: 'var(--city-color)',
-                            },
-                        }}
-                    >
-                        포지션
-                    </InputLabel>
-                    <Select
-                        value={filters.position}
-                        onChange={handlePositionChange}
-                        sx={{
-                            color: 'var(--text-color)',
-                            backgroundColor: 'transparent',
-                            borderRadius: '4px',
-                            fontFamily: '"Pretendard-Regular", sans-serif',
-                            '.MuiSvgIcon-root': {color: 'var(--text-color)'},
-                        }}
-                    >
+                    <InputLabel>포지션</InputLabel>
+                    <Select value={filters.position} onChange={handlePositionChange}>
                         <MenuItem value="">모든 포지션</MenuItem>
-                        <MenuItem value="ST">ST</MenuItem>
-                        <MenuItem value="CM">CM</MenuItem>
-                        <MenuItem value="RW">RW</MenuItem>
-                        <MenuItem value="LW">LW</MenuItem>
-                        <MenuItem value="CDM">CDM</MenuItem>
-                        <MenuItem value="CB">CB</MenuItem>
-                        <MenuItem value="GK">GK</MenuItem>
+                        {positions.map((position) => (
+                            <MenuItem key={position} value={position}>
+                                {position}
+                            </MenuItem>
+                        ))}
                     </Select>
                 </FormControl>
                 <FormControl size="small" sx={{minWidth: 120, backgroundColor: 'transparent'}}>
-                    <InputLabel
-                        sx={{
-                            backgroundColor: 'transparent',
-                            fontFamily: '"Pretendard-Regular", sans-serif',
-                            color: 'var(--text-color)',
-                            fontSize: '16px',
-                            '&.Mui-focused': {
-                                color: 'var(--city-color)',
-                            },
-                        }}
-                    >
-                        국가
-                    </InputLabel>
-                    <Select
-                        value={filters.nationality}
-                        onChange={handleNationalityChange}
-                        sx={{
-                            color: 'var(--text-color)',
-                            backgroundColor: 'transparent',
-                            borderRadius: '4px',
-                            fontFamily: '"Pretendard-Regular", sans-serif',
-                            '.MuiSvgIcon-root': {color: 'var(--text-color)'},
-                        }}
-                    >
+                    <InputLabel>국가</InputLabel>
+                    <Select value={filters.nationality} onChange={handleNationalityChange}>
                         <MenuItem value="">모든 국가</MenuItem>
-                        {/* 국가 목록을 props에서 전달된 값으로 렌더링 */}
+                        {nationalities.map((nationality) => (
+                            <MenuItem key={nationality} value={nationality}>
+                                {nationality}
+                            </MenuItem>
+                        ))}
                     </Select>
                 </FormControl>
                 <Button

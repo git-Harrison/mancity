@@ -1,5 +1,5 @@
-import { ChangeEvent } from 'react';
-import { SelectChangeEvent } from '@mui/material';
+import {ChangeEvent} from 'react';
+import {SelectChangeEvent} from '@mui/material';
 
 export interface TransferMarketTableHeaderProps {
     filters: {
@@ -14,4 +14,6 @@ export interface TransferMarketTableHeaderProps {
     handleResetFilters: () => void;
     sortKey: string;
     sortOrder: string;
+    positions: string[];
+    nationalities: string[];
 }
