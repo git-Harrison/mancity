@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { TransferMarketDetailProps } from '../../models/interfaces/Player.interface';
-import { RootState } from '../../store';
+import { RootState } from '../../store/store';
 import { setCity } from '../../store/slices/citySlice';
 import { addMultiplePlayers } from '../../store/slices/playerSlice'; // addMultiplePlayers 액션 가져오기
 

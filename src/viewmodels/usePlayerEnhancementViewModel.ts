@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {RootState} from '../store/index';
+import {RootState} from '../store/store';
 import {fetchPlayers, fetchPreviousSeasonPlayers} from '../api/services/playerService';
 import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
 

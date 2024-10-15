@@ -8,7 +8,7 @@ import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
 import PlayerEnhancementList from '../components/molecules/PlayerEnhancementList';
 import EnhancementTable from "../components/molecules/EnhancementTable";
 import {Button} from '@mui/material';
-import {RootState} from '../store';
+import {RootState} from '../store/store';
 
 // 강화 등급별 확률 및 OVR 상승량 설정
 const enhancementConfig: Record<number, { successRate: number; ovrIncrease: number }> = {

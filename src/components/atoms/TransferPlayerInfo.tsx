@@ -2,7 +2,7 @@ import React from 'react';
 import {PlayerCardProps} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
 import {useSelector} from 'react-redux';
-import {RootState} from '../../store';
+import {RootState} from '../../store/store';
 
 const TransferPlayerInfo: React.FC<PlayerCardProps> = ({player}) => {
     // 로컬스토리지에서 heldPlayers 값 가져오기

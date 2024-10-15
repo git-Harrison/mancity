@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux';
-import {RootState} from '../store';
+import {RootState} from '../store/store';
 import {useEffect, useState} from 'react';
 
 export const useHeaderViewModel = () => {

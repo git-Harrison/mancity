@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {RootState} from '../store';
+import {RootState} from '../store/store';
 import {setCity} from '../store/slices/citySlice';
 
 export const useCityViewModel = () => {

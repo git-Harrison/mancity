@@ -3,7 +3,7 @@ import {BrowserRouter} from 'react-router-dom';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
-import store, {persistor} from './store';
+import store, {persistor} from './store/store';
 import AppRoutes from './routes/AppRoutes';
 import Header from './components/organisms/Header';
 import SideMenuNav from './components/organisms/SideMenuNav';
