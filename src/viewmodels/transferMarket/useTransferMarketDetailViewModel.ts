@@ -59,7 +59,7 @@ export const useTransferMarketDetailViewModel = (player: TransferMarketDetailPro
 
             setDialogType('success');
             setOpen(true);
-        }, 1500);
+        }, 1000);
     };
 
     return {
