@@ -76,10 +76,6 @@
       "height": 194,
       "weight": 88,
       "date_of_birth": "2000.07.21",
-      "transfer_details": {
-        "transfer_fee": 547000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -153,10 +149,6 @@
       "height": 181,
       "weight": 68,
       "date_of_birth": "1991.06.28",
-      "transfer_details": {
-        "transfer_fee": 670000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -225,10 +217,6 @@
       "height": 191,
       "weight": 82,
       "date_of_birth": "1996.06.22",
-      "transfer_details": {
-        "transfer_fee": 475000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -280,10 +268,6 @@
       "height": 173,
       "weight": 64,
       "date_of_birth": "1994.08.10",
-      "transfer_details": {
-        "transfer_fee": 389000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -338,10 +322,6 @@
       "height": 171,
       "weight": 63,
       "date_of_birth": "2000.05.28",
-      "transfer_details": {
-        "transfer_fee": 406000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -381,10 +361,6 @@
       "height": 180,
       "weight": 77,
       "date_of_birth": "1995.09.10",
-      "transfer_details": {
-        "transfer_fee": 253000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -430,10 +406,6 @@
       "height": 171,
       "weight": 66,
       "date_of_birth": "2002.05.27",
-      "transfer_details": {
-        "transfer_fee": 340000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [],
@@ -471,10 +443,6 @@
       "height": 180,
       "weight": 79,
       "date_of_birth": "1990.10.24",
-      "transfer_details": {
-        "transfer_fee": 220000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -538,10 +506,6 @@
       "height": 177,
       "weight": 78,
       "date_of_birth": "1994.05.06",
-      "transfer_details": {
-        "transfer_fee": 17000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -592,10 +556,6 @@
       "height": 183,
       "weight": 76,
       "date_of_birth": "1998.08.27",
-      "transfer_details": {
-        "transfer_fee": 22000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [],
@@ -643,10 +603,6 @@
       "height": 174,
       "weight": 70,
       "date_of_birth": "2003.05.12",
-      "transfer_details": {
-        "transfer_fee": 110000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -680,10 +636,6 @@
       "height": 178,
       "weight": 73,
       "date_of_birth": "1995.12.02",
-      "transfer_details": {
-        "transfer_fee": 45000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -732,10 +684,6 @@
       "height": 178,
       "weight": 72,
       "date_of_birth": "2003.01.07",
-      "transfer_details": {
-        "transfer_fee": 10000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -784,10 +732,6 @@
       "height": 176,
       "weight": 70,
       "date_of_birth": "2004.04.10",
-      "transfer_details": {
-        "transfer_fee": 1300000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [],
@@ -835,10 +779,6 @@
       "height": 180,
       "weight": 68,
       "date_of_birth": "2002.10.18",
-      "transfer_details": {
-        "transfer_fee": 1000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -884,10 +824,6 @@
       "height": 187,
       "weight": 76,
       "date_of_birth": "1997.05.14",
-      "transfer_details": {
-        "transfer_fee": 440000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -934,10 +870,6 @@
       "height": 183,
       "weight": 80,
       "date_of_birth": "1990.05.28",
-      "transfer_details": {
-        "transfer_fee": 380000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1007,10 +939,6 @@
       "height": 188,
       "weight": 80,
       "date_of_birth": "1994.05.28",
-      "transfer_details": {
-        "transfer_fee": 274000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1060,10 +988,6 @@
       "height": 188,
       "weight": 91,
       "date_of_birth": "1995.07.19",
-      "transfer_details": {
-        "transfer_fee": 160000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1108,10 +1032,6 @@
       "height": 180,
       "weight": 75,
       "date_of_birth": "1995.02.18",
-      "transfer_details": {
-        "transfer_fee": 221000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1173,10 +1093,6 @@
       "height": 185,
       "weight": 80,
       "date_of_birth": "2002.01.23",
-      "transfer_details": {
-        "transfer_fee": 52000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [],
@@ -1214,10 +1130,6 @@
       "height": 169,
       "weight": 64,
       "date_of_birth": "2004.11.21",
-      "transfer_details": {
-        "transfer_fee": 44000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1252,10 +1164,6 @@
       "height": 176,
       "weight": 67,
       "date_of_birth": "2002.12.26",
-      "transfer_details": {
-        "transfer_fee": 2000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1306,10 +1214,6 @@
       "height": 188,
       "weight": 86,
       "date_of_birth": "1993.08.17",
-      "transfer_details": {
-        "transfer_fee": 348000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1369,10 +1273,6 @@
       "height": 185,
       "weight": 88,
       "date_of_birth": "1992.11.06",
-      "transfer_details": {
-        "transfer_fee": 45000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [
@@ -1447,10 +1347,6 @@
       "height": 188,
       "weight": 85,
       "date_of_birth": "1985.09.03",
-      "transfer_details": {
-        "transfer_fee": 1000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1,
       "honors": {
         "프리미어리그": [

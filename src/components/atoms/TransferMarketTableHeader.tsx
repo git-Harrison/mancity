@@ -28,7 +28,6 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
             <FaSortUp style={{marginLeft: '8px'}}/>;
     };
 
-
     return (
         <Box
             sx={{
@@ -149,7 +148,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                 </Button>
                 <Button
                     variant="contained"
-                    onClick={() => handleSort('transfer_details.transfer_fee')}
+                    onClick={() => handleSort('transfer_fee')}
                     sx={{
                         width: '100px',
                         height: '44px',
@@ -164,7 +163,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         },
                     }}
                 >
-                    이적료 {getSortIcon('transfer_details.transfer_fee')}
+                    이적료 {getSortIcon('transfer_fee')}
                 </Button>
             </Box>
         </Box>

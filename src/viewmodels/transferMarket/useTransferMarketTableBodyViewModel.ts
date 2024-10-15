@@ -1,18 +1,16 @@
-import {useState, useEffect} from 'react';
-import {Player} from '../../models/interfaces/Player.interface';
+import {useMemo} from 'react';
+import {Player, PlayerFilters} from '../../models/interfaces/Player.interface';
 
-export const useTransferMarketTableBodyViewModel = (players: Player[], filters: any) => {
-    const [filteredPlayers, setFilteredPlayers] = useState(players);
-
-    useEffect(() => {
-        const result = players.filter((player) => {
+export const useTransferMarketTableBodyViewModel = (players: Player[], filters: PlayerFilters) => {
+    // 필터링만 수행하도록 수정
+    const filteredPlayers = useMemo(() => {
+        return players.filter((player) => {
             return (
                 (!filters.position || player.position.includes(filters.position)) &&
                 (!filters.nationality || player.nationality.includes(filters.nationality)) &&
                 (!filters.name || player.name.toLowerCase().includes(filters.name.toLowerCase()))
             );
         });
-        setFilteredPlayers(result);
     }, [players, filters]);
 
     return {filteredPlayers};

@@ -57,6 +57,12 @@ export interface PlayersCardSliderProps {
     onPlayerClick: (number: number) => void;
 }
 
+export interface PlayerFilters {
+    position: string;
+    nationality: string;
+    name: string;
+}
+
 export interface HeldPlayer {
     id: string;
     number: number;

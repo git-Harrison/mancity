@@ -1,21 +1,25 @@
 import {useState, useEffect} from 'react';
 import {Player} from '../../models/interfaces/Player.interface';
 
-export const useTransferMarketTableViewModel = (players: Player[]) => {
-    const [sortedPlayers, setSortedPlayers] = useState(players);
+export const useTransferMarketTableViewModel = (initializedPlayers: Player[]) => {
+    const [sortedPlayers, setSortedPlayers] = useState<Player[]>([]);
     const [sortKey, setSortKey] = useState('overall_ability');
-    const [sortOrder, setSortOrder] = useState('desc');
+    const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
 
     useEffect(() => {
-        let sorted = [...players];
+        let sorted = [...initializedPlayers]; // 한 번 초기화된 데이터를 사용
         sorted.sort((a, b) => {
-            if (sortKey === 'transfer_details.transfer_fee') {
-                const transferFeeA = a.transfer_details?.transfer_fee ?? 0;
-                const transferFeeB = b.transfer_details?.transfer_fee ?? 0;
-                return sortOrder === 'desc' ? transferFeeB - transferFeeA : transferFeeA - transferFeeB;
+            let valueA: any;
+            let valueB: any;
+
+            if (sortKey === 'transfer_fee') {
+                valueA = a.transfer_details?.transfer_fee ?? 0;
+                valueB = b.transfer_details?.transfer_fee ?? 0;
+            } else {
+                valueA = a[sortKey as keyof Player];
+                valueB = b[sortKey as keyof Player];
             }
-            const valueA = a[sortKey as keyof typeof a];
-            const valueB = b[sortKey as keyof typeof b];
+
             if (typeof valueA === 'number' && typeof valueB === 'number') {
                 return sortOrder === 'desc' ? valueB - valueA : valueA - valueB;
             }
@@ -24,12 +28,12 @@ export const useTransferMarketTableViewModel = (players: Player[]) => {
             }
             return 0;
         });
-        setSortedPlayers(sorted);
-    }, [players, sortKey, sortOrder]);
+        setSortedPlayers(sorted); // 정렬된 플레이어 설정
+    }, [initializedPlayers, sortKey, sortOrder]);
 
     const handleSort = (key: string) => {
+        setSortOrder(prevSortOrder => (sortKey === key && prevSortOrder === 'desc' ? 'asc' : 'desc'));
         setSortKey(key);
-        setSortOrder(sortKey === key && sortOrder === 'desc' ? 'asc' : 'desc');
     };
 
     return {sortedPlayers, sortKey, sortOrder, handleSort};

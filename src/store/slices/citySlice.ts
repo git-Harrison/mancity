@@ -5,7 +5,7 @@ interface CityState {
 }
 
 const initialState: CityState = {
-    city: 10000000000000, // 초기값 설정
+    city: 1000000000000, // 초기값 설정
 };
 
 const citySlice = createSlice({

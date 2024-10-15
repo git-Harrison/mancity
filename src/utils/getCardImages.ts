@@ -31,7 +31,7 @@ export const getCardImages = (player: Player) => {
     } else if (player.overall_ability < 70) {
         return {
             background: `${process.env.PUBLIC_URL}/images/card_tt_bg.png`,
-            tag: `${process.env.PUBLIC_URL}/images/card_tttag.png`,
+            tag: `${process.env.PUBLIC_URL}/images/card_tt_tag.png`,
             badge: `${process.env.PUBLIC_URL}/images/card_tt_badge.png`
         };
     } else if (player.overall_ability < 80) {

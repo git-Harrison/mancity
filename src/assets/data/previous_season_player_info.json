@@ -10,10 +10,6 @@
       "height": 173,
       "weight": 70,
       "date_of_birth": "1988.06.02",
-      "transfer_details": {
-        "transfer_fee": 512000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -26,10 +22,6 @@
       "height": 170,
       "weight": 69,
       "date_of_birth": "1994.12.08",
-      "transfer_details": {
-        "transfer_fee": 6300000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -42,10 +34,6 @@
       "height": 189,
       "weight": 88,
       "date_of_birth": "1990.08.12",
-      "transfer_details": {
-        "transfer_fee": 2800000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -58,10 +46,6 @@
       "height": 193,
       "weight": 80,
       "date_of_birth": "1986.03.17",
-      "transfer_details": {
-        "transfer_fee": 210000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -74,10 +58,6 @@
       "height": 173,
       "weight": 77,
       "date_of_birth": "1984.02.05",
-      "transfer_details": {
-        "transfer_fee": 97600000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -90,10 +70,6 @@
       "height": 179,
       "weight": 67,
       "date_of_birth": "1991.02.21",
-      "transfer_details": {
-        "transfer_fee": 123000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -106,10 +82,6 @@
       "height": 175,
       "weight": 73,
       "date_of_birth": "1997.04.03",
-      "transfer_details": {
-        "transfer_fee": 3200000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -122,10 +94,6 @@
       "height": 170,
       "weight": 70,
       "date_of_birth": "2000.01.31",
-      "transfer_details": {
-        "transfer_fee": 19800000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -138,10 +106,6 @@
       "height": 182,
       "weight": 84,
       "date_of_birth": "1988.12.10",
-      "transfer_details": {
-        "transfer_fee": 28000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -154,10 +118,6 @@
       "height": 188,
       "weight": 74,
       "date_of_birth": "1972.02.11",
-      "transfer_details": {
-        "transfer_fee": 22500000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -170,10 +130,6 @@
       "height": 183,
       "weight": 75,
       "date_of_birth": "1996.01.11",
-      "transfer_details": {
-        "transfer_fee": 37000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -186,10 +142,6 @@
       "height": 191,
       "weight": 81,
       "date_of_birth": "1984.02.26",
-      "transfer_details": {
-        "transfer_fee": 29000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -202,10 +154,6 @@
       "height": 186,
       "weight": 85,
       "date_of_birth": "1985.08.20",
-      "transfer_details": {
-        "transfer_fee": 25000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -218,10 +166,6 @@
       "height": 184,
       "weight": 78,
       "date_of_birth": "1987.02.14",
-      "transfer_details": {
-        "transfer_fee": 20000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -234,10 +178,6 @@
       "height": 168,
       "weight": 64,
       "date_of_birth": "1981.10.25",
-      "transfer_details": {
-        "transfer_fee": 9000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -250,10 +190,6 @@
       "height": 183,
       "weight": 79,
       "date_of_birth": "1989.11.02",
-      "transfer_details": {
-        "transfer_fee": 26000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     }
   ],
@@ -268,10 +204,6 @@
       "height": 170,
       "weight": 67,
       "date_of_birth": "1986.01.08",
-      "transfer_details": {
-        "transfer_fee": 497600000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -284,10 +216,6 @@
       "height": 188,
       "weight": 90,
       "date_of_birth": "1983.05.13",
-      "transfer_details": {
-        "transfer_fee": 17200000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -300,10 +228,6 @@
       "height": 184,
       "weight": 85,
       "date_of_birth": "1978.06.20",
-      "transfer_details": {
-        "transfer_fee": 4880000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -316,10 +240,6 @@
       "height": 183,
       "weight": 79,
       "date_of_birth": "1981.02.23",
-      "transfer_details": {
-        "transfer_fee": 12500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -332,10 +252,6 @@
       "height": 179,
       "weight": 67,
       "date_of_birth": "1985.05.04",
-      "transfer_details": {
-        "transfer_fee": 40000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -348,10 +264,6 @@
       "height": 175,
       "weight": 75,
       "date_of_birth": "1987.06.26",
-      "transfer_details": {
-        "transfer_fee": 25000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -364,10 +276,6 @@
       "height": 192,
       "weight": 85,
       "date_of_birth": "1976.06.23",
-      "transfer_details": {
-        "transfer_fee": 4740000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -380,10 +288,6 @@
       "height": 174,
       "weight": 72,
       "date_of_birth": "1984.11.30",
-      "transfer_details": {
-        "transfer_fee": 19000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
 
     },
@@ -397,10 +301,6 @@
       "height": 178,
       "weight": 71,
       "date_of_birth": "1988.09.04",
-      "transfer_details": {
-        "transfer_fee": 10000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -413,10 +313,6 @@
       "height": 188,
       "weight": 83,
       "date_of_birth": "1991.03.11",
-      "transfer_details": {
-        "transfer_fee": 15000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -429,10 +325,6 @@
       "height": 175,
       "weight": 70,
       "date_of_birth": "1986.01.04",
-      "transfer_details": {
-        "transfer_fee": 20000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -445,10 +337,6 @@
       "height": 182,
       "weight": 75,
       "date_of_birth": "2002.05.06",
-      "transfer_details": {
-        "transfer_fee": 30000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     }
   ],
@@ -463,10 +351,6 @@
       "height": 190,
       "weight": 85,
       "date_of_birth": "1986.04.10",
-      "transfer_details": {
-        "transfer_fee": 197600000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -479,10 +363,6 @@
       "height": 176,
       "weight": 66,
       "date_of_birth": "1985.07.26",
-      "transfer_details": {
-        "transfer_fee": 8500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -495,10 +375,6 @@
       "height": 180,
       "weight": 83,
       "date_of_birth": "1988.06.24",
-      "transfer_details": {
-        "transfer_fee": 1000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -511,10 +387,6 @@
       "height": 176,
       "weight": 69,
       "date_of_birth": "1999.09.13",
-      "transfer_details": {
-        "transfer_fee": 20000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -527,10 +399,6 @@
       "height": 174,
       "weight": 73,
       "date_of_birth": "1985.01.16",
-      "transfer_details": {
-        "transfer_fee": 8000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -543,10 +411,6 @@
       "height": 178,
       "weight": 70,
       "date_of_birth": "1998.05.09",
-      "transfer_details": {
-        "transfer_fee": 2070000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -559,10 +423,6 @@
       "height": 187,
       "weight": 83,
       "date_of_birth": "1985.11.10",
-      "transfer_details": {
-        "transfer_fee": 18000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -575,10 +435,6 @@
       "height": 182,
       "weight": 76,
       "date_of_birth": "2001.01.09",
-      "transfer_details": {
-        "transfer_fee": 23000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -591,10 +447,6 @@
       "height": 171,
       "weight": 63,
       "date_of_birth": "2000.12.10",
-      "transfer_details": {
-        "transfer_fee": 150000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -607,10 +459,6 @@
       "height": 182,
       "weight": 74,
       "date_of_birth": "1994.05.27",
-      "transfer_details": {
-        "transfer_fee": 17600000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -623,10 +471,6 @@
       "height": 188,
       "weight": 85,
       "date_of_birth": "1991.02.13",
-      "transfer_details": {
-        "transfer_fee": 42000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -639,10 +483,6 @@
       "height": 188,
       "weight": 83,
       "date_of_birth": "1993.03.28",
-      "transfer_details": {
-        "transfer_fee": 16000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -655,10 +495,6 @@
       "height": 192,
       "weight": 90,
       "date_of_birth": "1988.09.03",
-      "transfer_details": {
-        "transfer_fee": 13500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -671,10 +507,6 @@
       "height": 192,
       "weight": 87,
       "date_of_birth": "1986.11.27",
-      "transfer_details": {
-        "transfer_fee": 900000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -687,10 +519,6 @@
       "height": 179,
       "weight": 73,
       "date_of_birth": "1982.04.20",
-      "transfer_details": {
-        "transfer_fee": 6000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -703,10 +531,6 @@
       "height": 184,
       "weight": 78,
       "date_of_birth": "1985.09.15",
-      "transfer_details": {
-        "transfer_fee": 8500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -719,10 +543,6 @@
       "height": 188,
       "weight": 88,
       "date_of_birth": "1982.08.16",
-      "transfer_details": {
-        "transfer_fee": 27000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -735,10 +555,6 @@
       "height": 191,
       "weight": 86,
       "date_of_birth": "1994.05.27",
-      "transfer_details": {
-        "transfer_fee": 65000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -751,10 +567,6 @@
       "height": 175,
       "weight": 70,
       "date_of_birth": "1996.12.15",
-      "transfer_details": {
-        "transfer_fee": 25000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -767,10 +579,6 @@
       "height": 184,
       "weight": 78,
       "date_of_birth": "1991.07.15",
-      "transfer_details": {
-        "transfer_fee": 37000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -783,10 +591,6 @@
       "height": 173,
       "weight": 71,
       "date_of_birth": "1990.09.19",
-      "transfer_details": {
-        "transfer_fee": 3500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -799,10 +603,6 @@
       "height": 183,
       "weight": 81,
       "date_of_birth": "1988.02.12",
-      "transfer_details": {
-        "transfer_fee": 87000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     }
   ],
@@ -817,10 +617,6 @@
       "height": 196,
       "weight": 89,
       "date_of_birth": "1987.04.19",
-      "transfer_details": {
-        "transfer_fee": 99900000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -833,10 +629,6 @@
       "height": 186,
       "weight": 80,
       "date_of_birth": "1981.09.28",
-      "transfer_details": {
-        "transfer_fee": 8500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -849,10 +641,6 @@
       "height": 189,
       "weight": 82,
       "date_of_birth": "1986.11.05",
-      "transfer_details": {
-        "transfer_fee": 1500000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -865,10 +653,6 @@
       "height": 184,
       "weight": 80,
       "date_of_birth": "1983.04.13",
-      "transfer_details": {
-        "transfer_fee": 18000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -881,10 +665,6 @@
       "height": 193,
       "weight": 95,
       "date_of_birth": "1963.11.18",
-      "transfer_details": {
-        "transfer_fee": 1160000000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     },
     {
@@ -897,10 +677,6 @@
       "height": 193,
       "weight": 86,
       "date_of_birth": "1963.09.19",
-      "transfer_details": {
-        "transfer_fee": 64600000000,
-        "currency": "EUR"
-      },
       "enhancementLevel": 1
     }
   ]

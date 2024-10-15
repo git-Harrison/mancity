@@ -1,20 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import TransferMarketTableHeader from '../atoms/TransferMarketTableHeader';
 import TransferMarketTableBody from '../atoms/TransferMarketTableBody';
 import {TransferMarketTableProps} from '../../models/interfaces/transferMarket/TransferMarketTable.interface';
+import {Player} from '../../models/interfaces/Player.interface';
 import {useTransferMarketTableViewModel} from '../../viewmodels/transferMarket/useTransferMarketTableViewModel';
 import {useTransferMarketTableBodyViewModel} from '../../viewmodels/transferMarket/useTransferMarketTableBodyViewModel';
 import {
     useTransferMarketTableHeaderViewModel
 } from '../../viewmodels/transferMarket/useTransferMarketTableHeaderViewModel';
+import {getRandomTransferFee} from '../../utils/transferFeeUtils';
 
 const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPlayerClick}) => {
     const {filters, handleFilterChange, handlePositionChange, handleNationalityChange, handleResetFilters} =
         useTransferMarketTableHeaderViewModel();
-    const {sortedPlayers, sortKey, sortOrder, handleSort} = useTransferMarketTableViewModel(players);
+
+    // transfer_fee를 한 번만 초기화
+    const [initializedPlayers, setInitializedPlayers] = useState<Player[]>([]);
+
+    useEffect(() => {
+        const playersWithFees = players.map(player => ({
+            ...player,
+            transfer_details: {
+                ...player.transfer_details,
+                transfer_fee: player.transfer_details?.transfer_fee ?? getRandomTransferFee(player.overall_ability),
+                currency: player.transfer_details?.currency || 'CITY',
+            },
+        }));
+        setInitializedPlayers(playersWithFees);
+    }, [players]);
+
+    const {sortedPlayers, sortKey, sortOrder, handleSort} = useTransferMarketTableViewModel(initializedPlayers);
     const {filteredPlayers} = useTransferMarketTableBodyViewModel(sortedPlayers, filters);
 
-    // 선수 데이터로부터 고유한 포지션과 국가 값을 추출
+    // 포지션과 국가 리스트 생성
     const positions = Array.from(new Set(players.map(player => player.position)));
     const nationalities = Array.from(new Set(players.map(player => player.nationality)));
 
