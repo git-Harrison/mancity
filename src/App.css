@@ -157,6 +157,9 @@ img {
   --city-color: #98C5E9;
   --table-header-color: #ffffff;
   --table-hover-color: #edeff8;
+  --player-info-bg: #f5f6fa;
+  --player-info-border: #d1d3db;
+  --player-info-box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 :root[data-theme=dark] {
@@ -171,6 +174,9 @@ img {
   --city-color: #98C5E9;
   --table-header-color: #3e3d55;
   --table-hover-color: #000000;
+  --player-info-bg: #2b2c3b; /* Dark background for player info */
+  --player-info-border: #404060;
+  --player-info-box-shadow: rgba(255, 255, 255, 0.1);
 }
 
 :root[data-theme=dark] img.invertible {
@@ -556,14 +562,17 @@ header .page-name {
   padding: 20px;
   border-radius: 8px;
   width: 524px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 0px 4px 10px var(--player-info-box-shadow);
+  background-color: var(--player-info-bg);
+  border: 1px solid var(--player-info-border);
+  color: var(--text-color);
 }
 .players-info .info-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  color: var(--text-color);
 }
 .players-info .info-top .detail {
   display: flex;
@@ -579,11 +588,10 @@ header .page-name {
 }
 .players-info .info-top .name {
   font-size: 24px;
-  color: #151432;
   font-family: "Pretendard-Regular", sans-serif;
 }
 .players-info .info-top .number {
-  font-size: 12px;
+  font-size: 24px;
   font-family: "Pretendard-Regular", sans-serif;
 }
 .players-info .position {
@@ -609,12 +617,12 @@ header .page-name {
 .players-info .honor-item {
   width: 100%;
   font-size: 16px;
-  color: #7f8c8d;
+  color: var(--sub-text-color);
   margin-bottom: 5px;
 }
 .players-info .player-rating {
   font-size: 18px;
-  color: #f39c12;
+  color: var(--sub-text-color);
   margin: 10px 0;
 }
 .players-info .nationality img {
@@ -639,9 +647,9 @@ header .page-name {
   font-size: 15px;
   font-weight: normal;
   padding: 15px 0;
-  color: #6b6a7b;
-  border-top: 10px solid #3e3d55;
-  border-bottom: 2px solid #3e3d55;
+  color: var(--sub-text-color);
+  border-top: 10px solid var(--player-info-border);
+  border-bottom: 2px solid var(--player-info-border);
   text-align: left;
   font-family: "Pretendard-Regular", sans-serif;
 }
@@ -651,8 +659,8 @@ header .page-name {
 .players-info .club-history table td {
   overflow: hidden;
   font-size: 13px;
-  color: #6b6a7b;
-  border-bottom: 1px solid #e1e1e5;
+  color: var(--sub-text-color);
+  border-bottom: 1px solid var(--player-info-border);
   line-height: 38px;
   font-family: "Pretendard-Regular", sans-serif;
 }

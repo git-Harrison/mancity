@@ -11,14 +11,17 @@
     padding: 20px;
     border-radius: 8px;
     width: 524px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    box-shadow: 0px 4px 10px var(--player-info-box-shadow);
+    background-color: var(--player-info-bg);
+    border: 1px solid var(--player-info-border);
+    color: var(--text-color);
 
     .info-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
+        color: var(--text-color);
 
         .detail {
             display: flex;
@@ -37,12 +40,11 @@
 
         .name {
             font-size: 24px;
-            color: #151432;
             font-family: "Pretendard-Regular", sans-serif;
         }
 
         .number {
-            font-size: 12px;
+            font-size: 24px;
             font-family: "Pretendard-Regular", sans-serif;
         }
     }
@@ -73,13 +75,13 @@
     .honor-item {
         width: 100%;
         font-size: 16px;
-        color: #7f8c8d;
+        color: var(--sub-text-color);
         margin-bottom: 5px;
     }
 
     .player-rating {
         font-size: 18px;
-        color: #f39c12;
+        color: var(--sub-text-color);
         margin: 10px 0;
     }
 
@@ -108,9 +110,9 @@
                 font-size: 15px;
                 font-weight: normal;
                 padding: 15px 0;
-                color: #6b6a7b;
-                border-top: 10px solid #3e3d55;
-                border-bottom: 2px solid #3e3d55;
+                color: var(--sub-text-color);
+                border-top: 10px solid var(--player-info-border);
+                border-bottom: 2px solid var(--player-info-border);
                 text-align: left;
                 font-family: "Pretendard-Regular", sans-serif;
             }
@@ -126,8 +128,8 @@
             td {
                 overflow: hidden;
                 font-size: 13px;
-                color: #6b6a7b;
-                border-bottom: 1px solid #e1e1e5;
+                color: var(--sub-text-color);
+                border-bottom: 1px solid var(--player-info-border);
                 line-height: 38px;
                 font-family: "Pretendard-Regular", sans-serif;
             }

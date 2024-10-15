@@ -112,6 +112,9 @@ $level-styles: (
     --city-color: #98C5E9;
     --table-header-color: #ffffff;
     --table-hover-color: #edeff8;
+    --player-info-bg: #f5f6fa;
+    --player-info-border: #d1d3db;
+    --player-info-box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 // Dark Theme Variables
@@ -127,6 +130,10 @@ $level-styles: (
     --city-color: #98C5E9;
     --table-header-color: #3e3d55;
     --table-hover-color: #000000;
+    --player-info-bg: #2b2c3b;  /* Dark background for player info */
+    --player-info-border: #404060;
+    --player-info-box-shadow: rgba(255, 255, 255, 0.1);
+
 }
 
 :root[data-theme="dark"] img.invertible {

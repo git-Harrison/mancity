@@ -42,7 +42,7 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                         <div className="name">{player.name}</div>
                     </motion.div>
                     <motion.div className="number" {...textAnimation(0.1, 0.4)}>
-                        {player.number}
+                        {player.overall_ability}
                     </motion.div>
                 </div>
 
