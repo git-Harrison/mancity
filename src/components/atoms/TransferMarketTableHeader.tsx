@@ -1,9 +1,11 @@
 import React from 'react';
 import {TextField, Select, MenuItem, Button, InputLabel, FormControl, Box} from '@mui/material';
-import {FaSort, FaSortUp, FaSortDown} from 'react-icons/fa';
+import {FaSort, FaSortUp, FaSortDown, FaDownload} from 'react-icons/fa';
+import {HiOutlineDownload} from 'react-icons/hi';
 import {
     TransferMarketTableHeaderProps
-} from '../../models/interfaces/transferMarket/TransferMarketTableHeader.interface';
+} from '../../models/interfaces/Player.interface';
+import {useExcelExportViewModel} from '../../viewmodels/transferMarket/useExcelExportViewModel';
 
 const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                                                                                  filters,
@@ -15,13 +17,17 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                                                                                  sortKey,
                                                                                  sortOrder,
                                                                                  positions,
-                                                                                 nationalities
+                                                                                 nationalities,
+                                                                                 players
                                                                              }) => {
+    const {downloadExcel} = useExcelExportViewModel();
+
     const getSortIcon = (key: string) => {
         if (sortKey !== key) return <FaSort style={{marginLeft: '8px'}}/>;
         return sortOrder === 'desc' ? <FaSortDown style={{marginLeft: '8px'}}/> :
             <FaSortUp style={{marginLeft: '8px'}}/>;
     };
+
 
     return (
         <Box
@@ -103,6 +109,26 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                 </Button>
             </Box>
             <Box sx={{display: 'flex', gap: 1}}>
+                <Button
+                    variant="contained"
+                    onClick={() => downloadExcel(players)}
+                    sx={{
+                        width: '180px',
+                        height: '44px',
+                        fontSize: '16px',
+                        textTransform: 'none',
+                        color: '#ffffff',
+                        backgroundColor: '#3e3d55',
+                        transition: 'transform 0.3s ease-in-out',
+                        fontFamily: '"Pretendard-Regular", sans-serif',
+                        '&:hover': {
+                            color: '#ffffff',
+                            backgroundColor: 'var(--city-color)',
+                        },
+                    }}
+                >
+                    선수정보 다운로드 <HiOutlineDownload style={{marginLeft: '4px'}}/>
+                </Button>
                 <Button
                     variant="contained"
                     onClick={() => handleSort('overall_ability')}

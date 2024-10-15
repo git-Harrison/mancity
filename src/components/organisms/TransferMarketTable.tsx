@@ -31,6 +31,7 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPla
                 sortOrder={sortOrder}
                 positions={positions}
                 nationalities={nationalities}
+                players={filteredPlayers}
             />
             <table className="transfer-market-table">
                 <thead>

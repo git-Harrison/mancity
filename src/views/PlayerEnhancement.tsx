@@ -7,7 +7,7 @@ import {usePlayerEnhancementViewModel} from "../viewmodels/usePlayerEnhancementV
 import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
 import PlayerEnhancementList from '../components/molecules/PlayerEnhancementList';
 import EnhancementTable from "../components/molecules/EnhancementTable";
-import {Button, Box} from '@mui/material';
+import {Button} from '@mui/material';
 import {RootState} from '../store';
 
 // 강화 등급별 확률 및 OVR 상승량 설정
