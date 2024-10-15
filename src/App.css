@@ -562,7 +562,7 @@ header .page-name {
   padding: 20px;
   border-radius: 8px;
   width: 524px;
-  box-shadow: 0px 4px 10px var(--player-info-box-shadow);
+  box-shadow: 0 4px 10px var(--player-info-box-shadow);
   background-color: var(--player-info-bg);
   border: 1px solid var(--player-info-border);
   color: var(--text-color);
