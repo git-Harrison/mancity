@@ -153,11 +153,18 @@ $level-styles: (
 body {
     background-color: var(--contents-background-color);
     transition: background-color 0.3s ease;
+    background-image: url('./assets/images/bg.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .contents-container,
 .transfer-market-container {
-    margin-top: 65px;
+    padding-top: 65px;
     padding-left: 82px;
     display: flex;
 }
