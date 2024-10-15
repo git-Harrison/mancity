@@ -15,6 +15,7 @@ const SideMenuNav: React.FC = () => {
             "/players": "players",
             "/scores": "scores",
             "/transfer": "transfer",
+            "/enhancement": "enhancement",
         };
         setActiveMenu(pathToMenu[location.pathname] || "");
     }, [location.pathname]);

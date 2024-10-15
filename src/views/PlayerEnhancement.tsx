@@ -111,12 +111,11 @@ const PlayerEnhancement: React.FC = () => {
                                             height: '44px',
                                             fontSize: '16px',
                                             textTransform: 'none',
-                                            color: '#ffffff',
-                                            backgroundColor: '#3e3d55',
-                                            transition: 'transform 0.3s ease-in-out',
+                                            color: 'var(--text-color)',
+                                            backgroundColor: 'var(--table-header-color)',
+                                            transition: 'all 0.2s ease',
                                             fontFamily: '"Pretendard-Bold", sans-serif',
                                             '&:hover': {
-                                                color: '#ffffff',
                                                 backgroundColor: 'var(--city-color)',
                                             },
                                         }}
