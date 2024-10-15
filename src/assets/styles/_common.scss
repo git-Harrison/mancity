@@ -129,6 +129,15 @@ $level-styles: (
     --table-hover-color: #000000;
 }
 
+:root[data-theme="dark"] img.invertible {
+    filter: invert(1);
+}
+
+/* No inversion for light theme */
+:root[data-theme="light"] img.invertible {
+    filter: none;
+}
+
 .container {
     position: relative;
     overflow: hidden;

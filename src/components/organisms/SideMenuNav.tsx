@@ -34,7 +34,7 @@ const SideMenuNav: React.FC = () => {
                     <img
                         src={`${process.env.PUBLIC_URL}/images/ea_sports_icon.webp`}
                         alt="ea_sports_icon"
-                        className="ea_sports_icon"
+                        className="ea_sports_icon invertible"
                     />
                 </li>
                 {menuItems.map(({name, path, icon, label}) => (
