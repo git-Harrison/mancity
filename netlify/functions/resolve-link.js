@@ -1,20 +1,20 @@
 const axios = require('axios');
 
 exports.handler = async function (event) {
+    console.log('Request event:', event);  // 요청 확인
     const { url } = event.queryStringParameters;
 
     try {
-        // Google News URL을 그대로 반환 (추가적인 처리 없이 원본 URL 사용)
         return {
             statusCode: 200,
-            body: JSON.stringify({ finalUrl: url }),
+            body: JSON.stringify({ finalUrl: url }),  // 원본 URL을 반환
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
         };
     } catch (error) {
-        console.error('Error in resolve-link function:', error);
+        console.error('Error in resolve-link function:', error);  // 에러 로그 출력
 
         return {
             statusCode: 500,

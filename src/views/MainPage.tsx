@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 interface Article {
     title: string;
@@ -12,17 +12,8 @@ const MainPage: React.FC = () => {
     const CSE_ID = process.env.REACT_APP_CUSTOM_SEARCH_CSE_ID;
 
     const resolveLink = async (url: string) => {
-        const baseUrl = window.location.hostname === 'localhost'
-            ? '/.netlify/functions/resolve-link'
-            : '/api/resolve-link';
-
-        const response = await fetch(`${baseUrl}?url=${encodeURIComponent(url)}`);
-        const data = await response.json();
-
-        console.log('Resolve link data:', data);  // 응답 데이터 확인
-        return data.finalUrl;  // 최종 URL 반환
+        return url;  // 링크를 리디렉션 없이 그대로 반환
     };
-
 
     useEffect(() => {
         const query = 'Manchester City news';  // 검색할 키워드
@@ -36,7 +27,7 @@ const MainPage: React.FC = () => {
                     const resolvedArticles = await Promise.all(
                         data.items.map(async (item: any) => ({
                             title: item.title,
-                            link: await resolveLink(item.link),  // 리디렉션을 추적하여 최종 URL 사용
+                            link: await resolveLink(item.link),  // 원본 URL 사용
                             thumbnail: item.pagemap?.cse_image?.[0]?.src || '',  // 썸네일 이미지 가져오기
                         }))
                     );
@@ -54,7 +45,7 @@ const MainPage: React.FC = () => {
                     {articles.map((article, index) => (
                         <li key={index} className="news_item">
                             <a href={article.link} target="_blank" rel="noopener noreferrer">
-                                <img src={article.thumbnail} alt={article.title}/>
+                                <img src={article.thumbnail} alt={article.title} />
                                 {article.title}
                             </a>
                         </li>
