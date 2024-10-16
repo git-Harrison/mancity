@@ -1447,42 +1447,42 @@ header .page-name {
 }
 
 .news_list_wrap {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-.news_list_wrap .news_list {
-  z-index: 1;
-  position: absolute;
+  position: fixed;
   right: 25%;
   top: 53%;
   transform: translate(50%, -50%);
   width: 40%;
-  height: 80vh;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
+}
+.news_list_wrap .news_list_row {
   box-shadow: 0 4px 10px var(--player-info-box-shadow);
   background-color: var(--player-info-bg);
   border: 1px solid var(--player-info-border);
   border-radius: 8px;
-  font-family: "INGAME", sans-serif;
 }
-.news_list_wrap .news_list h2 {
+.news_list_wrap .news_list_row h2 {
   width: 100%;
-  padding: 28px 0;
+  padding: 18px 0;
   text-align: center;
   color: var(--text-color);
   letter-spacing: 4px;
 }
-.news_list_wrap .news_list .news_item {
+.news_list_wrap .news_list_row .news_list {
+  z-index: 1;
+  width: 100%;
+  height: 77vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  font-family: "INGAME", sans-serif;
+}
+.news_list_wrap .news_list_row .news_list .news_item {
   display: flex;
   width: 100%;
 }
-.news_list_wrap .news_list .news_item:hover {
+.news_list_wrap .news_list_row .news_list .news_item:hover {
   background-color: var(--table-hover-color);
 }
-.news_list_wrap .news_list .news_item a {
+.news_list_wrap .news_list_row .news_list .news_item a {
   display: flex;
   align-items: center;
   padding: 16px;
@@ -1490,21 +1490,21 @@ header .page-name {
   text-decoration: none;
   border-bottom: 1px solid var(--border-color);
 }
-.news_list_wrap .news_list .news_item a img {
+.news_list_wrap .news_list_row .news_list .news_item a img {
   width: 180px;
   border-radius: 8px;
 }
-.news_list_wrap .news_list .news_item a div {
+.news_list_wrap .news_list_row .news_list .news_item a div {
   width: 100%;
   color: var(--text-color);
   font-size: 21px;
   margin-left: 12px;
   font-family: "INGAME", sans-serif;
 }
-.news_list_wrap .news_list .news_item a div strong {
+.news_list_wrap .news_list_row .news_list .news_item a div strong {
   font-weight: normal;
 }
-.news_list_wrap .news_list .news_item a div p {
+.news_list_wrap .news_list_row .news_list .news_item a div p {
   color: var(--sub-text-color);
 }
 
@@ -1534,17 +1534,18 @@ header .page-name {
 }
 
 .loading-components {
-  position: absolute;
+  position: fixed; /* fixed로 설정하여 화면에 고정 */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* 뷰포트 전체 너비 */
+  height: 100vh; /* 뷰포트 전체 높이로 변경 */
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  pointer-events: none; /* 클릭 방지 */
 }
 
 .common-dialog #common-dialog-title {
