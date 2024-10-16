@@ -3,7 +3,7 @@
   publish = "build"
 
 [[redirects]]
-  from = "/api/*"
+  from = "/api/footballProxy/*"
   to = "/.netlify/functions/footballProxy/:splat"
   status = 200
 
