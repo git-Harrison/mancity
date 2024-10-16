@@ -150,7 +150,6 @@ body {
     position: relative;
 }
 
-/* 배경 이미지를 가상 요소로 추가 */
 body::before {
     content: '';
     position: absolute;
@@ -160,7 +159,7 @@ body::before {
     height: 100%;
     background-image: url('./assets/images/bg.webp');
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     z-index: -1;
     transition: filter 0.3s ease;

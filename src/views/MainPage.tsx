@@ -1,57 +1,10 @@
-import React, { useEffect, useState } from "react";
-
-interface Article {
-    title: string;
-    link: string;
-    thumbnail: string;  // 썸네일 이미지 URL
-}
+import React from "react";
+import News from "../components/molecules/News";
 
 const MainPage: React.FC = () => {
-    const [articles, setArticles] = useState<Article[]>([]);
-    const API_KEY = process.env.REACT_APP_CUSTOM_SEARCH_API_KEY;
-    const CSE_ID = process.env.REACT_APP_CUSTOM_SEARCH_CSE_ID;
-
-    const resolveLink = async (url: string) => {
-        return url;  // 링크를 리디렉션 없이 그대로 반환
-    };
-
-    useEffect(() => {
-        const query = 'Manchester City news';  // 검색할 키워드
-        const url = `https://www.googleapis.com/customsearch/v1?q=${query}&cx=${CSE_ID}&key=${API_KEY}`;
-
-        fetch(url)
-            .then((response) => response.json())
-            .then(async (data) => {
-                console.log('API 응답:', data);  // 응답 확인용 로그
-                if (data.items) {
-                    const resolvedArticles = await Promise.all(
-                        data.items.map(async (item: any) => ({
-                            title: item.title,
-                            link: await resolveLink(item.link),  // 원본 URL 사용
-                            thumbnail: item.pagemap?.cse_image?.[0]?.src || '',  // 썸네일 이미지 가져오기
-                        }))
-                    );
-                    setArticles(resolvedArticles);  // 최종 URL 및 썸네일 포함된 상태 설정
-                }
-            })
-            .catch((error) => console.error('Error fetching data:', error));
-    }, [API_KEY, CSE_ID]);
-
     return (
         <div className="container">
-            <h1>Manchester City 관련 기사</h1>
-            <div className="news_list_wrap">
-                <ul className="news_list">
-                    {articles.map((article, index) => (
-                        <li key={index} className="news_item">
-                            <a href={article.link} target="_blank" rel="noopener noreferrer">
-                                <img src={article.thumbnail} alt={article.title} />
-                                {article.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            <News/>
         </div>
     );
 };
