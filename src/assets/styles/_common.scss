@@ -130,19 +130,10 @@ $level-styles: (
     --city-color: #98C5E9;
     --table-header-color: #2b2c3b;
     --table-hover-color: #000000;
-    --player-info-bg: #2b2c3b;  /* Dark background for player info */
+    --player-info-bg: #2b2c3b;
     --player-info-border: #404060;
     --player-info-box-shadow: rgba(255, 255, 255, 0.1);
 
-}
-
-:root[data-theme="dark"] img.invertible {
-    filter: invert(1);
-}
-
-/* No inversion for light theme */
-:root[data-theme="light"] img.invertible {
-    filter: none;
 }
 
 .container {
@@ -153,13 +144,43 @@ $level-styles: (
 body {
     background-color: var(--contents-background-color);
     transition: background-color 0.3s ease;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 배경 이미지를 가상 요소로 추가 */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('./assets/images/bg.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
+    z-index: -1;
+    transition: filter 0.3s ease;
+}
+
+:root[data-theme="dark"] body::before {
+    filter: none;
+}
+
+/* 라이트 테마에서는 필터 없음 */
+:root[data-theme="light"] body::before {
+    filter: invert(1);
+}
+
+:root[data-theme="dark"] img.invertible {
+    filter: invert(1);
+}
+
+:root[data-theme="light"] img.invertible {
+    filter: none;
 }
 
 .contents-container,

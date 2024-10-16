@@ -13,8 +13,9 @@
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-    width: 70%;
+    width: 65%;
     height: calc(100vh - 66px);
+    background-color: var(--contents-background-color);
     overflow: auto;
 }
 
@@ -125,12 +126,12 @@
 }
 
 .standings-list {
+    overflow: auto;
     display: flex;
     justify-content: center;
-    width: calc(30%);
+    width: 35%;
     height: calc(100vh - 66px);
-    padding-top: 20px;
-    overflow: auto;
+    background-color: var(--contents-background-color);
 
     .standings-table {
         width: 90%;
