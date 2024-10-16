@@ -1447,6 +1447,27 @@ header .page-name {
   background-color: var(--table-hover-color);
 }
 
+.news_list_wrap {
+  padding-top: 66px;
+  padding-left: 83px;
+}
+.news_list_wrap .news_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news_list_wrap .news_list .news_item {
+  display: flex;
+  width: 100%;
+}
+.news_list_wrap .news_list .news_item a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.news_list_wrap .news_list .news_item img {
+  width: 100px;
+}
+
 .loading-overlay {
   position: fixed;
   top: 0;

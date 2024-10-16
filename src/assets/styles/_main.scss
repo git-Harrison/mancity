@@ -1,0 +1,25 @@
+.news_list_wrap {
+    padding-top: 66px;
+    padding-left: 83px;
+
+    .news_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .news_item {
+            display: flex;
+            width: 100%;
+            
+            a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+
+
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

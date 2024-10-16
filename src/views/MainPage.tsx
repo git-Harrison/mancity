@@ -24,7 +24,6 @@ const MainPage: React.FC = () => {
     };
 
 
-
     useEffect(() => {
         const query = 'Manchester City news';  // 검색할 키워드
         const url = `https://www.googleapis.com/customsearch/v1?q=${query}&cx=${CSE_ID}&key=${API_KEY}`;
@@ -50,16 +49,18 @@ const MainPage: React.FC = () => {
     return (
         <div className="container">
             <h1>Manchester City 관련 기사</h1>
-            <ul>
-                {articles.map((article, index) => (
-                    <li key={index}>
-                        <a href={article.link} target="_blank" rel="noopener noreferrer">
-                            <img src={article.thumbnail} alt={article.title}/> {/* 썸네일 이미지 */}
-                            {article.title}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+            <div className="news_list_wrap">
+                <ul className="news_list">
+                    {articles.map((article, index) => (
+                        <li key={index} className="news_item">
+                            <a href={article.link} target="_blank" rel="noopener noreferrer">
+                                <img src={article.thumbnail} alt={article.title}/>
+                                {article.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };
