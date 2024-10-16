@@ -6,3 +6,8 @@
   from = "/api/*"
   to = "/.netlify/functions/footballProxy/:splat"
   status = 200
+
+[[redirects]]
+  from = "/api/resolve-link"
+  to = "/.netlify/functions/resolve-link"
+  status = 200
