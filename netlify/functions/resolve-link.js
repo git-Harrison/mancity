@@ -1,13 +1,12 @@
 const axios = require('axios');
 
 exports.handler = async function (event) {
-    console.log('Request event:', event);  // 요청 확인
-    const { url } = event.queryStringParameters;
+    const {url} = event.queryStringParameters;
 
     try {
         return {
             statusCode: 200,
-            body: JSON.stringify({ finalUrl: url }),  // 원본 URL을 반환
+            body: JSON.stringify({finalUrl: url}),  // 원본 URL을 반환
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
@@ -18,7 +17,7 @@ exports.handler = async function (event) {
 
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: error.message }),
+            body: JSON.stringify({error: error.message}),
         };
     }
 };

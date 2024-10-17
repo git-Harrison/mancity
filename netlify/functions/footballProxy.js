@@ -1,14 +1,12 @@
 const axios = require('axios');
 
 exports.handler = async function (event) {
-    console.log('Request event:', event); // 로그 확인용
     const { path, queryStringParameters } = event;
 
     try {
         // Netlify Functions 경로를 제거하여 API 요청 경로 생성
         const apiPath = path.replace('/.netlify/functions/footballProxy', ''); // 불필요한 경로 제거
         const apiUrl = `https://api.football-data.org/v4${apiPath}`; // 올바른 경로로 설정
-        console.log('API URL:', apiUrl); // API URL 로그 기록
 
         const response = await axios.get(apiUrl, {
             headers: {
@@ -17,7 +15,6 @@ exports.handler = async function (event) {
             params: queryStringParameters,
         });
 
-        console.log('API Response:', response.data); // API 응답 로그 기록
         return {
             statusCode: 200,
             body: JSON.stringify(response.data),
