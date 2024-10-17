@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
     const getPageName = () => {
         switch (location.pathname) {
             case '/':
-                return '메인 페이지';
+                return 'HOME';
             case '/players':
                 return '24/25 현재 시즌 선수 명단';
             case '/scores':
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
             case '/enhancement':
                 return '보유 선수 강화 시뮬레이션';
             default:
-                return '페이지 없음';
+                return '페이지 이름 없음';
         }
     };
 
