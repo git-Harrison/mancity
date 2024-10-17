@@ -32,10 +32,19 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
     // 영입할 인원 수 변경 핸들러
     const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(event.target.value, 10);
-        if (!isNaN(value) && value > 0) {
-            setQuantity(value); // 1 이상의 유효한 값일 때만 상태 업데이트
+
+        if (!isNaN(value)) {
+            // 값이 1 미만이면 1로, 50 초과면 50으로 설정
+            if (value < 1) {
+                setQuantity(1);
+            } else if (value > 50) {
+                setQuantity(50);
+            } else {
+                setQuantity(value); // 1 이상 50 이하일 때만 상태 업데이트
+            }
         }
     };
+
 
     const handleBuyPlayer = () => {
         buyPlayer(quantity); // 선택한 수량을 인자로 buyPlayer 호출
@@ -54,8 +63,8 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
                         type="number"
                         value={quantity}
                         onChange={handleQuantityChange}
-                        InputProps={{inputProps: {min: 1}}} // 최소 값 1로 설정
-                        sx={{width: '80px'}} // 입력 필드 크기 조정
+                        InputProps={{inputProps: {min: 1, max: 50}}} // 최소 값 1, 최대 값 50으로 설정
+                        sx={{width: '80px'}}
                     />
                 </div>
             </div>

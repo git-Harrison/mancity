@@ -1,5 +1,3 @@
-// 리덕스 슬라이스 정의 파일 (playerSlice.ts)
-
 import { createSlice, PayloadAction, nanoid } from '@reduxjs/toolkit';
 import { HeldPlayer } from '../../models/interfaces/Player.interface';
 
@@ -11,6 +9,8 @@ const initialState: PlayerState = {
     heldPlayers: [],
 };
 
+const MAX_PLAYERS = 50; // 최대 50명으로 제한
+
 const playerSlice = createSlice({
     name: 'player',
     initialState,
@@ -20,7 +20,11 @@ const playerSlice = createSlice({
         },
         addPlayer: {
             reducer(state, action: PayloadAction<HeldPlayer>) {
-                state.heldPlayers.push(action.payload);
+                if (state.heldPlayers.length < MAX_PLAYERS) {
+                    state.heldPlayers.push(action.payload); // 최대 수를 초과하지 않을 경우 추가
+                } else {
+                    console.warn('선수 추가가 제한되었습니다. 최대 보유 가능한 선수는 50명입니다.'); // 경고 메시지 출력
+                }
             },
             prepare(player: { number: number; enhancementLevel: number; overall_ability: number }) {
                 const id = nanoid(); // 고유 ID 생성
@@ -30,7 +34,12 @@ const playerSlice = createSlice({
         },
         addMultiplePlayers: {
             reducer(state, action: PayloadAction<HeldPlayer[]>) {
-                state.heldPlayers.push(...action.payload);
+                const totalPlayers = state.heldPlayers.length + action.payload.length;
+                if (totalPlayers <= MAX_PLAYERS) {
+                    state.heldPlayers.push(...action.payload); // 최대 수를 초과하지 않을 경우 추가
+                } else {
+                    console.warn('선수 추가가 제한되었습니다. 최대 보유 가능한 선수는 50명입니다.'); // 경고 메시지 출력
+                }
             },
             prepare(players: { number: number; enhancementLevel: number; overall_ability: number }[], quantity: number) {
                 // 여러 개의 선수를 추가하기 위해 고유 ID와 함께 새로운 HeldPlayer 배열 생성
