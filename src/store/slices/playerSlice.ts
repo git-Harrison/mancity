@@ -9,7 +9,7 @@ const initialState: PlayerState = {
     heldPlayers: [],
 };
 
-const MAX_PLAYERS = 50; // 최대 50명으로 제한
+const MAX_PLAYERS = 100; // 최대 100명으로 제한
 
 const playerSlice = createSlice({
     name: 'player',
@@ -23,7 +23,7 @@ const playerSlice = createSlice({
                 if (state.heldPlayers.length < MAX_PLAYERS) {
                     state.heldPlayers.push(action.payload); // 최대 수를 초과하지 않을 경우 추가
                 } else {
-                    console.warn('선수 추가가 제한되었습니다. 최대 보유 가능한 선수는 50명입니다.'); // 경고 메시지 출력
+                    console.warn('선수 추가가 제한되었습니다. 최대 보유 가능한 선수는 100명입니다.'); // 경고 메시지 출력
                 }
             },
             prepare(player: { number: number; enhancementLevel: number; overall_ability: number }) {
@@ -38,7 +38,7 @@ const playerSlice = createSlice({
                 if (totalPlayers <= MAX_PLAYERS) {
                     state.heldPlayers.push(...action.payload); // 최대 수를 초과하지 않을 경우 추가
                 } else {
-                    console.warn('선수 추가가 제한되었습니다. 최대 보유 가능한 선수는 50명입니다.'); // 경고 메시지 출력
+                    console.warn('선수 추가가 제한되었습니다. 최대 보유 가능한 선수는 100명입니다.'); // 경고 메시지 출력
                 }
             },
             prepare(players: { number: number; enhancementLevel: number; overall_ability: number }[], quantity: number) {
