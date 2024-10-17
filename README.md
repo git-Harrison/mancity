@@ -2,6 +2,8 @@
 
 <a href="https://mancity-harrison.netlify.app/" target="_blank"><strong>프로젝트 보러가기</strong></a>
 
+: READMD.md 파일은 실시간으로 수정 중입니다.
+
 ## 📌 프로젝트 개요
 
 이 프로젝트는 **Manchester City Football Club**의 선수 데이터를 관리하는 웹 애플리케이션으로, **MVVM (Model-View-ViewModel)** 패턴을 기반으로 설계되었습니다.
