@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.10711d91.css",
-    "main.js": "./static/js/main.0fbabe3a.js",
+    "main.css": "./static/css/main.8b296a70.css",
+    "main.js": "./static/js/main.d3b5298e.js",
     "static/js/453.bb108b7c.chunk.js": "./static/js/453.bb108b7c.chunk.js",
     "static/media/YoonGothic530.woff2": "./static/media/YoonGothic530.794ced64dc2bfbcb60cb.woff2",
     "static/media/Pretendard-Bold.woff2": "./static/media/Pretendard-Bold.0c6f5e225ff28f456183.woff2",
     "static/media/Pretendard-SemiBold.woff2": "./static/media/Pretendard-SemiBold.d5ded8ad2884e7855bb1.woff2",
     "static/media/Pretendard-Medium.woff2": "./static/media/Pretendard-Medium.a9645bebe1a0010e66dc.woff2",
     "static/media/Pretendard-Regular.woff2": "./static/media/Pretendard-Regular.38bed7de46e7b9049ced.woff2",
+    "static/media/bg.webp": "./static/media/bg.9f6614569d42e412dc41.webp",
+    "static/media/EASANS.woff": "./static/media/EASANS.47227ff862bfef91bbc5.woff",
     "index.html": "./index.html",
-    "main.10711d91.css.map": "./static/css/main.10711d91.css.map",
-    "main.0fbabe3a.js.map": "./static/js/main.0fbabe3a.js.map",
+    "main.8b296a70.css.map": "./static/css/main.8b296a70.css.map",
+    "main.d3b5298e.js.map": "./static/js/main.d3b5298e.js.map",
     "453.bb108b7c.chunk.js.map": "./static/js/453.bb108b7c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10711d91.css",
-    "static/js/main.0fbabe3a.js"
+    "static/css/main.8b296a70.css",
+    "static/js/main.d3b5298e.js"
   ]
 }
