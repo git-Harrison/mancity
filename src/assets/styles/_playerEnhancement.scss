@@ -47,6 +47,8 @@
         display: flex;
         flex-wrap: wrap;
         transition: transform 0.5s ease-in-out;
+        height: 80vh;
+        overflow: auto;
 
         .player-item {
             display: flex;
