@@ -17,7 +17,7 @@ const News: React.FC = () => {
                                 <img src={article.thumbnail} alt={article.title}/>
                                 <div>
                                     <strong>{article.title}</strong>
-                                    <p>{article.date.toDateString()}</p>
+                                    <p>{article.date}</p>
                                 </div>
                             </a>
                         </div>
