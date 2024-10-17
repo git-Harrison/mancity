@@ -35,7 +35,12 @@ const CommonDialog: React.FC<CommonDialogProps> = ({
                         확인
                     </Button>
                 )}
-                {dialogType === 'failure' && (
+                {dialogType === 'insufficientCity' && (
+                    <Button onClick={onClose} color="primary">
+                        닫기
+                    </Button>
+                )}
+                {dialogType === 'playerLimitExceeded' && (
                     <Button onClick={onClose} color="primary">
                         닫기
                     </Button>

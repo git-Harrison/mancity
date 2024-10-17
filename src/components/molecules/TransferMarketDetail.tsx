@@ -95,10 +95,16 @@ const TransferMarketDetail: React.FC<TransferMarketDetailProps> = ({player}) => 
                         <span className="highlight">{quantity}명의 {player.name} 선수를 영입에 성공했습니다.</span>
                     </div>
                 );
-            case 'failure':
+            case 'insufficientCity':
                 return (
                     <div className="dialog-content failure-message">
                         <span>보유한 CITY가 부족하여 영입할 수 없습니다.</span>
+                    </div>
+                );
+            case 'playerLimitExceeded':
+                return (
+                    <div className="dialog-content failure-message">
+                        <span>보유한 선수(100명)이 초과하여 영입할 수 없습니다.</span>
                     </div>
                 );
             default:

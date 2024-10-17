@@ -4,6 +4,6 @@ export interface CommonDialogProps {
     onConfirm?: () => void;
     title: string;
     content: string | React.ReactNode;
-    dialogType?: 'confirm' | 'success' | 'failure';
+    dialogType?: 'confirm' | 'success' | 'insufficientCity' | 'playerLimitExceeded';
     onExited?: () => void;
 }
