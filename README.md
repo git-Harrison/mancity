@@ -1,4 +1,4 @@
-# Manchester City Football Club Player Management
+# Manchester City Football Club Management
 
 <a href="https://mancity-harrison.netlify.app/" target="_blank"><strong>프로젝트 보러가기</strong></a>
 
