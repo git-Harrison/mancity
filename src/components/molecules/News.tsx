@@ -7,12 +7,11 @@ const News: React.FC = () => {
     const {articles, isLoading, isLastPage, handleMoreData} = useNewsViewModel();
 
     return (
-        <div className="news_list_wrap">
-            <div className="news_list_row">
-                <h2>Manchester City 관련 기사</h2>
-                <div className="news_list">
+        <div className="news-list-wrap">
+            <div className="news-list-row">
+                <div className="news-list">
                     {articles.map((article, index) => (
-                        <div key={index} className="news_item">
+                        <div key={index} className="news-item">
                             <a href={article.link} target="_blank" rel="noopener noreferrer">
                                 <img src={article.thumbnail} alt={article.title}/>
                                 <div>
@@ -53,5 +52,5 @@ const News: React.FC = () => {
         </div>
     );
 };
-  
+
 export default News;
