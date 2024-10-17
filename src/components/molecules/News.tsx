@@ -22,7 +22,7 @@ const News: React.FC = () => {
                         </div>
                     ))}
                     <Box sx={{display: 'flex', justifyContent: 'flex-end', width: '100%', marginTop: '14px'}}>
-                        {!isLastPage && (
+                        {!isLastPage && !isLoading && (
                             <Button
                                 variant="contained"
                                 color="primary"

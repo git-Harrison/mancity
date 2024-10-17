@@ -160,6 +160,7 @@ img {
   --player-info-bg: #f5f6fa;
   --player-info-border: #d1d3db;
   --player-info-box-shadow: rgba(0, 0, 0, 0.1);
+  --before-background-color: rgba(0, 0, 0, 0.1);
 }
 
 :root[data-theme=dark] {
@@ -177,6 +178,7 @@ img {
   --player-info-bg: #2b2c3b;
   --player-info-border: #404060;
   --player-info-box-shadow: rgba(255, 255, 255, 0.1);
+  --before-background-color: rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -524,17 +526,12 @@ header .page-name {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  background-color: #fff;
+  background-color: var(--background-color);
   transition: opacity 1s ease-out;
-  opacity: 0;
-}
-
-.loading-screen.fade-out {
-  display: flex;
   opacity: 1;
   pointer-events: none;
 }
@@ -544,7 +541,7 @@ header .page-name {
   width: 100vw;
   background-size: cover;
   background-position: center;
-  background-color: #fff;
+  background-color: var(--background-color);
   opacity: 0.1;
 }
 
@@ -557,6 +554,9 @@ header .page-name {
   height: 250px;
   object-fit: cover;
   animation: blink 1.5s ease-in-out infinite;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 @keyframes blink {
@@ -1599,18 +1599,18 @@ header .page-name {
 }
 
 .loading-components {
-  position: fixed; /* fixed로 설정하여 화면에 고정 */
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw; /* 뷰포트 전체 너비 */
-  height: 100vh; /* 뷰포트 전체 높이로 변경 */
-  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--before-background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  pointer-events: none; /* 클릭 방지 */
+  pointer-events: none;
 }
 
 .common-dialog #common-dialog-title {

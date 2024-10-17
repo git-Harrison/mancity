@@ -2,20 +2,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    background-color: #fff;
+    background-color: var(--background-color);
     transition: opacity 1s ease-out;
-    opacity: 0;
-
-}
-
-.loading-screen.fade-out {
-    display: flex;
     opacity: 1;
     pointer-events: none;
+
 }
 
 .loading-bg {
@@ -23,7 +18,7 @@
     width: 100vw;
     background-size: cover;
     background-position: center;
-    background-color: #fff;
+    background-color: var(--background-color);
     opacity: 0.1;
 }
 
@@ -36,6 +31,9 @@
     height: 250px;
     object-fit: cover;
     animation: blink 1.5s ease-in-out infinite;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 @keyframes blink {
