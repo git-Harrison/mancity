@@ -25,13 +25,14 @@
             flex-wrap: wrap;
             overflow: auto;
             font-family: "Pretendard-Regular", sans-serif;
+            background-color: var(--contents-background-image);
 
             .news-item {
                 display: flex;
                 width: 100%;
 
                 &:hover {
-                    background-color: var(--table-hover-color);
+                    background-color: var(--city-color);
                 }
 
                 a {

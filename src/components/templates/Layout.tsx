@@ -9,6 +9,7 @@ const Layout: React.FC = () => {
 
     return (
         <>
+            <img src={`${process.env.PUBLIC_URL}/images/bg.webp`} alt="" className="contents-background-image"/>
             <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
             <SideMenuNav/>
             <AppRoutes/>

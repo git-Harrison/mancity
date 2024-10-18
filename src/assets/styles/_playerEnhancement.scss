@@ -38,6 +38,7 @@
     position: relative;
     overflow: hidden;
     margin-top: 66px;
+    background-color: var(--contents-background-image);
 
     h3 {
         color: var(--text-color);
@@ -47,6 +48,7 @@
         display: flex;
         flex-wrap: wrap;
         transition: transform 0.5s ease-in-out;
+        width: 94%;
         height: 80vh;
         overflow: auto;
 
