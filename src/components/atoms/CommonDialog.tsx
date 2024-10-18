@@ -45,6 +45,11 @@ const CommonDialog: React.FC<CommonDialogProps> = ({
                         닫기
                     </Button>
                 )}
+                {dialogType === 'failure' && (
+                    <Button onClick={onClose} color="primary">
+                        닫기
+                    </Button>
+                )}
             </DialogActions>
         </Dialog>
     );

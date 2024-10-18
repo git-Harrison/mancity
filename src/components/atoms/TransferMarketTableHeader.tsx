@@ -34,11 +34,13 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                marginBottom: 2,
                 backgroundColor: 'var(--contents-background-image)',
                 padding: 2,
                 borderRadius: 1,
                 fontFamily: '"Pretendard-Regular", sans-serif',
+                position: 'sticky', // Makes the header sticky
+                top: 0, // Stick to the top
+                zIndex: 1000, // Ensure it appears above the table
             }}
         >
             <Box sx={{display: 'flex', gap: 2}}>

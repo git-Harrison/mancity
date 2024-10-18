@@ -29,7 +29,6 @@ export interface Player {
     enhancementLevel: number;
 }
 
-
 export interface PlayerCardProps {
     player: Player;
 }
