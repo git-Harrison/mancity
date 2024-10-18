@@ -18,8 +18,8 @@ export const useScoresViewModel = () => {
                     getEPLStandings(),
                 ]);
 
-                setMatches(matchesData); // ScoresType[] 타입으로 매핑
-                setEplStandings(standingsData); // TeamStanding[] 타입으로 매핑
+                setMatches(matchesData);
+                setEplStandings(standingsData);
             } catch (error) {
                 setError('데이터를 불러오는 데 오류가 발생했습니다.');
             } finally {
