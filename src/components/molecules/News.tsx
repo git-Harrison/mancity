@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button } from "@mui/material";
 import { useNewsViewModel } from "../../viewmodels/useNewsViewModel";
 import LoadingComponents from "../atoms/LoadingComponents";
-import NotFoundNewApi from "../atoms/NotFoundNewApi";
+import ApiLimitNotice from "../atoms/ApiLimitNotice";
 
 const News: React.FC = () => {
     const { articles, isLoading, isLastPage, handleMoreData } = useNewsViewModel();
@@ -20,7 +20,7 @@ const News: React.FC = () => {
     if (!articles.length) {
         return (
             <div className="news-videos-container">
-                <NotFoundNewApi />
+                <ApiLimitNotice apiName="Custom Search API" errorMessage="API 할당량을 초과하여 현재 데이터를 불러올 수 없습니다." />
             </div>
         );
     }

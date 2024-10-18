@@ -1,7 +1,7 @@
 import React from 'react';
 import {useYouTubeViewModel} from '../../viewmodels/useYouTubeViewModel';
 import LoadingComponents from '../atoms/LoadingComponents';
-import NotFoundYoutubeApi from "../atoms/NotFoundYoutubeApi";
+import ApiLimitNotice from "../atoms/ApiLimitNotice";
 
 const YouTubeVideos: React.FC = () => {
     const {videos, loading} = useYouTubeViewModel();
@@ -19,7 +19,7 @@ const YouTubeVideos: React.FC = () => {
     if (!videos.length) {
         return (
             <div className="youtube-videos-container">
-                <NotFoundYoutubeApi/>
+                <ApiLimitNotice apiName="YouTube Data API v3" errorMessage="API 할당량을 초과하여 현재 데이터를 불러올 수 없습니다."/>
             </div>
         );
     }
