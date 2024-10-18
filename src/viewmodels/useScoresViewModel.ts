@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { getMatches, getEPLStandings } from '../api/services/footballService';
-import { ScoresType, TeamStanding } from '../models/interfaces/FootballTypes.interface'; // 수정된 인터페이스 경로 확인
+import {useEffect, useState} from 'react';
+import {getMatches, getEPLStandings} from '../api/services/footballService';
+import {ScoresType, TeamStanding} from '../models/interfaces/FootballTypes.interface';
 
 export const useScoresViewModel = () => {
     const [matches, setMatches] = useState<ScoresType[]>([]);
     const [eplStandings, setEplStandings] = useState<TeamStanding[]>([]);
     const [error, setError] = useState<string | null>(null);
-    const [isLoading, setIsLoading] = useState<boolean>(false); // 단일 로딩 상태
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -30,5 +30,5 @@ export const useScoresViewModel = () => {
         fetchData();
     }, []);
 
-    return { matches, eplStandings, error, isLoading };
+    return {matches, eplStandings, error, isLoading};
 };

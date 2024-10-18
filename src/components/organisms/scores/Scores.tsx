@@ -1,35 +1,42 @@
 import React from 'react';
 import MatchCard from './MatchCard';
 import StandingsList from './StandingsList';
-import {useScoresViewModel} from '../../../viewmodels/useScoresViewModel';
-import NotFound from "../../atoms/NotFound";
-import LoadingSpinner from "../../atoms/LoadingSpinner";
+import { useScoresViewModel } from '../../../viewmodels/useScoresViewModel';
+import NotFound from '../../atoms/NotFound';
+import LoadingComponents from '../../atoms/LoadingComponents';
 
 const Scores: React.FC = () => {
-    const {matches, eplStandings, error, isLoading} = useScoresViewModel();
+    const { matches, eplStandings, error, isLoading } = useScoresViewModel();
 
     if (error) {
-        return <NotFound/>;
+        return <NotFound />;
     }
 
     return (
         <div className="contents-container">
-            {/* 로딩 상태 표시 */}
-            {isLoading ? (
-                <LoadingSpinner message="데이터 가져오는 중..."/>
-            ) : (
-                <>
-                    {/* 경기 데이터 표시 */}
-                    <div className="contents-list">
-                        {matches.map((match) => (
-                            <MatchCard key={match.id} match={match}/>
-                        ))}
-                    </div>
+            {/* 경기 데이터 표시 */}
+            <div
+                className="contents-list"
+                style={{ overflow: isLoading ? 'hidden' : 'auto' }} // 로딩 중일 때 overflow 설정
+            >
+                {isLoading ? (
+                    <LoadingComponents message="경기 데이터를 가져오는 중..." />
+                ) : (
+                    matches.map((match) => <MatchCard key={match.id} match={match} />)
+                )}
+            </div>
 
-                    {/* EPL 순위 데이터 표시 */}
-                    <StandingsList eplStandings={eplStandings}/>
-                </>
-            )}
+            {/* EPL 순위 데이터 표시 */}
+            <div
+                className="standings-list"
+                style={{ overflow: isLoading ? 'hidden' : 'auto' }} // 로딩 중일 때 overflow 설정
+            >
+                {isLoading ? (
+                    <LoadingComponents message="순위 데이터를 가져오는 중..." />
+                ) : (
+                    <StandingsList eplStandings={eplStandings} />
+                )}
+            </div>
         </div>
     );
 };

@@ -19,7 +19,7 @@ const TransferMarket: React.FC = () => {
     }
 
     return (
-        <div className="transfer-market-container">
+        <div className="contents-container">
             <TransferMarketTable players={players} onPlayerClick={setSelectedPlayer}/> {/* onPlayerClick 이벤트 추가 */}
             <TransferMarketDetail player={selectedPlayer}/> {/* 선수 디테일 정보 표시 */}
         </div>

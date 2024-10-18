@@ -1003,13 +1003,16 @@ header .page-name {
 }
 
 .contents-list {
+  position: fixed;
+  left: 33%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 77vh;
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 20px;
-  width: 65%;
-  height: calc(100vh - 66px);
-  background-color: var(--contents-background-color);
   overflow: auto;
 }
 
@@ -1028,9 +1031,12 @@ header .page-name {
   padding: 8px 15px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: var(--contents-background-color);
+  background-color: var(--contents-background-image);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
+}
+.match-card:first-child {
+  margin-top: -15px;
 }
 .match-card:hover {
   transform: scale(1.02);
@@ -1106,15 +1112,18 @@ header .page-name {
 }
 
 .standings-list {
+  position: fixed;
+  right: 20%;
+  top: 53%;
+  transform: translate(50%, -50%);
+  width: 30%;
   overflow: auto;
   display: flex;
   justify-content: center;
-  width: 35%;
-  height: calc(100vh - 66px);
-  background-color: var(--contents-background-color);
+  height: 77vh;
 }
 .standings-list .standings-table {
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
 }
 .standings-list th,
@@ -1124,13 +1133,17 @@ header .page-name {
   text-align: center;
 }
 .standings-list .standing-header th {
-  background-color: var(--contents-background-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--table-header-color);
   color: var(--text-color);
   font-weight: bold;
   font-family: "INGAME", sans-serif;
+  z-index: 2;
 }
 .standings-list .team-standing {
   color: var(--sub-text-color);
+  background-color: var(--contents-background-image);
   font-family: "Pretendard-Regular", sans-serif;
 }
 .standings-list .team-standing:hover {
@@ -1151,7 +1164,7 @@ header .page-name {
   font-size: 14px;
 }
 .standings-list .team-position {
-  width: 50px; /* 순위 칸 너비 */
+  width: 50px;
   font-weight: bold;
   text-align: center;
 }
@@ -1394,7 +1407,6 @@ header .page-name {
   position: relative;
   overflow: hidden;
   margin-top: 66px;
-  background-color: var(--contents-background-image);
 }
 .player-list-wrap h3 {
   color: var(--text-color);
@@ -1415,6 +1427,7 @@ header .page-name {
   width: 100%;
   padding: 8px;
   border-bottom: 1px solid #ddd;
+  background-color: var(--contents-background-image);
 }
 .player-list-wrap .player-list .player-item div {
   flex: 1;
