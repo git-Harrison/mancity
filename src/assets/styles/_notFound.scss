@@ -3,10 +3,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    justify-content: center;
     display: flex;
-    flex-wrap: wrap;
-    width: 500px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
 }
 
 .not-found-title {
@@ -35,3 +36,57 @@
         color: #ffffff;
     }
 }
+
+
+.error-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    word-break: keep-all;
+}
+
+.error-title {
+    font-size: 5rem;
+    color: var(--sub-text-color);
+}
+
+.error-message {
+    font-size: 1.4rem;
+    color: var(--sub-text-color);
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--city-color);
+    }
+}
+
+.contact-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+

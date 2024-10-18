@@ -35,7 +35,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 marginBottom: 2,
-                backgroundColor: 'var(--contents-background-color)',
+                backgroundColor: 'var(--contents-background-image)',
                 padding: 2,
                 borderRadius: 1,
                 fontFamily: '"Pretendard-Regular", sans-serif',
@@ -50,6 +50,10 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                     size="small"
                     sx={{
                         color: 'var(--text-color)',
+                        backgroundColor: 'var(--background-color)',
+                        transition: 'all 0.2s ease',
+                        fontFamily: '"Pretendard-Regular", sans-serif',
+                        borderColor: 'var(--main-border-color)',
                         input: {color: 'var(--text-color)'},
                         borderRadius: '4px',
                         '& input:-webkit-autofill': {
@@ -65,7 +69,38 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         },
                     }}
                 />
-                <FormControl size="small" sx={{minWidth: 120, backgroundColor: 'transparent'}}>
+                <FormControl
+                    size="small"
+                    sx={{
+                        minWidth: 120,
+                        color: 'var(--text-color)',
+                        backgroundColor: 'var(--background-color)',
+                        borderRadius: '4px',
+                        fontFamily: '"Pretendard-Regular", sans-serif',
+                        '& .MuiInputLabel-root': {
+                            color: 'var(--text-color)',
+                        },
+                        '& .MuiOutlinedInput-root': {
+                            color: 'var(--text-color)',
+                            backgroundColor: 'var(--background-color)',
+                            borderColor: 'var(--main-border-color)',
+                            transition: 'all 0.2s ease',
+                            fontFamily: '"Pretendard-Regular", sans-serif',
+                            '& fieldset': {
+                                borderColor: '#535354',
+                            },
+                            '&:hover fieldset': {
+                                borderColor: 'var(--text-color)',
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: 'var(--city-color)',
+                            },
+                        },
+                        '& .MuiSelect-icon': {
+                            color: 'var(--text-color)', // 드롭다운 아이콘 색상
+                        },
+                    }}
+                >
                     <InputLabel>포지션</InputLabel>
                     <Select value={filters.position} onChange={handlePositionChange}>
                         <MenuItem value="">모든 포지션</MenuItem>
@@ -76,7 +111,40 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         ))}
                     </Select>
                 </FormControl>
-                <FormControl size="small" sx={{minWidth: 120, backgroundColor: 'transparent'}}>
+
+                <FormControl
+                    size="small"
+                    sx={{
+                        minWidth: 120,
+                        color: 'var(--text-color)',
+                        backgroundColor: 'var(--background-color)',
+                        borderColor: 'var(--city-color)',
+                        borderRadius: '4px',
+                        fontFamily: '"Pretendard-Regular", sans-serif',
+                        '& .MuiInputLabel-root': {
+                            color: 'var(--text-color)',
+                        },
+                        '& .MuiOutlinedInput-root': {
+                            color: 'var(--text-color)',
+                            backgroundColor: 'var(--background-color)',
+                            borderColor: 'var(--main-border-color)',
+                            transition: 'all 0.2s ease',
+                            fontFamily: '"Pretendard-Regular", sans-serif',
+                            '& fieldset': {
+                                borderColor: '#535354',
+                            },
+                            '&:hover fieldset': {
+                                borderColor: 'var(--text-color)',
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: 'var(--city-color)',
+                            },
+                        },
+                        '& .MuiSelect-icon': {
+                            color: 'var(--text-color)', // 드롭다운 아이콘 색상
+                        },
+                    }}
+                >
                     <InputLabel>국가</InputLabel>
                     <Select value={filters.nationality} onChange={handleNationalityChange}>
                         <MenuItem value="">모든 국가</MenuItem>
@@ -87,6 +155,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         ))}
                     </Select>
                 </FormControl>
+                <Box sx={{display: 'flex', gap: 1}}>
                 <Button
                     variant="outlined"
                     onClick={handleResetFilters}
@@ -95,17 +164,19 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         fontSize: '14px',
                         textTransform: 'none',
                         color: 'var(--text-color)',
-                        backgroundColor: 'transparent',
-                        borderColor: 'var(--city-color)',
+                        borderColor: 'var(--background-color)',
+                        backgroundColor: 'var(--background-color)',
                         transition: 'all 0.2s ease',
                         fontFamily: '"Pretendard-Regular", sans-serif',
                         '&:hover': {
-                            backgroundColor: 'var(--city-color)',
+                            color: 'var(--background-color)',
+                            backgroundColor: 'var(--nav-hover-before-color)',
                         },
                     }}
                 >
                     초기화
                 </Button>
+                </Box>
             </Box>
             <Box sx={{display: 'flex', gap: 1}}>
                 <Button
@@ -117,11 +188,12 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         fontSize: '16px',
                         textTransform: 'none',
                         color: 'var(--text-color)',
-                        backgroundColor: 'var(--table-header-color)',
+                        backgroundColor: 'var(--background-color)',
                         transition: 'all 0.2s ease',
                         fontFamily: '"Pretendard-Regular", sans-serif',
                         '&:hover': {
-                            backgroundColor: 'var(--city-color)',
+                            color: 'var(--background-color)',
+                            backgroundColor: 'var(--nav-hover-after-color)',
                         },
                     }}
                 >
@@ -136,7 +208,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         fontSize: '16px',
                         textTransform: 'none',
                         color: 'var(--text-color)',
-                        backgroundColor: 'var(--table-header-color)',
+                        backgroundColor: 'var(--background-color)',
                         transition: 'all 0.2s ease',
                         fontFamily: '"Pretendard-Regular", sans-serif',
                         '&:hover': {
@@ -155,7 +227,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         fontSize: '16px',
                         textTransform: 'none',
                         color: 'var(--text-color)',
-                        backgroundColor: 'var(--table-header-color)',
+                        backgroundColor: 'var(--background-color)',
                         transition: 'all 0.2s ease',
                         fontFamily: '"Pretendard-Regular", sans-serif',
                         '&:hover': {

@@ -2,38 +2,38 @@ import React, {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {removePlayer, upgradePlayer} from '../store/slices/playerSlice';
 import {setCity} from '../store/slices/citySlice';
-import PlayerCard from "../components/atoms/PlayerCard";
-import {usePlayerEnhancementViewModel} from "../viewmodels/usePlayerEnhancementViewModel";
+import PlayerCard from '../components/atoms/PlayerCard';
+import {usePlayerEnhancementViewModel} from '../viewmodels/usePlayerEnhancementViewModel';
 import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
 import PlayerEnhancementList from '../components/molecules/PlayerEnhancementList';
-import EnhancementTable from "../components/molecules/EnhancementTable";
+import EnhancementTable from '../components/molecules/EnhancementTable';
 import {Button} from '@mui/material';
 import {RootState} from '../store/store';
+import {motion} from 'framer-motion';
 
 // 강화 등급별 확률 및 OVR 상승량 설정
-const enhancementConfig: Record<number, { successRate: number; ovrIncrease: number }> = {
-    1: {successRate: 1.00, ovrIncrease: 1},  // 1강 -> 2강
-    2: {successRate: 0.81, ovrIncrease: 1},  // 2강 -> 3강
-    3: {successRate: 0.64, ovrIncrease: 2},  // 3강 -> 4강
-    4: {successRate: 0.50, ovrIncrease: 2},  // 4강 -> 5강
-    5: {successRate: 0.26, ovrIncrease: 2},  // 5강 -> 6강
-    6: {successRate: 0.15, ovrIncrease: 3},  // 6강 -> 7강
-    7: {successRate: 0.07, ovrIncrease: 4},  // 7강 -> 8강
-    8: {successRate: 0.04, ovrIncrease: 4},  // 8강 -> 9강
-    9: {successRate: 0.02, ovrIncrease: 5},  // 9강 -> 10강
+const enhancementConfig: Record<number, {
+    successRate: number;
+    ovrIncrease: number
+}> = {
+    1: {successRate: 1.0, ovrIncrease: 1}, // 1강 -> 2강
+    2: {successRate: 0.81, ovrIncrease: 1}, // 2강 -> 3강
+    3: {successRate: 0.64, ovrIncrease: 2}, // 3강 -> 4강
+    4: {successRate: 0.5, ovrIncrease: 2},  // 4강 -> 5강
+    5: {successRate: 0.26, ovrIncrease: 2}, // 5강 -> 6강
+    6: {successRate: 0.15, ovrIncrease: 3}, // 6강 -> 7강
+    7: {successRate: 0.07, ovrIncrease: 4}, // 7강 -> 8강
+    8: {successRate: 0.04, ovrIncrease: 4}, // 8강 -> 9강
+    9: {successRate: 0.02, ovrIncrease: 5}, // 9강 -> 10강
 };
 
 const PlayerEnhancement: React.FC = () => {
     const dispatch = useDispatch();
     const {heldPlayerDetails, handlePlayerSelect} = usePlayerEnhancementViewModel();
-
-    // Redux 스토어에서 현재 city 값 가져오기
     const cityAmount = useSelector((state: RootState) => state.city.city);
-
     const [sameLevelPlayersCount, setSameLevelPlayersCount] = useState<number>(0);
     const [targetPlayer, setTargetPlayer] = useState<(HeldPlayer & Player) | null>(null);
 
-    // targetPlayer가 변경되거나 heldPlayerDetails가 변경될 때 targetPlayer를 업데이트
     useEffect(() => {
         if (targetPlayer) {
             const updatedPlayer = heldPlayerDetails.find(
@@ -61,7 +61,6 @@ const PlayerEnhancement: React.FC = () => {
         if (!targetPlayer) return;
 
         const {id, number, enhancementLevel} = targetPlayer;
-
         const materialPlayer = heldPlayerDetails.find(
             (player) =>
                 player.number === number &&
@@ -74,18 +73,13 @@ const PlayerEnhancement: React.FC = () => {
             return;
         }
 
-        // 현재 강화 레벨에 맞는 성공 확률과 OVR 증가량 가져오기
-        const config = enhancementConfig[enhancementLevel]; // enhancementConfig 객체 참조
-        const enhancementSuccess = Math.random() < config.successRate; // 확률에 따라 성공 여부 결정
+        const config = enhancementConfig[enhancementLevel];
+        const enhancementSuccess = Math.random() < config.successRate;
 
-        // 재료 선수 제거
         dispatch(removePlayer({id: materialPlayer.id}));
-
-        // 성공 여부와 상관없이 city 값 추가
-        dispatch(setCity(cityAmount + 100000000000)); // 기존 cityAmount 값에 10,000,000,000을 더해서 setCity 호출
+        dispatch(setCity(cityAmount + 100000000000));
 
         if (enhancementSuccess) {
-            // 강화 성공 시: 타겟 선수의 강화 레벨 및 OVR 상승
             dispatch(upgradePlayer({id, ovrIncrease: config.ovrIncrease}));
             alert('강화에 성공하였습니다!');
         } else {
@@ -94,11 +88,22 @@ const PlayerEnhancement: React.FC = () => {
     };
 
     return (
-        <div className="contents-container">
+        <motion.div
+            className="contents-container"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.5}}
+        >
             <div className="enhance-wrap">
                 {heldPlayerDetails.length > 0 ? (
                     <>
-                        <div className="enhance-box">
+                        <motion.div
+                            className="enhance-box"
+                            initial={{scale: 0.9, opacity: 0}}
+                            animate={{scale: 1, opacity: 1}}
+                            transition={{duration: 0.4}}
+                        >
                             {targetPlayer ? (
                                 <>
                                     <PlayerCard player={targetPlayer} showEnhancement={true}/>
@@ -126,22 +131,41 @@ const PlayerEnhancement: React.FC = () => {
                                     </Button>
                                 </>
                             ) : (
-                                <div className="empty">강화 할 선수를 선택하세요</div>
+                                <motion.div
+                                    className="empty"
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    transition={{duration: 0.5}}
+                                >
+                                    강화 할 선수를 선택하세요
+                                </motion.div>
                             )}
-                        </div>
-                        <div className="player-list-wrap">
+                        </motion.div>
+                        <motion.div
+                            className="player-list-wrap"
+                            initial={{x: -100, opacity: 0}}
+                            animate={{x: 0, opacity: 1}}
+                            transition={{duration: 0.6}}
+                        >
                             <h3>Held Players</h3>
                             <PlayerEnhancementList
                                 players={heldPlayerDetails}
                                 onPlayerClick={handleSelectPlayer}
                             />
-                        </div>
+                        </motion.div>
                     </>
                 ) : (
-                    <div className="empty full-size">보유중인 선수가 없습니다</div>
+                    <motion.div
+                        className="empty full-size"
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: 0.5}}
+                    >
+                        보유중인 선수가 없습니다
+                    </motion.div>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

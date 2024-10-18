@@ -1,6 +1,7 @@
 import React from 'react';
 import {useYouTubeViewModel} from '../../viewmodels/useYouTubeViewModel';
 import LoadingComponents from '../atoms/LoadingComponents';
+import NotFoundYoutubeApi from "../atoms/NotFoundYoutubeApi";
 
 const YouTubeVideos: React.FC = () => {
     const {videos, loading} = useYouTubeViewModel();
@@ -16,7 +17,11 @@ const YouTubeVideos: React.FC = () => {
 
     // videos 배열이 있는 경우에만 렌더링
     if (!videos.length) {
-        return null;
+        return (
+            <div className="youtube-videos-container">
+                <NotFoundYoutubeApi/>
+            </div>
+        );
     }
 
     const mainVideo = videos[0];

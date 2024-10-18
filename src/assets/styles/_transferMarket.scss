@@ -2,7 +2,7 @@
     overflow: auto;
     width: 70%;
     height: calc(100vh - 66px);
-    background-color: var(--contents-background-color);
+    background-color: var(--contents-background-image);
 
     .table-nav {
         margin-top: 16px;
@@ -19,7 +19,7 @@
         top: 0;
         z-index: 1;
         height: 48px;
-        background-color: var(--table-header-color);
+        background-color: var(--background-color);
         font-family: "INGAME", sans-serif;
     }
 
@@ -61,7 +61,7 @@
 .transfer-market-detail {
     width: 30%;
     padding: 20px;
-    background-color: var(--contents-background-color);
+    background-color: var(--contents-background-image);
     color: var(--text-color);
     font-size: 18px;
 

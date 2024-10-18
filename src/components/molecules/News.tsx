@@ -1,19 +1,38 @@
 import React from "react";
-import {Box, Button} from "@mui/material";
-import {useNewsViewModel} from "../../viewmodels/useNewsViewModel";
+import { Box, Button } from "@mui/material";
+import { useNewsViewModel } from "../../viewmodels/useNewsViewModel";
 import LoadingComponents from "../atoms/LoadingComponents";
+import NotFoundNewApi from "../atoms/NotFoundNewApi";
 
 const News: React.FC = () => {
-    const {articles, isLoading, isLastPage, handleMoreData} = useNewsViewModel();
+    const { articles, isLoading, isLastPage, handleMoreData } = useNewsViewModel();
+
+    // 로딩 중인 경우
+    if (isLoading) {
+        return (
+            <div className="news-videos-container">
+                <LoadingComponents message="뉴스 데이터를 가져오는 중.." />
+            </div>
+        );
+    }
+
+    // articles 배열이 없는 경우
+    if (!articles.length) {
+        return (
+            <div className="news-videos-container">
+                <NotFoundNewApi />
+            </div>
+        );
+    }
 
     return (
-        <div className="news-list-wrap">
+        <div className="news-videos-container">
             <div className="news-list-row">
                 <div className="news-list">
                     {articles.map((article, index) => (
                         <div key={index} className="news-item">
                             <a href={article.link} target="_blank" rel="noopener noreferrer">
-                                <img src={article.thumbnail} alt={article.title}/>
+                                <img src={article.thumbnail} alt={article.title} />
                                 <div>
                                     <strong>{article.title}</strong>
                                     <p>{article.date}</p>
@@ -21,7 +40,7 @@ const News: React.FC = () => {
                             </a>
                         </div>
                     ))}
-                    <Box sx={{display: 'flex', justifyContent: 'flex-end', width: '100%', marginTop: '14px'}}>
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-end', width: '100%', marginTop: '14px' }}>
                         {!isLastPage && !isLoading && (
                             <Button
                                 variant="contained"
@@ -45,7 +64,6 @@ const News: React.FC = () => {
                             </Button>
                         )}
                     </Box>
-                    {isLoading && <LoadingComponents message="뉴스 데이터 가져오는중.."/>}
                     {isLastPage && !isLoading && <h2>마지막 기사 입니다.</h2>}
                 </div>
             </div>
