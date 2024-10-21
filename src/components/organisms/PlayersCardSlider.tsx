@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, {useRef} from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Pagination, Navigation } from 'swiper/modules';
+import {Pagination, Navigation} from 'swiper/modules';
 import SwiperCore from 'swiper';
-import { PlayersCardSliderProps, Player } from '../../models/interfaces/Player.interface';
+import {PlayersCardSliderProps, Player} from '../../models/interfaces/Player.interface';
 import PlayerCard from "../atoms/PlayerCard";
 
-const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({ players, onPlayerClick }) => {
+const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({players, onPlayerClick}) => {
     const swiperRef = useRef<SwiperCore | null>(null);
 
     const handleSlideChange = (swiper: SwiperCore) => {
@@ -35,7 +35,7 @@ const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({ players, onPlayer
                 slidesPerView={4.5}
                 slidesPerGroup={1}
                 navigation
-                pagination={{ clickable: true }}
+                pagination={{clickable: true}}
                 loop
                 speed={900}
                 onSwiper={(swiper: SwiperCore) => {
@@ -53,7 +53,7 @@ const PlayersCardSlider: React.FC<PlayersCardSliderProps> = ({ players, onPlayer
                             key={player.number}
                             onClick={() => handleClick(index, player.number)}
                         >
-                            <PlayerCard player={playerWithEnhancement} />
+                            <PlayerCard player={playerWithEnhancement}/>
                         </SwiperSlide>
                     );
                 })}
