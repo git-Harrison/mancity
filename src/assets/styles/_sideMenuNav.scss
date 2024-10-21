@@ -23,6 +23,11 @@
             flex-wrap: wrap;
             cursor: pointer;
 
+            &:first-child {
+                pointer-events: none;
+                cursor: default;
+            }
+
             .ea_sports_icon {
                 width: 50px;
             }

@@ -528,8 +528,8 @@ header .toggle_theme_button {
   cursor: pointer;
 }
 header .page-name {
-  font-size: 24px;
-  font-family: "FCOAllSans-Light", sans-serif;
+  font-size: 26px;
+  font-family: "FCOAllSans-Regular", sans-serif;
 }
 
 .side-menu-wrap {
@@ -556,6 +556,10 @@ header .page-name {
   justify-content: center;
   flex-wrap: wrap;
   cursor: pointer;
+}
+.side-menu-wrap ul li:first-child {
+  pointer-events: none;
+  cursor: default;
 }
 .side-menu-wrap ul li .ea_sports_icon {
   width: 50px;
