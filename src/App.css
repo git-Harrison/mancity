@@ -346,7 +346,7 @@ body {
   color: #ffffdb;
   position: absolute;
   top: 50px;
-  left: 0;
+  left: 2px;
   text-align: center;
   width: 61px;
   z-index: 2;
@@ -371,7 +371,7 @@ body {
   color: #ffffdb;
   position: absolute;
   top: 95px;
-  left: 0;
+  left: 2px;
   text-align: center;
   width: 61px;
   z-index: 2;

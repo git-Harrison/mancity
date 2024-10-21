@@ -16,7 +16,6 @@ const PlayerCard: React.FC<PlayerCardProps & { showEnhancement?: boolean }> = ({
     const {background: backgroundImage, league: leagueIcon, tag: tagImage} = getCardImages(player);
 
     return (
-
         <div className="players-card-row" style={{backgroundImage: `url(${backgroundImage})`,}}>
             <div className="players-card">
                 <div className="players-row">
