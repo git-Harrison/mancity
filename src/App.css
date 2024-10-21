@@ -994,6 +994,10 @@ header .page-name {
   z-index: 10;
 }
 
+.swiper-slide:first-child {
+  margin-left: -64px;
+}
+
 .swiper-horizontal {
   padding-bottom: 90px;
 }

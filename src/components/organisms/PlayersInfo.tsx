@@ -7,6 +7,10 @@ interface PlayersInfoProps {
 }
 
 const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
+    const dldNumbers = [9, 17, 16, 20, 47, 19, 3, 24].includes(player.number);
+    const tagImageSrc = dldNumbers
+        ? `${process.env.PUBLIC_URL}/images/card_bld_tag.webp`
+        : `${process.env.PUBLIC_URL}/images/card_toty_tag.webp`;
     const textAnimation = (delay: number, duration: number) => ({
         initial: {opacity: 0, y: 50},
         animate: {opacity: 1, y: 0},
@@ -36,7 +40,7 @@ const PlayersInfo: React.FC<PlayersInfoProps> = ({player}) => {
                 <div className="info-top">
                     <motion.div className="detail" {...textAnimation(0.05, 0.4)}>
                         <img
-                            src={`${process.env.PUBLIC_URL}/images/card_toty_tag.png`}
+                            src={tagImageSrc}
                             alt="card_icon"
                         />
                         <div className="name">{player.name}</div>
