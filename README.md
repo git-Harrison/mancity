@@ -138,6 +138,6 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 This project is fan-made and is not officially affiliated with Manchester City Football Club.
 
 ## 이미지 출처 (Image Attribution)
-본 프로젝트에 사용된 이미지는 나무위키와 넥슨 FC 온라인에서 제공된 자료를 기반으로 하고 있습니다.
+본 프로젝트에 사용된 이미지는 나무위키와 넥슨 FC 온라인, EA 스포츠에서 제공된 자료를 기반으로 하고 있습니다.
 
 The images used in this project are attributed to sources from NamuWiki and Nexon FC Online.
