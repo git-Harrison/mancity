@@ -31,6 +31,7 @@ export interface Player {
 
 export interface PlayerCardProps {
     player: Player;
+    showEnhancement?: boolean;
 }
 
 export interface TransferMarketDetailProps {

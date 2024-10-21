@@ -1,5 +1,3 @@
-// PlayersCardSlider.tsx
-
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
