@@ -194,7 +194,7 @@ const TransferMarketTableHeader: React.FC<TransferMarketTableHeaderProps> = ({
                         transition: 'all 0.2s ease',
                         fontFamily: '"Pretendard-Regular", sans-serif',
                         '&:hover': {
-                            color: 'var(--background-color)',
+                            color: 'var(--text-color)',
                             backgroundColor: 'var(--nav-hover-after-color)',
                         },
                     }}

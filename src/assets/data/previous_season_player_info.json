@@ -109,6 +109,42 @@
       "enhancementLevel": 1
     },
     {
+      "number": 101058,
+      "name": "에네스 위날",
+      "position": "ST",
+      "dominant_foot": "Right",
+      "nationality": "Turkey",
+      "overall_ability": 98,
+      "height": 185,
+      "weight": 75,
+      "date_of_birth": "1997.05.10",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101046,
+      "name": "로비 파울러",
+      "position": "ST",
+      "dominant_foot": "Left",
+      "nationality": "England",
+      "overall_ability": 104,
+      "height": 173,
+      "weight": 76,
+      "date_of_birth": "1975.04.09",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101070,
+      "name": "잭 해리슨",
+      "position": "LW",
+      "dominant_foot": "Left",
+      "nationality": "England",
+      "overall_ability": 98,
+      "height": 175,
+      "weight": 70,
+      "date_of_birth": "1996.11.20",
+      "enhancementLevel": 1
+    },
+    {
       "number": 1060,
       "name": "스티브 맥매너먼",
       "position": "RW",
@@ -333,10 +369,34 @@
       "position": "CAM",
       "dominant_foot": "Left",
       "nationality": "England",
-      "overall_ability": 93,
+      "overall_ability": 98,
       "height": 182,
       "weight": 75,
       "date_of_birth": "2002.05.06",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101045,
+      "name": "브라힘 디아즈",
+      "position": "CAM",
+      "dominant_foot": "Right",
+      "nationality": "Spain",
+      "overall_ability": 96,
+      "height": 170,
+      "weight": 68,
+      "date_of_birth": "1999.08.03",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101063,
+      "name": "세코 포파나",
+      "position": "CM",
+      "dominant_foot": "Right",
+      "nationality": "Ivory Coast",
+      "overall_ability": 92,
+      "height": 184,
+      "weight": 76,
+      "date_of_birth": "1995.06.07",
       "enhancementLevel": 1
     }
   ],
@@ -498,6 +558,18 @@
       "enhancementLevel": 1
     },
     {
+      "number": 10101031,
+      "name": "헤수스 나바스",
+      "position": "RB",
+      "dominant_foot": "Right",
+      "nationality": "Spain",
+      "overall_ability": 109,
+      "height": 170,
+      "weight": 60,
+      "date_of_birth": "1985.11.21",
+      "enhancementLevel": 1
+    },
+    {
       "number": 101043,
       "name": "댄 팅겔",
       "position": "CB",
@@ -603,6 +675,42 @@
       "height": 183,
       "weight": 81,
       "date_of_birth": "1988.02.12",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101073,
+      "name": "벤 미",
+      "position": "CB",
+      "dominant_foot": "Left",
+      "nationality": "England",
+      "overall_ability": 96,
+      "height": 180,
+      "weight": 70,
+      "date_of_birth": "1989.09.21",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101076,
+      "name": "다마커스 비즐리",
+      "position": "LB",
+      "dominant_foot": "Left",
+      "nationality": "USA",
+      "overall_ability": 92,
+      "height": 173,
+      "weight": 66,
+      "date_of_birth": "1982.05.24",
+      "enhancementLevel": 1
+    },
+    {
+      "number": 101079,
+      "name": "플로리랑 르죈",
+      "position": "CB",
+      "dominant_foot": "Right",
+      "nationality": "France",
+      "overall_ability": 91,
+      "height": 190,
+      "weight": 81,
+      "date_of_birth": "1991.05.17",
       "enhancementLevel": 1
     }
   ],
