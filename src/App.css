@@ -1268,6 +1268,7 @@ header .page-name {
   border-bottom: 1px solid var(--border-color);
 }
 .transfer-market-table td.name {
+  font-size: 20px;
   font-family: "FCOAllSans-Light", sans-serif;
 }
 .transfer-market-table td.profile-icon img {
