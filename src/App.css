@@ -353,12 +353,14 @@ body {
   top: 81px;
   right: 5px;
   z-index: 1;
-  width: 155px;
+  width: 169px;
   height: 169px;
   overflow: hidden;
 }
 .players-row .img img {
-  width: 169px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .players-row .team-logo {
   position: absolute;
