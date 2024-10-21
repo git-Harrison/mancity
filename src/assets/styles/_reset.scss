@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @font-face {
-    font-family: "INGAME";
-    font-weight: 100;
-    src: url('assets/fonts/YoonGothic530.woff2') format('truetype');
+    font-family: 'FCOAllSans-Light';
+    src: local('FCOAllSans-Light'), url('assets/fonts/FCOAllSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FCOAllSans-Regular';
+    src: local('FCOAllSans-Regular'), url('assets/fonts/FCOAllSans-Regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FCOAllSans-Medium';
+    src: local('FCOAllSans-Medium'), url('assets/fonts/FCOAllSans-Medium.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FCOAllSans-Bold';
+    src: local('FCOAllSans-Bold'), url('assets/fonts/FCOAllSans-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
@@ -42,10 +64,10 @@
 }
 
 
-//font-family: "INGAME", sans-serif;
 //font-family: "Roboto", sans-serif;
 //font-family: "Pretendard-Regular", sans-serif;
 //font-family: "EASANS", sans-serif;
+//font-family: "FCOAllSans-Light", sans-serif;
 
 * {
     margin: 0;

@@ -20,7 +20,7 @@
         z-index: 1;
         height: 48px;
         background-color: var(--background-color);
-        font-family: "INGAME", sans-serif;
+        font-family: "FCOAllSans-Light", sans-serif;
     }
 
     tr {
@@ -39,7 +39,7 @@
         border-bottom: 1px solid var(--border-color);
 
         &.name {
-            font-family: "INGAME", sans-serif;
+            font-family: "FCOAllSans-Light", sans-serif;
         }
 
         &.profile-icon {
@@ -90,7 +90,7 @@
             border-radius: 8px;
             border: none;
             cursor: pointer;
-            font-family: "INGAME", sans-serif;
+            font-family: "FCOAllSans-Light", sans-serif;
         }
     }
 }
@@ -104,13 +104,13 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 40px;
-        font-family: "INGAME", sans-serif;
+        font-family: "FCOAllSans-Light", sans-serif;
         font-size: 34px;
 
         .held-status {
             font-size: 18px;
             color: var(--city-color);
-            font-family: "INGAME", sans-serif;
+            font-family: "FCOAllSans-Light", sans-serif;
         }
     }
 
@@ -175,12 +175,12 @@
     font-size: 28px;
     border-top: 1px solid var(--border-color);
     text-align: right;
-    font-family: "INGAME", sans-serif;
+    font-family: "FCOAllSans-Light", sans-serif;
 
     span {
         font-size: 22px;
         color: var(--text-color);
-        font-family: "INGAME", sans-serif;
+        font-family: "FCOAllSans-Light", sans-serif;
         font-weight: bold;
 
         &.label {

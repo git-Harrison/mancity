@@ -1,9 +1,28 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @font-face {
-  font-family: "INGAME";
-  font-weight: 100;
-  src: url("assets/fonts/YoonGothic530.woff2") format("truetype");
+  font-family: "FCOAllSans-Light";
+  src: local("FCOAllSans-Light"), url("assets/fonts/FCOAllSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FCOAllSans-Regular";
+  src: local("FCOAllSans-Regular"), url("assets/fonts/FCOAllSans-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FCOAllSans-Medium";
+  src: local("FCOAllSans-Medium"), url("assets/fonts/FCOAllSans-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FCOAllSans-Bold";
+  src: local("FCOAllSans-Bold"), url("assets/fonts/FCOAllSans-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
 }
 @font-face {
   font-family: "Pretendard-Regular";
@@ -164,7 +183,7 @@ img {
   --scrollbar-thumb-color: #98C5E9;
   --scrollbar-track-color: #f5f6fa;
   --scrollbar-hover-color: #6bafe3;
-  --contents-background-image:#F4EFF1;
+  --contents-background-image: #F4EFF1;
 }
 
 :root[data-theme=dark] {
@@ -186,7 +205,7 @@ img {
   --scrollbar-thumb-color: #98C5E9;
   --scrollbar-track-color: #1f1f20;
   --scrollbar-hover-color: #6bafe3;
-  --contents-background-image:#0B100E;
+  --contents-background-image: #0B100E;
 }
 
 ::-webkit-scrollbar {
@@ -298,6 +317,24 @@ body {
   color: #e9a216;
 }
 
+.players-card-row {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.players-card {
+  width: 210px;
+  height: 336px;
+  text-align: center;
+}
+
 .players-row {
   position: relative;
   overflow: hidden;
@@ -306,51 +343,50 @@ body {
   height: 100%;
 }
 .players-row .number {
-  color: #fff;
+  color: #ffffdb;
   position: absolute;
-  top: 62px;
+  top: 50px;
   left: 0;
   text-align: center;
   width: 61px;
-  font-weight: bold;
   z-index: 2;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  font-size: 37px;
-  font-family: "INGAME", sans-serif;
+  font-size: 40px;
+  font-family: "FCOAllSans-Bold", sans-serif;
 }
-.players-row .number.icon {
-  color: #5d573d;
+.players-row .number.bdo {
+  color: #ffefc3;
+  text-shadow: none;
+}
+.players-row .number.bld {
+  color: #f1d698;
   text-shadow: none;
 }
 .players-row .position {
-  font-size: 26px;
-  color: #fff;
+  font-size: 25px;
+  color: #ffffdb;
   position: absolute;
-  top: 99px;
+  top: 95px;
   left: 0;
   text-align: center;
   width: 61px;
   z-index: 2;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Regular", sans-serif;
   font-weight: 100;
   letter-spacing: -1px;
 }
-.players-row .position.icon {
-  color: #5d573d;
+.players-row .position.bdo {
+  color: #ffefc3;
   text-shadow: none;
 }
-.players-row .country-logo {
-  position: absolute;
-  top: 133px;
-  left: 15px;
-  width: 32px;
-  text-align: center;
-  z-index: 2;
+.players-row .position.bld {
+  color: #f1d698;
+  text-shadow: none;
 }
 .players-row .img {
   position: absolute;
-  top: 81px;
+  top: 71px;
   right: 5px;
   z-index: 1;
   width: 169px;
@@ -362,57 +398,68 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.players-row .team-logo {
-  position: absolute;
-  top: 192px;
-  left: 9px;
-  text-align: center;
-  width: 46px;
-  height: 46px;
-  z-index: 2;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #fff;
-}
-.players-row .team-logo img {
-  width: 33px;
-  height: 33px;
-}
 .players-row .players {
-  width: 100%;
   position: absolute;
-  top: 262px;
+  top: 240px;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 96px;
+  overflow: hidden;
 }
-.players-row .players img {
-  width: 20px;
-  height: 16px;
+.players-row .players .players-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 4px;
+  margin-bottom: 4px;
+}
+.players-row .players .players-detail-top img {
+  width: 30px;
+  height: 24px;
   margin-right: 3px;
+  margin-top: -1px;
   display: inline-block;
   vertical-align: top;
 }
-.players-row .players .name {
+.players-row .players .players-detail-top .name {
   display: inline-block;
   max-width: 140px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 24px;
   color: #141432;
-  font-family: "Pretendard-Regular", sans-serif;
+  font-family: "FCOAllSans-Regular", sans-serif;
+}
+.players-row .players .players-detail-top .name.bdo, .players-row .players .players-detail-top .name.dld {
+  color: #ffffff;
+}
+.players-row .players .players-detail-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.players-row .players .players-detail-bottom img {
+  width: 100%;
+}
+.players-row .players .players-detail-bottom .country-logo {
+  width: 24px;
+}
+.players-row .players .players-detail-bottom .league-logo {
+  width: 32px;
+  height: 32px;
+}
+.players-row .players .players-detail-bottom .city-logo {
+  width: 24px;
+  height: 24px;
 }
 .players-row .enhancement-level {
   z-index: 99;
   position: absolute;
-  right: 2px;
-  bottom: 86px;
+  left: 6px;
+  bottom: 96px;
 }
 
 .enhancement-level {
@@ -421,9 +468,9 @@ body {
   box-sizing: border-box;
   font-size: 18px;
   font-weight: 500;
-  height: 23px;
+  height: 30px;
   letter-spacing: 1px;
-  line-height: 24px;
+  line-height: 30px;
   padding-left: 0;
   position: relative;
   text-align: center;
@@ -471,7 +518,7 @@ header .toggle_theme_button {
 }
 header .page-name {
   font-size: 24px;
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 
 .side-menu-wrap {
@@ -1140,7 +1187,7 @@ header .page-name {
   background-color: var(--table-header-color);
   color: var(--text-color);
   font-weight: bold;
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
   z-index: 2;
 }
 .standings-list .team-standing {
@@ -1196,7 +1243,7 @@ header .page-name {
   z-index: 1;
   height: 48px;
   background-color: var(--background-color);
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .transfer-market-table tr {
   cursor: pointer;
@@ -1210,7 +1257,7 @@ header .page-name {
   border-bottom: 1px solid var(--border-color);
 }
 .transfer-market-table td.name {
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .transfer-market-table td.profile-icon img {
   width: 75px;
@@ -1251,7 +1298,7 @@ header .page-name {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 
 .transfer-player-info {
@@ -1263,13 +1310,13 @@ header .page-name {
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
   font-size: 34px;
 }
 .transfer-player-info .name .held-status {
   font-size: 18px;
   color: var(--city-color);
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .transfer-player-info .statistics {
   display: flex;
@@ -1322,12 +1369,12 @@ header .page-name {
   font-size: 28px;
   border-top: 1px solid var(--border-color);
   text-align: right;
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .transfer-fee span {
   font-size: 22px;
   color: var(--text-color);
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
   font-weight: bold;
 }
 .transfer-fee span.label {
@@ -1719,7 +1766,7 @@ header .page-name {
   padding: 30px 30px 60px 30px;
   color: var(--text-color);
   background-color: var(--background-color);
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .common-dialog.success #common-dialog-title, .common-dialog.failure #common-dialog-title {
   padding-bottom: 0;
@@ -1727,7 +1774,7 @@ header .page-name {
 .common-dialog .MuiPaper-root {
   color: var(--text-color);
   background-color: var(--background-color);
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .common-dialog .MuiDialogContent-root,
 .common-dialog .MuiDialogActions-root {
@@ -1747,7 +1794,7 @@ header .page-name {
 .common-dialog .dialog-content {
   padding: 6px;
   font-size: 26px;
-  font-family: "INGAME", sans-serif;
+  font-family: "FCOAllSans-Light", sans-serif;
 }
 .common-dialog .dialog-actions {
   padding: 8px 24px;

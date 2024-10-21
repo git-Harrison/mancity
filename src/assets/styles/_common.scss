@@ -119,7 +119,7 @@ $level-styles: (
     --scrollbar-thumb-color: #98C5E9;
     --scrollbar-track-color: #f5f6fa;
     --scrollbar-hover-color: #6bafe3;
-    --contents-background-image:#F4EFF1;
+    --contents-background-image: #F4EFF1;
 }
 
 // Dark Theme Variables
@@ -142,7 +142,7 @@ $level-styles: (
     --scrollbar-thumb-color: #98C5E9;
     --scrollbar-track-color: #1f1f20;
     --scrollbar-hover-color: #6bafe3;
-    --contents-background-image:#0B100E;
+    --contents-background-image: #0B100E;
 }
 
 ::-webkit-scrollbar {
@@ -183,22 +183,6 @@ body {
     overflow: hidden;
     position: relative;
 }
-
-//
-//body::before {
-//    content: '';
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    width: 100%;
-//    height: 100%;
-//    background-image: url('./assets/images/bg.webp');
-//    background-size: cover;
-//    background-position: top center;
-//    background-repeat: no-repeat;
-//    z-index: -1;
-//    transition: filter 0.3s ease;
-//}
 
 .contents-background-image {
     z-index: -1;
@@ -271,6 +255,24 @@ body {
     color: #e9a216;
 }
 
+.players-card-row {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.players-card {
+    width: 210px;
+    height: 336px;
+    text-align: center;
+}
+
 .players-row {
     position: relative;
     overflow: hidden;
@@ -279,56 +281,56 @@ body {
     height: 100%;
 
     .number {
-        color: #fff;
+        color: #ffffdb;
         position: absolute;
-        top: 62px;
+        top: 50px;
         left: 0;
         text-align: center;
         width: 61px;
-        font-weight: bold;
         z-index: 2;
         text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
-        font-size: 37px;
-        font-family: 'INGAME', sans-serif;
+        font-size: 40px;
+        font-family: 'FCOAllSans-Bold', sans-serif;
 
-        &.icon {
-            color: #5d573d;
+        &.bdo {
+            color: #ffefc3;
+            text-shadow: none;
+        }
+
+        &.bld {
+            color: #f1d698;
             text-shadow: none;
         }
     }
 
     .position {
-        font-size: 26px;
-        color: #fff;
+        font-size: 25px;
+        color: #ffffdb;
         position: absolute;
-        top: 99px;
+        top: 95px;
         left: 0;
         text-align: center;
         width: 61px;
         z-index: 2;
         text-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
-        font-family: 'INGAME', sans-serif;
+        font-family: 'FCOAllSans-Regular', sans-serif;
         font-weight: 100;
         letter-spacing: -1px;
 
-        &.icon {
-            color: #5d573d;
+        &.bdo {
+            color: #ffefc3;
+            text-shadow: none;
+        }
+
+        &.bld {
+            color: #f1d698;
             text-shadow: none;
         }
     }
 
-    .country-logo {
-        position: absolute;
-        top: 133px;
-        left: 15px;
-        width: 32px;
-        text-align: center;
-        z-index: 2;
-    }
-
     .img {
         position: absolute;
-        top: 81px;
+        top: 71px;
         right: 5px;
         z-index: 1;
         width: 169px;
@@ -342,62 +344,80 @@ body {
         }
     }
 
-    .team-logo {
-        position: absolute;
-        top: 192px;
-        left: 9px;
-        text-align: center;
-        width: 46px;
-        height: 46px;
-        z-index: 2;
-        display: flex;
-        overflow: hidden;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: #fff;
-
-        img {
-            width: 33px;
-            height: 33px;
-        }
-    }
-
     .players {
-        width: 100%;
         position: absolute;
-        top: 262px;
+        top: 240px;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
+        height: 96px;
+        overflow: hidden;
 
-        img {
-            width: 20px;
-            height: 16px;
-            margin-right: 3px;
-            display: inline-block;
-            vertical-align: top;
+        .players-detail-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 4px;
+            margin-bottom: 4px;
+
+            img {
+                width: 30px;
+                height: 24px;
+                margin-right: 3px;
+                margin-top: -1px;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .name {
+                display: inline-block;
+                max-width: 140px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 24px;
+                color: #141432;
+                font-family: "FCOAllSans-Regular", sans-serif;
+
+                &.bdo,
+                &.dld {
+                    color: #ffffff;
+                }
+            }
         }
 
-        .name {
-            display: inline-block;
-            max-width: 140px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-size: 19px;
-            font-weight: 500;
-            color: #141432;
-            font-family: "Pretendard-Regular", sans-serif;
+        .players-detail-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                width: 100%;
+            }
+
+            .country-logo {
+                width: 24px;
+            }
+
+            .league-logo {
+                width: 32px;
+                height: 32px;
+            }
+
+            .city-logo {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
+
 
     .enhancement-level {
         z-index: 99;
         position: absolute;
-        right: 2px;
-        bottom: 86px;
+        left: 6px;
+        bottom: 96px;
     }
 }
 
@@ -407,9 +427,9 @@ body {
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 500;
-    height: 23px;
+    height: 30px;
     letter-spacing: 1px;
-    line-height: 24px;
+    line-height: 30px;
     padding-left: 0;
     position: relative;
     text-align: center;
