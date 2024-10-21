@@ -10,8 +10,9 @@ import {getCardImages} from '../../utils/getCardImages';
  */
 
 const PlayerCard: React.FC<PlayerCardProps & { showEnhancement?: boolean }> = ({player, showEnhancement = false}) => {
-    const cardType = [1042, 101008, 101049, 101037, 1051, 101032, 101010, 101021].includes(player.number) ? 'bdo' :
-        [9, 17, 16, 20, 47, 19, 3, 24, 1026, 101007, 101019, 1055, 101055, 101056].includes(player.number) ? 'dld' : '';
+    const cardType = [1042, 101008, 101037, 1051, 101032, 101010, 101021].includes(player.number) ? 'bdo' :
+        [9, 17, 16, 20, 47, 19, 3, 24, 1026, 101007, 101019, 1055, 101055, 101056].includes(player.number) ? 'dld' :
+            [101049].includes(player.number) ? 'icon' : '';
     const {background: backgroundImage, league: leagueIcon, tag: tagImage} = getCardImages(player);
 
     return (

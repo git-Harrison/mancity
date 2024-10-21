@@ -362,6 +362,10 @@ body {
   color: #f1d698;
   text-shadow: none;
 }
+.players-row .number.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
 .players-row .position {
   font-size: 25px;
   color: #ffffdb;
@@ -382,6 +386,10 @@ body {
 }
 .players-row .position.bld {
   color: #f1d698;
+  text-shadow: none;
+}
+.players-row .position.icon {
+  color: #5d573d;
   text-shadow: none;
 }
 .players-row .img {
@@ -434,6 +442,9 @@ body {
 }
 .players-row .players .players-detail-top .name.bdo, .players-row .players .players-detail-top .name.dld {
   color: #ffffff;
+}
+.players-row .players .players-detail-top .name.icon {
+  color: #000000;
 }
 .players-row .players .players-detail-bottom {
   display: flex;

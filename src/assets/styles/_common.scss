@@ -301,6 +301,11 @@ body {
             color: #f1d698;
             text-shadow: none;
         }
+
+        &.icon {
+            color: #5d573d;
+            text-shadow: none;
+        }
     }
 
     .position {
@@ -324,6 +329,11 @@ body {
 
         &.bld {
             color: #f1d698;
+            text-shadow: none;
+        }
+
+        &.icon {
+            color: #5d573d;
             text-shadow: none;
         }
     }
@@ -382,6 +392,10 @@ body {
                 &.bdo,
                 &.dld {
                     color: #ffffff;
+                }
+
+                &.icon {
+                    color: #000000;
                 }
             }
         }

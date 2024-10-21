@@ -1,9 +1,11 @@
 import {Player} from '../models/interfaces/Player.interface';
 
-const dboNumbers = [1042, 101008, 101049, 101037, 1051, 101032, 101010, 101021];
+const iconsNumber = [101049];
+const dboNumbers = [1042, 101008, 101037, 1051, 101032, 101010, 101021];
 const dldNumbers = [9, 17, 16, 20, 47, 19, 3, 24, 1026, 101007, 101019, 1055, 101055, 101056];
 
 export const getCardImages = (player: Player) => {
+    const isIconsNumber = iconsNumber.includes(player.number);
     const isBboNumbers = dboNumbers.includes(player.number);
     const isBldNumbers = dldNumbers.includes(player.number);
 
@@ -20,6 +22,14 @@ export const getCardImages = (player: Player) => {
             background: `${process.env.PUBLIC_URL}/images/card_bdo_bg.png`,
             league: `${process.env.PUBLIC_URL}/images/player_card_bdo_icon.webp`,
             tag: `${process.env.PUBLIC_URL}/images/card_bdo_tag.png`,
+        };
+    }
+
+    if (isIconsNumber) {
+        return {
+            background: `${process.env.PUBLIC_URL}/images/card_icon_bg.png`,
+            league: `${process.env.PUBLIC_URL}/images/player_card_bdo_icon2.webp`,
+            tag: `${process.env.PUBLIC_URL}/images/card_icon_tag.png`,
         };
     }
 
