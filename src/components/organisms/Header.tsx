@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
                         <div>MAN CITY</div>
                     </div>
                     <div>
-                        <img src={`${process.env.PUBLIC_URL}/man-city-logo.png`} alt="Manchester City Logo"
+                        <img src={`${process.env.PUBLIC_URL}/man-city-logo.webp`} alt="Manchester City Logo"
                              className="logo"/>
                     </div>
                 </div>
