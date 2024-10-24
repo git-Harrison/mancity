@@ -1,4 +1,4 @@
-# Man City Hub
+# ManCity Hub
 
 PC 버전용 프로젝트 입니다.
 
