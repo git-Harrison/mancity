@@ -48,6 +48,7 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 <div>
   <img src="./assets/scores_page.gif" alt="Main Page GIF" />
 </div>
+<br></br>
 
 
 
