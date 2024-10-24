@@ -1871,14 +1871,14 @@ header .page-name {
 .main-video a .main-video-info {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 58%;
 }
 .main-video a .main-video-info h2 {
   line-height: 50px;
 }
 
 .main-video-thumbnail {
-  width: 56%;
+  width: 40%;
   border-radius: 8px;
   display: block;
 }
