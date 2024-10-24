@@ -89,7 +89,7 @@ const SquadMaker: React.FC<SquadMakerProps> = ({formation}) => {
             </div>
 
             <div id="squad-maker-capture" className="squad-maker">
-                <img src={`${process.env.PUBLIC_URL}/images/squad_maker_bg.png`} alt="pitch" className="pitch-bg"/>
+                <img src={`${process.env.PUBLIC_URL}/images/squad_maker_bg.webp`} alt="pitch" className="pitch-bg"/>
 
                 {loading ? (
                     <LoadingComponents message="로딩중"/>
