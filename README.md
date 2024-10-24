@@ -8,7 +8,9 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 ## 📌 프로젝트 개요
 
-이 프로젝트는 **Manchester City Football Club**을 주제로 한 팬 사이트로, **React**와 **TypeScript**를 기반으로 제작되었습니다. **MVVM (Model-View-ViewModel)** 아키텍처 패턴을 채택하여 설계되었으며, 스타일링은 **MUI**와 **SCSS**로 작업되었습니다.
+이 프로젝트는 **Manchester City Football Club**을 주제로 한 팬 사이트로, **React**와 **TypeScript**를 기반으로 제작되었습니다.
+
+**MVVM (Model-View-ViewModel)** 아키텍처 패턴을 채택하여 설계되었으며, 스타일링은 **MUI**와 **SCSS**로 작업되었습니다.
 
 ---
 
