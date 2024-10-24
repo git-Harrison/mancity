@@ -2123,7 +2123,7 @@ header .page-name {
 
 .squad-player-list {
   z-index: 9;
-  position: absolute;
+  position: fixed;
   right: 2%;
   width: 300px;
   height: 500px;
