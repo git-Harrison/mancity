@@ -6,6 +6,11 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 ---
 
+![Main Page GIF](./assets/main.gif)
+![Page GIF](./assets/page.gif)
+
+---
+
 ## 📌 프로젝트 개요
 
 이 프로젝트는 **Manchester City Football Club**을 주제로 한 팬 사이트로 개인 프로젝트입니다, **React**와 **TypeScript**를 기반으로 제작되었습니다.
