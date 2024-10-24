@@ -6,9 +6,10 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 ---
 
-![Main Page GIF](./assets/main.gif)
-![Page GIF](./assets/page.gif)
-
+<div style="display: flex; justify-content: space-between;">
+  <img src="./assets/main.gif" alt="Main Page GIF" style="width: 49%;" />
+  <img src="./assets/page.gif" alt="Page GIF" style="width: 49%;" />
+</div>
 ---
 
 ## 📌 프로젝트 개요
