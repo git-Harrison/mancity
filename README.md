@@ -118,3 +118,22 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
     "postbuild": "cp build/index.html build/404.html"
   }
 }
+
+---
+
+## 📸 이미지 출처 및 사용 제한 안내
+
+본 프로젝트에서 사용된 이미지는 다음의 출처에서 가져왔습니다:
+
+- [FIFA Online (fconline.nexon.com)](https://fconline.nexon.com)
+- [EA Sports (ea.com)](https://www.ea.com)
+- [NamuWiki (namu.wiki)](https://namu.wiki)
+
+해당 이미지는 **비상업적** 목적으로만 사용되었으며, 맨체스터 시티 축구 클럽 관련 팬 프로젝트로서 제작되었습니다. 
+
+**상업적 사용 금지**: 본 프로젝트에 포함된 이미지는 상업적 목적으로 사용할 수 없으며, 상업적 용도로의 재배포, 수정 또는 전시하는 행위는 허용되지 않습니다.
+
+이미지 출처와 관련된 모든 저작권은 각각의 원 저작자에게 있으며, 이를 위반할 시 법적 문제가 발생할 수 있음을 알려드립니다.
+
+Please note that all images used in this project are for non-commercial, fan-made purposes only. Unauthorized commercial use is strictly prohibited.
+
