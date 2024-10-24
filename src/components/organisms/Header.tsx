@@ -20,6 +20,8 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
                 return '맨시티 선수 이적 시장';
             case '/enhancement':
                 return '보유 선수 강화 시뮬레이션';
+            case '/squadmaker':
+                return '보유 선수 스쿼드 메이커';
             default:
                 return '페이지 이름 없음';
         }

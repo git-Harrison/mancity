@@ -66,6 +66,7 @@ export interface PlayerFilters {
 export interface HeldPlayer {
     id: string;
     number: number;
+    position: string;
     enhancementLevel: number;
     overall_ability: number;
 }

@@ -16,6 +16,7 @@ const SideMenuNav: React.FC = () => {
             "/scores": "scores",
             "/transfer": "transfer",
             "/enhancement": "enhancement",
+            "/squadmaker": "squadmaker",
         };
         setActiveMenu(pathToMenu[location.pathname] || "");
     }, [location.pathname]);
@@ -26,6 +27,7 @@ const SideMenuNav: React.FC = () => {
         {name: "scores", path: "/scores", icon: <AiOutlineBarChart/>, label: "SCORES"},
         {name: "transfer", path: "/transfer", icon: <BiTransferAlt/>, label: "TRANSFER"},
         {name: "enhancement", path: "/enhancement", icon: <FaMagic/>, label: "ENHANCE"},
+        {name: "squadmaker", path: "/squadmaker", icon: <FaMagic/>, label: "SQUAD MAKER"},
     ];
 
     return (

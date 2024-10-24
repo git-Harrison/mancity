@@ -5,6 +5,7 @@ import PlayerInfoPage from "../views/PlayerInfoPage";
 import ScoresPage from "../views/ScoresPage";
 import TransferMarket from "../views/TransferMarket";
 import PlayerEnhancement from "../views/PlayerEnhancement";
+import SquadSetup from "../views/SquadSetup";
 
 const AppRoutes: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ const AppRoutes: React.FC = () => {
             <Route path="/scores" element={<ScoresPage/>}/>
             <Route path="/transfer" element={<TransferMarket/>}/>
             <Route path="/enhancement" element={<PlayerEnhancement/>}/>
+            <Route path="/squadmaker" element={<SquadSetup/>}/>
         </Routes>
     );
 };

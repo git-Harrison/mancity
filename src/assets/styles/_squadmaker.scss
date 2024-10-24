@@ -1,0 +1,181 @@
+.squad-maker-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.squad-setup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formation-selection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.formation-table-container {
+    margin-top: 20px;
+}
+
+.formation-table {
+    z-index: 1;
+    position: absolute;
+    top: 110%;
+    width: 70%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--contents-background-image);
+}
+
+.formation-table th,
+.formation-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formation-table th {
+    height: 48px;
+    background-color: var(--background-color);
+    font-family: "FCOAllSans-Light", sans-serif;
+}
+
+.formation-table td:hover {
+    background-color: var(--table-hover-color);
+}
+
+.selected-formation {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.selected-formation-image {
+    width: 180px;
+    height: 180px;
+}
+
+.formation-name {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.squad-setup-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.squad-maker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.pitch-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.position-slot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+
+    .position-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.squad-player-list {
+    z-index: 9;
+    position: absolute;
+    right: 2%;
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    h3 {
+        position: sticky;
+        top: 76px;
+        z-index: 1;
+        height: 48px;
+        padding: 12px;
+    }
+
+    p {
+        padding: 12px;
+    }
+
+    ul {
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 4px;
+            padding: 10px;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--table-hover-color);
+            }
+
+            .enhancement-level {
+                width: 40px !important;
+                font-size: 18px;
+                height: 22px;
+                line-height: 24px;
+            }
+
+            span {
+                margin: 0 4px;
+
+                &:first-child {
+                    min-width: 32px;
+                }
+            }
+        }
+    }
+
+}
+
+.capture-button {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 10px;
+    }
+}

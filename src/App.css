@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @font-face {
   font-family: "FCOAllSans-Light";
   src: local("FCOAllSans-Light"), url("assets/fonts/FCOAllSans-Light.woff2") format("woff2");
@@ -317,162 +316,6 @@ body {
   color: #e9a216;
 }
 
-.players-card-row {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 340px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-.players-card {
-  width: 210px;
-  height: 336px;
-  text-align: center;
-}
-
-.players-row {
-  position: relative;
-  overflow: hidden;
-  width: calc(100% - 9px);
-  left: 4px;
-  height: 100%;
-}
-.players-row .number {
-  color: #ffffdb;
-  position: absolute;
-  top: 50px;
-  left: 2px;
-  text-align: center;
-  width: 61px;
-  z-index: 2;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  font-size: 40px;
-  font-family: "FCOAllSans-Bold", sans-serif;
-}
-.players-row .number.bdo {
-  color: #ffefc3;
-  text-shadow: none;
-}
-.players-row .number.bld {
-  color: #f1d698;
-  text-shadow: none;
-}
-.players-row .number.icon {
-  color: #5d573d;
-  text-shadow: none;
-}
-.players-row .position {
-  font-size: 25px;
-  color: #ffffdb;
-  position: absolute;
-  top: 95px;
-  left: 2px;
-  text-align: center;
-  width: 61px;
-  z-index: 2;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-  font-family: "FCOAllSans-Regular", sans-serif;
-  font-weight: 100;
-  letter-spacing: -1px;
-}
-.players-row .position.bdo {
-  color: #ffefc3;
-  text-shadow: none;
-}
-.players-row .position.bld {
-  color: #f1d698;
-  text-shadow: none;
-}
-.players-row .position.icon {
-  color: #5d573d;
-  text-shadow: none;
-}
-.players-row .img {
-  position: absolute;
-  top: 71px;
-  right: 5px;
-  z-index: 1;
-  width: 169px;
-  height: 169px;
-  overflow: hidden;
-}
-.players-row .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.players-row .players {
-  position: absolute;
-  top: 240px;
-  left: 0;
-  width: 100%;
-  height: 96px;
-  overflow: hidden;
-}
-.players-row .players .players-detail-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-top: 4px;
-  margin-bottom: 4px;
-}
-.players-row .players .players-detail-top img {
-  width: 30px;
-  height: 24px;
-  margin-right: 3px;
-  margin-top: -1px;
-  display: inline-block;
-  vertical-align: top;
-}
-.players-row .players .players-detail-top .name {
-  display: inline-block;
-  max-width: 140px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 24px;
-  color: #141432;
-  font-family: "FCOAllSans-Regular", sans-serif;
-}
-.players-row .players .players-detail-top .name.bdo, .players-row .players .players-detail-top .name.dld {
-  color: #ffffff;
-}
-.players-row .players .players-detail-top .name.icon {
-  color: #000000;
-}
-.players-row .players .players-detail-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-.players-row .players .players-detail-bottom img {
-  width: 100%;
-}
-.players-row .players .players-detail-bottom .country-logo {
-  width: 24px;
-}
-.players-row .players .players-detail-bottom .league-logo {
-  width: 32px;
-  height: 32px;
-}
-.players-row .players .players-detail-bottom .city-logo {
-  width: 24px;
-  height: 24px;
-}
-.players-row .enhancement-level {
-  z-index: 99;
-  position: absolute;
-  left: 6px;
-  bottom: 96px;
-}
-
 .enhancement-level {
   display: block;
   width: 48px !important;
@@ -665,6 +508,333 @@ header .page-name {
   font-size: 1.5rem;
   color: white;
   margin-top: 20px;
+}
+
+.players-card-row {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.players-card {
+  width: 210px;
+  height: 336px;
+  text-align: center;
+}
+
+.players-row {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 9px);
+  left: 4px;
+  height: 100%;
+}
+.players-row .number {
+  color: #ffffdb;
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  text-align: center;
+  width: 61px;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  font-family: "FCOAllSans-Bold", sans-serif;
+}
+.players-row .number.bdo {
+  color: #ffefc3;
+  text-shadow: none;
+}
+.players-row .number.bld {
+  color: #f1d698;
+  text-shadow: none;
+}
+.players-row .number.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
+.players-row .position {
+  font-size: 25px;
+  color: #ffffdb;
+  position: absolute;
+  top: 95px;
+  left: 2px;
+  text-align: center;
+  width: 61px;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-family: "FCOAllSans-Regular", sans-serif;
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+.players-row .position.bdo {
+  color: #ffefc3;
+  text-shadow: none;
+}
+.players-row .position.bld {
+  color: #f1d698;
+  text-shadow: none;
+}
+.players-row .position.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
+.players-row .img {
+  position: absolute;
+  top: 71px;
+  right: 5px;
+  z-index: 1;
+  width: 169px;
+  height: 169px;
+  overflow: hidden;
+}
+.players-row .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.players-row .players {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  overflow: hidden;
+}
+.players-row .players .players-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 4px;
+  margin-bottom: 4px;
+}
+.players-row .players .players-detail-top img {
+  width: 30px;
+  height: 24px;
+  margin-right: 3px;
+  margin-top: -1px;
+  display: inline-block;
+  vertical-align: top;
+}
+.players-row .players .players-detail-top .name {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24px;
+  color: #141432;
+  font-family: "FCOAllSans-Regular", sans-serif;
+}
+.players-row .players .players-detail-top .name.bdo, .players-row .players .players-detail-top .name.dld {
+  color: #ffffff;
+}
+.players-row .players .players-detail-top .name.icon {
+  color: #000000;
+}
+.players-row .players .players-detail-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.players-row .players .players-detail-bottom img {
+  width: 100%;
+}
+.players-row .players .players-detail-bottom .country-logo {
+  width: 24px;
+}
+.players-row .players .players-detail-bottom .league-logo {
+  width: 32px;
+  height: 32px;
+}
+.players-row .players .players-detail-bottom .city-logo {
+  width: 24px;
+  height: 24px;
+}
+.players-row .enhancement-level {
+  z-index: 99;
+  position: absolute;
+  left: 6px;
+  bottom: 96px;
+}
+
+.players-mini-card-row {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.players-mini-card {
+  width: 160px;
+  height: 230px;
+  text-align: center;
+}
+
+.players-mini-row {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 9px);
+  left: 4px;
+  height: 100%;
+}
+.players-mini-row .number {
+  color: #ffffdb;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-family: "FCOAllSans-Bold", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  top: 52px;
+  left: 18px;
+  width: 32.5px;
+  padding-left: 3.5px;
+  box-sizing: border-box;
+  height: 14.5px;
+  line-height: 14.5px;
+}
+.players-mini-row .number.bdo {
+  color: #ffefc3;
+  text-shadow: none;
+}
+.players-mini-row .number.bld {
+  color: #f1d698;
+  text-shadow: none;
+}
+.players-mini-row .number.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
+.players-mini-row .position {
+  color: #ffffdb;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-family: "FCOAllSans-Regular", sans-serif;
+  font-weight: 100;
+  letter-spacing: -1px;
+  font-size: 14px;
+  top: 72px;
+  left: 18px;
+  width: 32.5px;
+  padding-left: 3.5px;
+  box-sizing: border-box;
+  height: 9.5px;
+  line-height: 9.5px;
+}
+.players-mini-row .position.bdo {
+  color: #ffefc3;
+  text-shadow: none;
+}
+.players-mini-row .position.bld {
+  color: #f1d698;
+  text-shadow: none;
+}
+.players-mini-row .position.icon {
+  color: #5d573d;
+  text-shadow: none;
+}
+.players-mini-row .img {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  right: 18px;
+  top: 56px;
+  margin-left: 0;
+  width: 100px;
+  height: 100px;
+  text-align: right;
+}
+.players-mini-row .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.players-mini-row .players {
+  position: absolute;
+  overflow: hidden;
+  top: 158px;
+  left: 0;
+  width: 100%;
+  padding: 0 3.5px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 12px;
+}
+.players-mini-row .players .players-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+  width: 72%;
+  margin: 0 auto;
+}
+.players-mini-row .players .players-detail-top img {
+  width: 13px;
+  height: 12px;
+  margin-top: -1px;
+  margin-right: 2px;
+  display: inline-block;
+  vertical-align: top;
+}
+.players-mini-row .players .players-detail-top .name {
+  display: inline-block;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  color: #141432;
+  font-family: "FCOAllSans-Light", sans-serif;
+}
+.players-mini-row .players .players-detail-top .name.bdo, .players-mini-row .players .players-detail-top .name.dld {
+  color: #ffffff;
+}
+.players-mini-row .players .players-detail-top .name.icon {
+  color: #000000;
+}
+.players-mini-row .players .players-detail-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+.players-mini-row .players .players-detail-bottom img {
+  width: 100%;
+}
+.players-mini-row .players .players-detail-bottom .country-logo {
+  width: 18px;
+}
+.players-mini-row .players .players-detail-bottom .league-logo {
+  width: 18px;
+}
+.players-mini-row .players .players-detail-bottom .city-logo {
+  width: 18px;
+  height: 18px;
+}
+.players-mini-row .enhancement-level {
+  z-index: 99;
+  position: absolute;
+  left: 19px;
+  bottom: 73px;
+  width: 32px !important;
+  height: 19px;
+  line-height: 19px;
+  font-size: 15px;
 }
 
 .players-info-container {
@@ -1837,6 +2007,174 @@ header .page-name {
 }
 .common-dialog.confirmation-dialog .dialog-title {
   background-color: #3e3d55;
+}
+
+.squad-maker-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.squad-setup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formation-selection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formation-table-container {
+  margin-top: 20px;
+}
+
+.formation-table {
+  z-index: 1;
+  position: absolute;
+  top: 110%;
+  width: 70%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--contents-background-image);
+}
+
+.formation-table th,
+.formation-table td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formation-table th {
+  height: 48px;
+  background-color: var(--background-color);
+  font-family: "FCOAllSans-Light", sans-serif;
+}
+
+.formation-table td:hover {
+  background-color: var(--table-hover-color);
+}
+
+.selected-formation {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.selected-formation-image {
+  width: 180px;
+  height: 180px;
+}
+
+.formation-name {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.squad-setup-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.squad-maker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.pitch-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.position-slot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+.position-slot .position-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.squad-player-list {
+  z-index: 9;
+  position: absolute;
+  right: 2%;
+  width: 300px;
+  height: 500px;
+  overflow: auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.squad-player-list h3 {
+  position: sticky;
+  top: 76px;
+  z-index: 1;
+  height: 48px;
+  padding: 12px;
+}
+.squad-player-list p {
+  padding: 12px;
+}
+.squad-player-list ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 4px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.squad-player-list ul li:hover {
+  background-color: var(--table-hover-color);
+}
+.squad-player-list ul li .enhancement-level {
+  width: 40px !important;
+  font-size: 18px;
+  height: 22px;
+  line-height: 24px;
+}
+.squad-player-list ul li span {
+  margin: 0 4px;
+}
+.squad-player-list ul li span:first-child {
+  min-width: 32px;
+}
+
+.capture-button:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 10px;
 }
 
 @keyframes neonGlow {

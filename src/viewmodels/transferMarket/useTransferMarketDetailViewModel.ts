@@ -1,4 +1,3 @@
-// useTransferMarketDetailViewModel.tsx
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {TransferMarketDetailProps} from '../../models/interfaces/Player.interface';
@@ -60,6 +59,7 @@ export const useTransferMarketDetailViewModel = (player: TransferMarketDetailPro
             // 영입할 선수 개수만큼 선수 객체 생성하여 addMultiplePlayers 액션 사용
             const newPlayers = Array.from({length: quantity}, () => ({
                 number: player.number,
+                position: player.position,
                 enhancementLevel: player.enhancementLevel ?? 1,
                 overall_ability: player.overall_ability ?? 0,
             }));

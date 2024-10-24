@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextField, Select, MenuItem, Button, InputLabel, FormControl, Box} from '@mui/material';
-import {FaSort, FaSortUp, FaSortDown, FaDownload} from 'react-icons/fa';
+import {FaSort, FaSortUp, FaSortDown} from 'react-icons/fa';
 import {HiOutlineDownload} from 'react-icons/hi';
 import {
     TransferMarketTableHeaderProps
