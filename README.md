@@ -21,6 +21,7 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 <div>
   <img src="./assets/main.gif" alt="Main Page GIF" />
 </div>
+<br></br>
 
 
 
@@ -28,11 +29,15 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 - **뉴스 크롤링**: **Custom Search API**를 사용하여 구글에서 맨시티 관련 뉴스를 크롤링하고, **restfulAPI**로 데이터를 가져옵니다.
 - **CORS 이슈 해결**: **Netlify**를 통해 CORS 문제를 해결하고, 빌드 및 배포를 진행하였습니다.
 
+
+
+<br></br><br></br>
 ### 2. 24/25 시즌 선수 명단 페이지
 
 <div>
   <img src="./assets/players_page.gif" alt="Main Page GIF"/>
 </div>
+<br></br>
 
 
 
@@ -42,7 +47,7 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 
 
-
+<br></br><br></br>
 ### 3. 스코어 페이지
 
 <div>
@@ -57,13 +62,13 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 
 
-
+<br></br><br></br>
 ### 4. 선수 이적 시장 페이지
 
 <div>
   <img src="./assets/transfer_page.gif" alt="Main Page GIF"/>
 </div>
-
+<br></br>
 
 - **선수 정보**: `assets/data/current_season_player_info.json`과 `previous_season_player_info.json` 데이터를 사용하여 선수 정보를 테이블 형식으로 표시합니다.
 - **필터 및 정렬**: 선수 정보를 필터링하고 정렬할 수 있는 기능을 제공하며, **Redux**를 통해 가상의 **CITY** 화폐를 관리해 선수 영입 기능을 구현했습니다.
@@ -73,13 +78,13 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 
 
-
+<br></br><br></br>
 ### 5. 강화 페이지
 
 <div>
   <img src="./assets/enhance_page.gif" alt="Main Page GIF"/>
 </div>
-
+<br></br>
 
 - **강화 시스템**: 이적 시장 페이지에서 구매한 선수를 **Redux** 상태로 관리하고, 해당 선수를 재료로 사용해 능력치를 강화하는 기능을 구현했습니다.
 - **강화 단계 반영**: 강화 단계에 따른 능력치 변동을 반영하며, **Redux 상태**를 동기화합니다.
@@ -88,7 +93,7 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 
 
 
-
+<br></br><br></br>
 ### 6. 스쿼드 메이커 페이지
 
 <div>
