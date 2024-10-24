@@ -1,8 +1,8 @@
-# Manchester City Hub
+# Man City Hub
 
 README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상태와 일치하지 않을 수 있습니다.
 
-<a href="https://mancityhub.netlify.app" target="_blank"><strong>ManchesterCityHub 프로젝트 보러가기</strong></a>
+<a href="https://mancityhub.netlify.app" target="_blank"><strong>Man City Hub 프로젝트 보러가기</strong></a>
 
 ---
 
