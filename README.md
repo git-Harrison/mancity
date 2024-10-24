@@ -19,8 +19,10 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 ### 1. 메인 페이지
 
 <div>
-  <img src="./assets/main.gif" alt="Main Page GIF" style="width: 60%;" />
+  <img src="./assets/main.gif" alt="Main Page GIF" />
 </div>
+
+
 
 - **유튜브 하이라이트 영상**: **YouTube Data API v3**를 활용하여 맨시티 경기 하이라이트 영상을 크롤링하고, 이를 **restfulAPI** 방식으로 데이터에 반영하였습니다.
 - **뉴스 크롤링**: **Custom Search API**를 사용하여 구글에서 맨시티 관련 뉴스를 크롤링하고, **restfulAPI**로 데이터를 가져옵니다.
@@ -29,8 +31,10 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 ### 2. 24/25 시즌 선수 명단 페이지
 
 <div>
-  <img src="./assets/players_page.gif" alt="Main Page GIF" style="width: 60%;" />
+  <img src="./assets/players_page.gif" alt="Main Page GIF"/>
 </div>
+
+
 
 - **데이터 관리**: `assets/data/current_season_player_info.json` 파일을 통해 현재 시즌의 선수 정보(나이, 신체 사이즈, 이적 정보 등)를 관리합니다.
 - **슬라이더 구현**: **Swiper** 라이브러리를 사용하여 선수 명단을 슬라이드 방식으로 구현했습니다.
@@ -38,16 +42,19 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 ### 3. 스코어 페이지
 
 <div>
-  <img src="./assets/scores_page.gif" alt="Main Page GIF" style="width: 60%;" />
+  <img src="./assets/scores_page.gif" alt="Main Page GIF" />
 </div>
+
+
 
 - **실시간 경기 정보**: **football-data.org** API를 활용하여 실시간 맨시티 경기 데이터 및 스코어, 현재 EPL 팀 순위를 가져와 표시합니다.
 
 ### 4. 선수 이적 시장 페이지
 
 <div>
-  <img src="./assets/transfer_page.gif" alt="Main Page GIF" style="width: 60%;" />
+  <img src="./assets/transfer_page.gif" alt="Main Page GIF"/>
 </div>
+
 
 - **선수 정보**: `assets/data/current_season_player_info.json`과 `previous_season_player_info.json` 데이터를 사용하여 선수 정보를 테이블 형식으로 표시합니다.
 - **필터 및 정렬**: 선수 정보를 필터링하고 정렬할 수 있는 기능을 제공하며, **Redux**를 통해 가상의 **CITY** 화폐를 관리해 선수 영입 기능을 구현했습니다.
@@ -56,8 +63,9 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 ### 5. 강화 페이지
 
 <div>
-  <img src="./assets/enhance_page.gif" alt="Main Page GIF" style="width: 60%;" />
+  <img src="./assets/enhance_page.gif" alt="Main Page GIF"/>
 </div>
+
 
 - **강화 시스템**: 이적 시장 페이지에서 구매한 선수를 **Redux** 상태로 관리하고, 해당 선수를 재료로 사용해 능력치를 강화하는 기능을 구현했습니다.
 - **강화 단계 반영**: 강화 단계에 따른 능력치 변동을 반영하며, **Redux 상태**를 동기화합니다.
@@ -65,8 +73,9 @@ README.md 파일은 실시간으로 수정 중이며, 프로젝트의 최신 상
 ### 6. 스쿼드 메이커 페이지
 
 <div>
-  <img src="./assets/squadmaker_page.gif" alt="Main Page GIF" style="width: 60%;" />
+  <img src="./assets/squadmaker_page.gif" alt="Main Page GIF"/>
 </div>
+
 
 - **스쿼드 구성**: 영입한 선수들을 기반으로 직접 스쿼드를 구성할 수 있으며, 여러 가지 포메이션 옵션을 제공합니다.
 - **캡처 기능**: 완성된 스쿼드를 이미지로 캡처하고, 다운로드할 수 있는 기능을 구현했습니다.
