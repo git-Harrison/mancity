@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import TransferMarketTableHeader from '../atoms/TransferMarketTableHeader';
 import TransferMarketTableBody from '../atoms/TransferMarketTableBody';
-import { TransferMarketTableProps } from '../../models/interfaces/transferMarket/TransferMarketTable.interface';
-import { Player } from '../../models/interfaces/Player.interface';
-import { useTransferMarketTableViewModel } from '../../viewmodels/transferMarket/useTransferMarketTableViewModel';
-import { useTransferMarketTableBodyViewModel } from '../../viewmodels/transferMarket/useTransferMarketTableBodyViewModel';
+import {TransferMarketTableProps} from '../../models/interfaces/transferMarket/TransferMarketTable.interface';
+import {Player} from '../../models/interfaces/Player.interface';
+import {useTransferMarketTableViewModel} from '../../viewmodels/transferMarket/useTransferMarketTableViewModel';
+import {useTransferMarketTableBodyViewModel} from '../../viewmodels/transferMarket/useTransferMarketTableBodyViewModel';
 import {
     useTransferMarketTableHeaderViewModel
 } from '../../viewmodels/transferMarket/useTransferMarketTableHeaderViewModel';
-import { getRandomTransferFee } from '../../utils/transferFeeUtils';
+import {getRandomTransferFee} from '../../utils/transferFeeUtils';
 
-const TransferMarketTable: React.FC<TransferMarketTableProps> = ({ players, onPlayerClick }) => {
-    const { filters, handleFilterChange, handlePositionChange, handleNationalityChange, handleResetFilters } =
+const TransferMarketTable: React.FC<TransferMarketTableProps> = ({players, onPlayerClick}) => {
+    const {filters, handleFilterChange, handlePositionChange, handleNationalityChange, handleResetFilters} =
         useTransferMarketTableHeaderViewModel();
 
     // transfer_fee를 한 번만 초기화
@@ -29,8 +29,8 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({ players, onPl
         setInitializedPlayers(playersWithFees);
     }, [players]);
 
-    const { sortedPlayers, sortKey, sortOrder, handleSort } = useTransferMarketTableViewModel(initializedPlayers);
-    const { filteredPlayers } = useTransferMarketTableBodyViewModel(sortedPlayers, filters);
+    const {sortedPlayers, sortKey, sortOrder, handleSort} = useTransferMarketTableViewModel(initializedPlayers);
+    const {filteredPlayers} = useTransferMarketTableBodyViewModel(sortedPlayers, filters);
 
     // 포지션과 국가 리스트 생성
     const positions = Array.from(new Set(players.map(player => player.position)));
@@ -63,7 +63,7 @@ const TransferMarketTable: React.FC<TransferMarketTableProps> = ({ players, onPl
                     <th>이적료</th>
                 </tr>
                 </thead>
-                <TransferMarketTableBody players={filteredPlayers} onPlayerClick={onPlayerClick} />
+                <TransferMarketTableBody players={filteredPlayers} onPlayerClick={onPlayerClick}/>
             </table>
         </div>
     );

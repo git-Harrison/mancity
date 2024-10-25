@@ -29,6 +29,11 @@ export interface Player {
     enhancementLevel: number;
 }
 
+export interface PlayerRowProps {
+    player: Player;
+    onPlayerClick: (player: Player) => void;
+}
+
 export interface PlayerCardProps {
     player: Player;
     showEnhancement?: boolean;

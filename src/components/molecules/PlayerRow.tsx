@@ -1,16 +1,11 @@
 import React from 'react';
-import { Player } from '../../models/interfaces/Player.interface';
-import { getFlagImage } from '../../utils/flagUtils';
-import { formatCurrency } from '../../utils/formatCurrency';
-import { usePlayerImage } from '../../utils/usePlayerImage';
+import {PlayerRowProps} from '../../models/interfaces/Player.interface';
+import {getFlagImage} from '../../utils/flagUtils';
+import {formatCurrency} from '../../utils/formatCurrency';
+import {usePlayerImage} from '../../utils/usePlayerImage';
 
-interface PlayerRowProps {
-    player: Player;
-    onPlayerClick: (player: Player) => void;
-}
-
-const PlayerRow: React.FC<PlayerRowProps> = ({ player, onPlayerClick }) => {
-    const { imageSrc, imageLoaded } = usePlayerImage(player.number);
+const PlayerRow: React.FC<PlayerRowProps> = ({player, onPlayerClick}) => {
+    const {imageSrc, imageLoaded} = usePlayerImage(player.number);
 
     return (
         <tr key={player.number} onClick={() => onPlayerClick(player)}>
@@ -37,7 +32,7 @@ const PlayerRow: React.FC<PlayerRowProps> = ({ player, onPlayerClick }) => {
             <td>{player.overall_ability}</td>
             <td className={`${player.position}`}>{player.position}</td>
             <td className="nationality">
-                <img src={getFlagImage(player.nationality)} alt={player.nationality} />
+                <img src={getFlagImage(player.nationality)} alt={player.nationality}/>
             </td>
             <td>{formatCurrency(player.transfer_details?.transfer_fee)}</td>
         </tr>
