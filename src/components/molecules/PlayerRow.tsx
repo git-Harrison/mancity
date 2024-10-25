@@ -5,21 +5,22 @@ import {formatCurrency} from '../../utils/formatCurrency';
 import {usePlayerImage} from '../../utils/usePlayerImage';
 
 const PlayerRow: React.FC<PlayerRowProps> = ({player, onPlayerClick}) => {
-    const {imageSrc, imageLoaded} = usePlayerImage(player.number);
+    const {imageSrc, imageLoaded, error, handleImageError} = usePlayerImage(player.number);
 
     return (
         <tr key={player.number} onClick={() => onPlayerClick(player)}>
             <td className="profile-icon">
-                {imageLoaded && (
+                {imageLoaded && !error ? (
                     <img
                         src={imageSrc}
                         alt={player.name}
                         className="player-image"
-                        onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.onerror = null;
-                            target.src = `${process.env.PUBLIC_URL}/images/profile_icon_default.webp`;
-                        }}
+                        onError={handleImageError}
+                    />
+                ) : (
+                    <img
+                        src={`${process.env.PUBLIC_URL}/images/profile_icon_default.webp`}
+                        alt="default-player-face"
                     />
                 )}
             </td>

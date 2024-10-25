@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback} from "react";
 import {Article} from "../models/interfaces/News.interface";
 import {fetchNews} from "../api/services/googleNewsService";
 
@@ -7,32 +7,39 @@ export const useNewsViewModel = () => {
     const [contentCount, setContentCount] = useState<number>(1);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isLastPage, setIsLastPage] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
 
-    const getNewsData = async () => {
+    const getNewsData = useCallback(async () => {
         setIsLoading(true);
+        setError(null);
 
-        const newArticles = await fetchNews('mancity.com/news', contentCount);
+        try {
+            const newArticles = await fetchNews('mancity.com/news', contentCount);
 
-        const filteredArticles = newArticles.filter(
-            (newArticle) => !articles.some((existingArticle) => existingArticle.link === newArticle.link)
-        );
+            const filteredArticles = newArticles.filter(
+                (newArticle) => !articles.some((existingArticle) => existingArticle.link === newArticle.link)
+            );
 
-        if (filteredArticles.length > 0) {
-            setArticles((prev) => [...filteredArticles, ...prev]);
+            if (filteredArticles.length > 0) {
+                setArticles((prev) => [...prev, ...filteredArticles]);
+            }
+
+            if (newArticles.length === 0 || newArticles.length < 10) {
+                setIsLastPage(true);
+            }
+        } catch (error) {
+            console.error('Error fetching news:', error);
+            setError('Failed to fetch news data');
+        } finally {
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 1000);
         }
-
-        if (newArticles.length === 0 || newArticles.length < 10) {
-            setIsLastPage(true);
-        }
-
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
-    };
+    }, [contentCount, articles]);
 
     useEffect(() => {
         getNewsData();
-    }, [contentCount]);
+    }, [getNewsData]);
 
     const handleMoreData = () => {
         setContentCount((prev) => prev + 10);
@@ -43,5 +50,6 @@ export const useNewsViewModel = () => {
         isLoading,
         isLastPage,
         handleMoreData,
+        error,
     };
 };

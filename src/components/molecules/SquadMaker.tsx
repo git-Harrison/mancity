@@ -17,11 +17,10 @@ const SquadMaker: React.FC<SquadMakerProps> = ({formation}) => {
     const {
         loading,
         selectedPlayers,
-        setSelectedPlayers,
         handlePlayerClick,
         filteredPlayers,
         captureAndDownload,  // 캡처 함수 가져오기
-    } = useSquadMakerViewModel(selectedPosition, clickedSlot);  // clickedSlot 전달
+    } = useSquadMakerViewModel(selectedPosition, clickedSlot);
 
     const currentPositionStyles = getFormationPositions(formation.name || '') || {
         goalkeeper: [],

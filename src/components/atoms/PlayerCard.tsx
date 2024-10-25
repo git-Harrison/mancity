@@ -6,7 +6,7 @@ import {usePlayerImage} from '../../utils/usePlayerImage';
 import {getCardType} from '../../utils/getCardType';
 
 const PlayerCard: React.FC<PlayerCardProps> = ({player, showEnhancement = false}) => {
-    const {imageSrc, imageLoaded} = usePlayerImage(player.number);
+    const {imageSrc, imageLoaded, error, handleImageError} = usePlayerImage(player.number);
     const cardType = getCardType(player.number);
     const {background: backgroundImage, league: leagueIcon, tag: tagImage} = getCardImages(player);
 
@@ -22,15 +22,16 @@ const PlayerCard: React.FC<PlayerCardProps> = ({player, showEnhancement = false}
                         </div>
                     )}
                     <div className="img">
-                        {imageLoaded && (
+                        {imageLoaded && !error ? (
                             <img
                                 src={imageSrc}
                                 alt="players-face"
-                                onError={(e) => {
-                                    const target = e.target as HTMLImageElement;
-                                    target.onerror = null;
-                                    target.src = `${process.env.PUBLIC_URL}/images/profile_icon_default.webp`;
-                                }}
+                                onError={handleImageError}
+                            />
+                        ) : (
+                            <img
+                                src={`${process.env.PUBLIC_URL}/images/profile_icon_default.webp`}
+                                alt="default-player-face"
                             />
                         )}
                     </div>
@@ -44,10 +45,11 @@ const PlayerCard: React.FC<PlayerCardProps> = ({player, showEnhancement = false}
                                 <img src={getFlagImage(player.nationality)} alt={player.nationality}/>
                             </div>
                             <div className="league-logo">
-                                <img src={leagueIcon}/>
+                                <img src={leagueIcon} alt="league-logo"/>
                             </div>
                             <div className="city-logo">
-                                <img src={`${process.env.PUBLIC_URL}/images/player_card_city_icon.webp`}/>
+                                <img src={`${process.env.PUBLIC_URL}/images/player_card_city_icon.webp`}
+                                     alt="city-icon"/>
                             </div>
                         </div>
                     </div>
