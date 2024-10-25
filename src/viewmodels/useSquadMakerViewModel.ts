@@ -1,17 +1,15 @@
-import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store/store';
-import { Player, HeldPlayer } from '../models/interfaces/Player.interface';
-import { fetchPlayers, fetchPreviousSeasonPlayers } from '../api/services/playerService';
-import html2canvas from 'html2canvas'; // html2canvas import
+import {useState, useEffect, useRef, useMemo} from 'react';
+import {useSelector} from 'react-redux';
+import {RootState} from '../store/store';
+import {Player, HeldPlayer} from '../models/interfaces/Player.interface';
+import {fetchPlayers, fetchPreviousSeasonPlayers} from '../api/services/playerService';
+import html2canvas from 'html2canvas';
 
 export const useSquadMakerViewModel = (selectedPosition: string | null, clickedSlot: string | null) => {
     const [currentPlayers, setCurrentPlayers] = useState<Player[]>([]);
     const [previousPlayers, setPreviousPlayers] = useState<Player[]>([]);
     const [selectedPlayers, setSelectedPlayers] = useState<{ [key: string]: Player | null }>({});
-    const [filteredPlayers, setFilteredPlayers] = useState<Player[]>([]);
     const [loading, setLoading] = useState(true);
-
     const heldPlayers = useSelector((state: RootState) => state.player.heldPlayers);
 
     // 전체 선수 로딩
@@ -58,8 +56,11 @@ export const useSquadMakerViewModel = (selectedPosition: string | null, clickedS
         return acc;
     }, []);
 
-    // 포지션에 맞는 선수 필터링 및 상태 업데이트
-    useEffect(() => {
+    // 이전 filteredPlayers 값을 저장할 ref
+    const prevFilteredPlayers = useRef<Player[]>([]);
+
+    // 포지션에 맞는 선수 필터링 및 메모이제이션
+    const filteredPlayers = useMemo(() => {
         const filtered = selectedPosition
             ? uniqueHeldPlayers.filter((player) => {
                 switch (selectedPosition) {
@@ -77,10 +78,15 @@ export const useSquadMakerViewModel = (selectedPosition: string | null, clickedS
             })
             : uniqueHeldPlayers;
 
-        if (JSON.stringify(filtered) !== JSON.stringify(filteredPlayers)) {
-            setFilteredPlayers(filtered);
+        // 상태가 변경되지 않았으면 이전 filteredPlayers 값을 반환
+        if (JSON.stringify(filtered) === JSON.stringify(prevFilteredPlayers.current)) {
+            return prevFilteredPlayers.current;
         }
-    }, [selectedPosition, uniqueHeldPlayers, filteredPlayers]);
+
+        // 상태가 변경되었으면 새로운 filteredPlayers를 저장
+        prevFilteredPlayers.current = filtered;
+        return filtered;
+    }, [selectedPosition, uniqueHeldPlayers]);
 
     // 화면을 캡처하여 다운로드하는 함수
     const captureAndDownload = async () => {
