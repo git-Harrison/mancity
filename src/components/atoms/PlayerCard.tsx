@@ -2,11 +2,11 @@ import React from 'react';
 import {PlayerCardProps} from '../../models/interfaces/Player.interface';
 import {getFlagImage} from '../../utils/flagUtils';
 import {getCardImages} from '../../utils/getCardImages';
-import {usePlayerImage} from '../../utils/usePlayerImage';
 import {getCardType} from '../../utils/getCardType';
 
 const PlayerCard: React.FC<PlayerCardProps> = ({player, showEnhancement = false}) => {
-    const {imageSrc, imageLoaded, error, handleImageError} = usePlayerImage(player.number);
+    const defaultImageSrc = `${process.env.PUBLIC_URL}/images/profile_icon_default.webp`;
+    const imageSrc = `${process.env.PUBLIC_URL}/images/profile_icon_${player.number}.webp`;
     const cardType = getCardType(player.number);
     const {background: backgroundImage, league: leagueIcon, tag: tagImage} = getCardImages(player);
 
@@ -22,18 +22,11 @@ const PlayerCard: React.FC<PlayerCardProps> = ({player, showEnhancement = false}
                         </div>
                     )}
                     <div className="img">
-                        {imageLoaded && !error ? (
-                            <img
-                                src={imageSrc}
-                                alt="players-face"
-                                onError={handleImageError}
-                            />
-                        ) : (
-                            <img
-                                src={`${process.env.PUBLIC_URL}/images/profile_icon_default.webp`}
-                                alt="default-player-face"
-                            />
-                        )}
+                        <img
+                            src={imageSrc}
+                            alt="player-face"
+                            onError={(e) => (e.currentTarget.src = defaultImageSrc)}
+                        />
                     </div>
                     <div className="players">
                         <div className="players-detail-top">
