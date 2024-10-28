@@ -82,7 +82,15 @@ const PlayerEnhancement: React.FC = () => {
                                         >
                                             강화하기
                                         </Button>
-                                        <Tooltip title="강화를 위해서는 동일한 선수 카드 중, 같은 강화 레벨의 카드 1장을 재료로 사용해야 합니다.">
+                                        <Tooltip
+                                            title={
+                                                <>
+                                                    - 강화를 위해서는 동일한 선수 카드 중, 같은 강화 레벨의 카드 1장을 재료로 사용해야 합니다.
+                                                    <br />
+                                                    - 강화 시도 시 1000억 CITY를 획득합니다.
+                                                </>
+                                            }
+                                        >
                                             <IconButton
                                                 sx={{
                                                     position: 'absolute',
@@ -90,9 +98,10 @@ const PlayerEnhancement: React.FC = () => {
                                                     top: '50%',
                                                     transform: 'translate(-50%, -50%)',
                                                     marginLeft: '8px',
-                                                    color: 'var(--text-color)'
-                                                }}>
-                                                <HelpOutlineIcon/>
+                                                    color: 'var(--text-color)',
+                                                }}
+                                            >
+                                                <HelpOutlineIcon />
                                             </IconButton>
                                         </Tooltip>
                                     </div>
