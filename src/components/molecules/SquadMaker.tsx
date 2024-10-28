@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import PlayerMiniCard from '../atoms/PlayerMiniCard';
 import LoadingComponents from '../atoms/LoadingComponents';
@@ -7,7 +8,8 @@ import {useSquadMakerViewModel} from '../../viewmodels/useSquadMakerViewModel';
 import {SquadMakerProps} from '../../models/interfaces/Formation.interface';
 import {Player} from '../../models/interfaces/Player.interface';
 import {RootState} from '../../store/store';
-import {Button} from '@mui/material';
+import {Button, IconButton, Tooltip} from '@mui/material';
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 const SquadMaker: React.FC<SquadMakerProps> = ({formation}) => {
     const {getFormationPositions} = useFormationStyleViewModel();
@@ -61,8 +63,17 @@ const SquadMaker: React.FC<SquadMakerProps> = ({formation}) => {
         <>
             {/* 필터링된 선수 리스트 표시 */}
             <div className="squad-player-list">
-                <div>
+                <div className="list-title">
                     <h3>{selectedPosition || 'All'} Players</h3>
+                    <Tooltip title="Squad Maker에서는 보유한 선수만 사용할 수 있습니다.">
+                        <IconButton
+                            sx={{
+                                marginLeft: '8px',
+                                color: 'var(--text-color)'
+                            }}>
+                            <HelpOutlineIcon/>
+                        </IconButton>
+                    </Tooltip>
                 </div>
                 {filteredPlayers.length > 0 ? (
                     <ul>
@@ -83,7 +94,31 @@ const SquadMaker: React.FC<SquadMakerProps> = ({formation}) => {
                             ))}
                     </ul>
                 ) : (
-                    <p>해당 포지션에 맞는 선수가 없습니다.<br/> 선수를 영입 후 이용해주세요.</p>
+                    <div className="notice">
+                        <p>해당 포지션에 맞는 선수가 없습니다.<br />선수를 영입 후 이용해주세요.</p>
+                        <Link to="/transfer" style={{ textDecoration: 'none' }}>
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                sx={{
+                                    width: '180px',
+                                    height: '44px',
+                                    fontSize: '16px',
+                                    textTransform: 'none',
+                                    marginTop: '20px',
+                                    color: 'var(--text-color)',
+                                    backgroundColor: 'var(--table-header-color)',
+                                    transition: 'all 0.2s ease',
+                                    fontFamily: '"Pretendard-Regular", sans-serif',
+                                    '&:hover': {
+                                        backgroundColor: 'var(--city-color)',
+                                    },
+                                }}
+                            >
+                                선수 영입하러 가기
+                            </Button>
+                        </Link>
+                    </div>
                 )}
             </div>
 

@@ -1690,6 +1690,7 @@ header .page-name {
   width: 300px;
   font-size: 24px;
   color: var(--text-color);
+  text-align: center;
 }
 
 .player-list-wrap {
@@ -2131,15 +2132,24 @@ header .page-name {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-.squad-player-list h3 {
+.squad-player-list .list-title {
   position: sticky;
-  top: 76px;
+  top: 0;
   z-index: 1;
   height: 48px;
   padding: 12px;
+  display: flex;
+  justify-content: space-between;
 }
-.squad-player-list p {
+.squad-player-list .notice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 12px;
+}
+.squad-player-list .notice p {
+  width: 100%;
+  text-align: center;
 }
 .squad-player-list ul li {
   display: flex;

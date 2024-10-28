@@ -122,16 +122,27 @@
     background-color: var(--background-color);
     color: var(--text-color);
 
-    h3 {
+
+    .list-title {
         position: sticky;
-        top: 76px;
+        top: 0;
         z-index: 1;
         height: 48px;
         padding: 12px;
+        display: flex;
+        justify-content: space-between;
     }
 
-    p {
+    .notice {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 12px;
+
+        p {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     ul {
