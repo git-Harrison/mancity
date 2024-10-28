@@ -8,10 +8,10 @@ const News: React.FC = () => {
     const {articles, isLoading, isLastPage, handleMoreData} = useNewsViewModel();
 
     // 로딩 중인 경우
-    if (isLoading) {
+    if (isLoading && articles.length === 0) {
         return (
             <div className="news-videos-container">
-                <LoadingComponents message="뉴스 데이터를 가져오는 중.."/>
+                <LoadingComponents message="뉴스 데이터를 가져오는 중..."/>
             </div>
         );
     }
@@ -29,17 +29,19 @@ const News: React.FC = () => {
         <div className="news-videos-container">
             <div className="news-list-row">
                 <div className="news-list">
-                    {articles.map((article, index) => (
-                        <div key={index} className="news-item">
-                            <a href={article.link} target="_blank" rel="noopener noreferrer">
-                                <img src={article.thumbnail} alt={article.title}/>
-                                <div>
-                                    <strong>{article.title}</strong>
-                                    <p>{article.date}</p>
-                                </div>
-                            </a>
-                        </div>
-                    ))}
+                    {articles
+                        .filter((article) => article.thumbnail) // thumbnail이 있는 기사만 표시
+                        .map((article, index) => (
+                            <div key={index} className="news-item">
+                                <a href={article.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={article.thumbnail} alt={article.title}/>
+                                    <div>
+                                        <strong>{article.title}</strong>
+                                        <p>{article.date}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        ))}
                     <Box sx={{display: 'flex', justifyContent: 'flex-end', width: '100%', marginTop: '14px'}}>
                         {!isLastPage && !isLoading && (
                             <Button
@@ -64,7 +66,7 @@ const News: React.FC = () => {
                             </Button>
                         )}
                     </Box>
-                    {isLastPage && !isLoading && <h2>마지막 기사 입니다.</h2>}
+                    {isLastPage && !isLoading && <h2>마지막 기사입니다.</h2>}
                 </div>
             </div>
         </div>

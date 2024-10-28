@@ -16,14 +16,19 @@ export const useNewsViewModel = () => {
         try {
             const newArticles = await fetchNews('mancity.com/news', contentCount);
 
+            // 중복된 기사를 제외한 새로운 기사만 필터링하고, 썸네일이 있는 기사만 추가
             const filteredArticles = newArticles.filter(
-                (newArticle) => !articles.some((existingArticle) => existingArticle.link === newArticle.link)
+                (newArticle) =>
+                    !articles.some((existingArticle) => existingArticle.link === newArticle.link) &&
+                    newArticle.thumbnail
             );
 
+            // 새로운 기사를 기존 리스트에 추가
             if (filteredArticles.length > 0) {
                 setArticles((prev) => [...prev, ...filteredArticles]);
             }
 
+            // 가져온 데이터가 0개이거나 10개 미만일 때 마지막 페이지로 설정
             if (newArticles.length === 0 || newArticles.length < 10) {
                 setIsLastPage(true);
             }
