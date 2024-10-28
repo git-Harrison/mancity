@@ -86,7 +86,7 @@ const PlayerEnhancement: React.FC = () => {
                                             title={
                                                 <>
                                                     - 강화를 위해서는 동일한 선수 카드 중, 같은 강화 레벨의 카드 1장을 재료로 사용해야 합니다.
-                                                    <br />
+                                                    <br/>
                                                     - 강화 시도 시 1000억 CITY를 획득합니다.
                                                 </>
                                             }
@@ -101,7 +101,7 @@ const PlayerEnhancement: React.FC = () => {
                                                     color: 'var(--text-color)',
                                                 }}
                                             >
-                                                <HelpOutlineIcon />
+                                                <HelpOutlineIcon/>
                                             </IconButton>
                                         </Tooltip>
                                     </div>
