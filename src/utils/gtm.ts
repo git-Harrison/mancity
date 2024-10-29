@@ -10,11 +10,10 @@ export const initializeGTM = (): void => {
         // Initialize dataLayer if it doesn't exist
         window.dataLayer = window.dataLayer || [];
 
-        // Define the gtag function for Google Analytics
-        function gtag(...args: any[]) {
+        // Define the gtag function for Google Analytics as an arrow function
+        window.gtag = (...args: any[]) => {
             window.dataLayer.push(args);
-        }
-        window.gtag = gtag;
+        };
 
         // Push initial page view event
         window.dataLayer.push({
@@ -29,7 +28,7 @@ export const initializeGTM = (): void => {
         document.head.appendChild(gtagScript);
 
         // Add inline script to configure gtag
-        gtag('js', new Date());
-        gtag('config', 'G-35LPSE99BQ');
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-35LPSE99BQ');
     }
 };
