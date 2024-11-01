@@ -9,7 +9,8 @@
     "@mui/material": "^6.1.1",
     "@reduxjs/toolkit": "^2.2.7",
     "@sentry/react": "^8.36.0",
-    "@sentry/tracing": "^7.114.0",
+    "@sentry/replay": "^7.29.0",
+    "@sentry/tracing": "^7.29.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -68,7 +69,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/axios": "^0.14.0",
     "@types/html2canvas": "^1.0.0",
     "@types/jest": "^27.5.2",
