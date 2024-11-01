@@ -1,4 +1,3 @@
-// src/index.tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -12,10 +11,8 @@ if (process.env.NODE_ENV === "production") {
             Sentry.browserTracingIntegration(),
             Sentry.replayIntegration(),
         ],
-        // Tracing
-        tracesSampleRate: 1.0, // 100% of the transactions in production
+        tracesSampleRate: 1.0,
         tracePropagationTargets: ["localhost", /^https:\/\/mancityhub\.netlify\.app/],
-        // Session Replay
         replaysSessionSampleRate: 0.1,
         replaysOnErrorSampleRate: 1.0,
     });
@@ -27,7 +24,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <App />
+        <App/>
     </React.StrictMode>
 );
 
