@@ -5,6 +5,12 @@ import {AiOutlineBarChart} from "react-icons/ai";
 import {BiTransferAlt} from "react-icons/bi";
 import {FaMagic} from 'react-icons/fa';
 
+declare global {
+    interface Window {
+        gtag?: (...args: any[]) => void;
+    }
+}
+
 const SideMenuNav: React.FC = () => {
     const location = useLocation();
     const [activeMenu, setActiveMenu] = useState<string>("");
@@ -30,6 +36,16 @@ const SideMenuNav: React.FC = () => {
         {name: "squadmaker", path: "/squadmaker", icon: <FaMagic/>, label: "SQUAD MAKER"},
     ];
 
+    const handleMenuClick = (name: string, label: string) => {
+        setActiveMenu(name);
+        if (window.gtag) {
+            window.gtag("event", "menu_click", {
+                event_category: "navigation",
+                event_label: label,
+            });
+        }
+    };
+
     return (
         <nav className="side-menu-wrap">
             <ul>
@@ -42,7 +58,11 @@ const SideMenuNav: React.FC = () => {
                 </li>
                 {menuItems.map(({name, path, icon, label}) => (
                     <li key={name} className={activeMenu === name ? "active" : ""}>
-                        <Link to={path} className="menu-link" onClick={() => setActiveMenu(name)}>
+                        <Link
+                            to={path}
+                            className="menu-link"
+                            onClick={() => handleMenuClick(name, label)}
+                        >
                             {icon}
                             <span>{label}</span>
                         </Link>

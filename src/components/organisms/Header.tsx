@@ -4,6 +4,12 @@ import {useLocation} from 'react-router-dom';
 import {HeaderProps} from '../../models/interfaces/Header.interface';
 import {useHeaderViewModel} from '../../viewmodels/useHeaderViewModel';
 
+declare global {
+    interface Window {
+        gtag?: (...args: any[]) => void;
+    }
+}
+
 const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
     const location = useLocation();
     const {city, heldPlayersCount} = useHeaderViewModel();
@@ -27,6 +33,17 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
         }
     };
 
+    const handleThemeToggle = () => {
+        toggleTheme();
+
+        if (window.gtag) {
+            window.gtag('event', 'theme_toggle', {
+                event_category: 'settings',
+                event_label: isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+            });
+        }
+    };
+
     return (
         <header>
             <div className="page-name" title="페이지 이름">{getPageName()}</div>
@@ -45,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({toggleTheme, isDarkMode}) => {
                              className="logo"/>
                     </div>
                 </div>
-                <div className="toggle_theme_button" onClick={toggleTheme} title="테마 모드 변경">
+                <div className="toggle_theme_button" onClick={handleThemeToggle} title="테마 모드 변경">
                     {isDarkMode ? <FiMoon/> : <FiSun/>}
                 </div>
             </div>
