@@ -4,14 +4,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as Sentry from "@sentry/react";
 import {BrowserTracing} from "@sentry/tracing";
-import {BrowserRouter} from 'react-router-dom';
 
 if (process.env.NODE_ENV === "production") {
     Sentry.init({
         dsn: "https://8aeb353d3ef73cf7a4e6715430f3f81c@o4508220889890816.ingest.us.sentry.io/4508220893560832",
         integrations: [
             new BrowserTracing({
-                routingInstrumentation: Sentry.reactRouterV6Instrumentation(BrowserRouter),
+                routingInstrumentation: Sentry.reactRouterV6Instrumentation(),
                 tracePropagationTargets: ["localhost", /^https:\/\/mancityhub\.netlify\.app/],
             }),
             new Sentry.Replay(),
@@ -30,9 +29,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
+        <App/>
     </React.StrictMode>
 );
 
