@@ -8,10 +8,12 @@ import {BrowserRouter} from 'react-router-dom';
 import './App.css';
 
 function App() {
+    const basename = process.env.REACT_APP_BASENAME || '/';
+    
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <BrowserRouter>
+                <BrowserRouter basename={basename}>
                     <LoadingScreenHandler>
                         <ThemeProviderWrapper/>
                     </LoadingScreenHandler>
