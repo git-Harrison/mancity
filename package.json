@@ -46,7 +46,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postbuild": "cp build/index.html build/404.html"
+    "postbuild": "cp build/index.html build/404.html",
+    "postinstall": "npm install @babel/plugin-proposal-private-property-in-object"
   },
   "homepage": ".",
   "eslintConfig": {
