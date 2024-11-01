@@ -13,6 +13,7 @@ const AppRoutes: React.FC = () => {
 
     useEffect(() => {
         initializeGTM();
+        console.log(location.pathname);
     }, [location]);
 
     return (
