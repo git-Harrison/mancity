@@ -2140,6 +2140,7 @@ header .page-name {
   padding: 12px;
   display: flex;
   justify-content: space-between;
+  background-color: var(--background-color);
 }
 .squad-player-list .notice {
   display: flex;
